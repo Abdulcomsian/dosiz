@@ -246,3 +246,6 @@ return view('admin.invoice');
 })->name('invoice');
 });
 /********************ADMIN ROUTES END******************************/
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

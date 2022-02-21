@@ -12,11 +12,22 @@
 							<div class="login-right-wrap">
 								<h1>Forgot Password?</h1>
 								<p class="account-subtitle">Enter your email to get a password reset link</p>
-								
+								@if (session('status'))
+			                        <div class="alert alert-success" role="alert">
+			                            {{ session('status') }}
+			                        </div>
+			                    @endif
 								<!-- Form -->
-								<form action="login">
+								<form method="POST" action="{{ route('password.email') }}">
+                        			@csrf
 									<div class="form-group">
-										<input class="form-control" type="text" placeholder="Email">
+										<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+		                                @error('email')
+		                                    <span class="invalid-feedback" role="alert">
+		                                        <strong>{{ $message }}</strong>
+		                                    </span>
+		                                @enderror
 									</div>
 									<div class="form-group mb-0">
 										<button class="btn btn-primary btn-block" type="submit">Reset Password</button>
@@ -24,7 +35,7 @@
 								</form>
 								<!-- /Form -->
 								
-								<div class="text-center dont-have">Remember your password? <a href="login">Login</a></div>
+								<div class="text-center dont-have">Remember your password? <a href="{{ route('login') }}">Login</a></div>
 							</div>
                         </div>
                     </div>

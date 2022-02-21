@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '3a5be41382f83e82e92064cbdc09909a12bd5ff9',
+    'reference' => 'a444906c4da411a889ca01608d31eb825b3f00f0',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -413,7 +413,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '3a5be41382f83e82e92064cbdc09909a12bd5ff9',
+      'reference' => 'a444906c4da411a889ca01608d31eb825b3f00f0',
     ),
     'laravel/tinker' => 
     array (
@@ -423,6 +423,15 @@
       array (
       ),
       'reference' => '5f2f9815b7631b9f586a3de7933c25f9327d4073',
+    ),
+    'laravel/ui' => 
+    array (
+      'pretty_version' => 'v2.4.0',
+      'version' => '2.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f5398544a9cd4804a42d09ce51735e37cd51ea2d',
     ),
     'league/commonmark' => 
     array (
@@ -696,8 +705,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0|2.0',
-        1 => '1.0.0 || 2.0.0 || 3.0.0',
+        0 => '1.0.0 || 2.0.0 || 3.0.0',
+        1 => '1.0|2.0',
       ),
     ),
     'psr/simple-cache' => 
@@ -859,6 +868,15 @@
       array (
       ),
       'reference' => '99732be0ddb3361e16ad77b68ba41efc8e979019',
+    ),
+    'spatie/laravel-permission' => 
+    array (
+      'pretty_version' => '5.5.0',
+      'version' => '5.5.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6a3ed627cee28a552b5176c172ae0abc5eb30925',
     ),
     'swiftmailer/swiftmailer' => 
     array (

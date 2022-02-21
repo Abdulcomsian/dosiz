@@ -70,6 +70,10 @@ body {
 	direction: rtl;
 }
 
+[type=email], [type=file], [type=number], [type=password], [type=tel], [type=url], code, samp, var {
+	text-align: right !important;
+}
+
 h1,
 h2,
 h3,
