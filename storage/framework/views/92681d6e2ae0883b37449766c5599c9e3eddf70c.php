@@ -57,7 +57,7 @@ unset($__errorArgs, $__bag); ?>
                                         <select name="role" id="role" class="form-control">
                                           <option disabled selected>Select Role</option>
                                           <?php $__currentLoopData = $roles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $all): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                          <option value="<?php echo e($all->id); ?>"><?php echo e($all->name); ?></option>
+                                          <option value="<?php echo e($all->name); ?>"><?php echo e($all->name); ?></option>
                                           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
                                         <?php $__errorArgs = ['role'];

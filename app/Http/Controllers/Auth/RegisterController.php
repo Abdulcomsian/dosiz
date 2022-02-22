@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -52,11 +52,11 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'phone' => ['required', 'string', 'min:10', 'max:13'],
+            'phone' => ['required', 'min:10', 'max:16'],
             'address' => ['required', 'string', 'min:5', 'max:500'], 
             'description' => ['required', 'string', 'min:5', 'max:1000'], 
             'date_of_birth' => ['required'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'min:8', 'confirmed'],
         ]);
     }
 
@@ -68,7 +68,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
@@ -77,5 +77,34 @@ class RegisterController extends Controller
             'date_of_birth' => $data['date_of_birth'],
             'password' => Hash::make($data['password']),
         ]);
+       $user->assignRole($data['role']);
+
+       return $user;
+
+    }
+
+    public function redirectTo()
+    {
+        if(Auth::user()->hasRole('Admin'))
+        {
+            $this->redirectTo = route('dashboard');
+
+            return $this->redirectTo;
+        }
+
+        elseif(Auth::user()->hasRole('Brand Manager'))
+        {
+            $this->redirectTo = route('dashboard');
+
+            return $this->redirectTo;
+        }
+
+        // else
+        // {
+        //     $this->redirectTo = route('home');
+
+        //     return $this->redirectTo;
+
+        // }
     }
 }

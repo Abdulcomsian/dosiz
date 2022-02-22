@@ -37,7 +37,7 @@
                                         <select name="role" id="role" class="form-control">
                                           <option disabled selected>Select Role</option>
                                           @foreach($roles as $all)
-                                          <option value="{{ $all->id }}">{{ $all->name }}</option>
+                                          <option value="{{ $all->name }}">{{ $all->name }}</option>
                                           @endforeach
                                         </select>
                                         @error('role')
