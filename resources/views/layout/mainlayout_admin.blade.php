@@ -14,5 +14,6 @@
   @endif
  @yield('content')
  @include('layout.partials.footer_admin-scripts')
+ @yield('js')
   </body>
 </html>

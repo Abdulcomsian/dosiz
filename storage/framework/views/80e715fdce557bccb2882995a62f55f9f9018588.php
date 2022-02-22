@@ -105,4 +105,5 @@
         <!-- Datatables CSS -->
         <link rel="stylesheet" href="<?php echo e(asset('assets_admin/plugins/datatables/datatables.min.css')); ?>">	
 		<!-- Main CSS -->
-        <link rel="stylesheet" href="<?php echo e(asset('assets_admin/css/style.css')); ?>"><?php /**PATH C:\wamp64\www\dosiz\resources\views/layout/partials/head_admin.blade.php ENDPATH**/ ?>
+        <link rel="stylesheet" href="<?php echo e(asset('assets_admin/css/style.css')); ?>">
+        <?php echo toastr_css(); ?><?php /**PATH C:\wamp64\www\dosiz\resources\views/layout/partials/head_admin.blade.php ENDPATH**/ ?>

@@ -25,4 +25,6 @@
 				<script src="../assets_admin/plugins/datatables/jquery.dataTables.min.js"></script>
 		<script src="../assets_admin/plugins/datatables/datatables.min.js"></script>
 		<!-- Custom JS -->
-		<script  src="../assets_admin/js/script.js"></script><?php /**PATH C:\wamp64\www\dosiz\resources\views/layout/partials/footer_admin-scripts.blade.php ENDPATH**/ ?>
+		<script  src="../assets_admin/js/script.js"></script>
+		<?php echo toastr_js(); ?>
+		<?php echo app('toastr')->render(); ?><?php /**PATH C:\wamp64\www\dosiz\resources\views/layout/partials/footer_admin-scripts.blade.php ENDPATH**/ ?>

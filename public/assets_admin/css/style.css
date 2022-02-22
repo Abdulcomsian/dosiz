@@ -74,6 +74,11 @@ body {
 	text-align: right !important;
 }
 
+.custom-control-input:checked~.custom-control-label::before {
+	border-color: #2b004f;
+    background-color: #2b004f;
+}
+
 h1,
 h2,
 h3,

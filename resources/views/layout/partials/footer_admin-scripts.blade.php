@@ -26,3 +26,5 @@
 		<script src="../assets_admin/plugins/datatables/datatables.min.js"></script>
 		<!-- Custom JS -->
 		<script  src="../assets_admin/js/script.js"></script>
+		@toastr_js
+		@toastr_render

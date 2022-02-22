@@ -23,4 +23,5 @@
 
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="assets/css/style.css">
+		@toastr_css
   
