@@ -147,7 +147,7 @@ textarea.form-control {
 	float: left;
 }
 .form-group {
-	margin-bottom: 1.25rem;
+	margin-bottom: 30px;
 }
 .input-group .form-control {
 	height: 40px;
@@ -1410,7 +1410,7 @@ button.bg-danger:hover {
 	right: 0;
 	top: 0;
 	z-index: 1001;
-	height: 60px;
+	padding: 17px 120px;
 }
 .header .header-left {
 	float: right;
@@ -1470,12 +1470,17 @@ button.bg-danger:hover {
     position: relative;
     z-index: 99;
 }
+.user-menu.nav > li{
+	padding-left: 25px;
+}
 .user-menu.nav > li > a {
-	color: #333;
+	color: #fff;
 	font-size: 14px;
 	line-height: 58px;
 	padding: 0 15px;
 	height: 60px;
+	position: relative;
+	top: 3px;
 }
 .user-menu.nav > li > a:hover,
 .user-menu.nav > li > a:focus {
@@ -2043,16 +2048,15 @@ html.menu-opened body {
     background-color: #fff;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	display: flex;
-    margin: 1.875rem auto;
-    max-width: 800px;
-    min-height: 500px;
+    margin: 160px auto;
     width: 100%;
+	max-width: 537px;
 }
 .login-wrapper .loginbox .login-left {
     align-items: center;
     background: linear-gradient(180deg, #2b004f, #2b004f);
-    border-radius: 0px 6px 6px 0px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
     flex-direction: column;
     justify-content: center;
     padding: 80px;
@@ -2064,23 +2068,24 @@ html.menu-opened body {
     display: flex;
     justify-content: center;
     padding: 40px;
-    width: 400px;
 }
 .login-wrapper .loginbox .login-right .login-right-wrap {
     max-width: 100%;
     flex: 0 0 100%;
 }
+.login-wrapper .loginbox .login-right .login-right-wrap form{
+	margin: 50px 0px;
+}
 .login-wrapper .loginbox .login-right h1 {
     font-size: 26px;
     font-weight: 500;
     margin-bottom: 5px;
-    text-align: center;
+	color: #CF2980;
 }
 .account-subtitle {
     color: #4c4c4c;
     font-size: 17px;
     margin-bottom: 1.875rem;
-    text-align: center;
 }
 .login-wrapper .loginbox .login-right .forgotpass a {
 	color: #a0a0a0;
@@ -2094,7 +2099,7 @@ html.menu-opened body {
 	margin-top: 1.875rem;
 }
 .login-wrapper .loginbox .login-right .dont-have a {
-	color: #333;
+	color: #CF2980;
 }
 .login-wrapper .loginbox .login-right .dont-have a:hover {
 	text-decoration: underline;
@@ -5021,4 +5026,243 @@ table.table-inbox tbody tr.checked {
 	.chat-window .chat-cont-left .chat-users-list a.media .media-body > div:first-child .user-last-chat {
 		max-width: 160px;
 	}
+}
+
+/*-----------------
+	 Footer
+-----------------------*/
+
+
+.footer {
+    background-color: #2B004F;
+	border-top: 1px solid #eceff0;
+	position: relative;
+}
+.footer:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom:0;
+	width: 100%;
+	height: 253px;
+	background-image: url(../img/footer-bg.png);
+	background-repeat: repeat;
+	background-position: center;
+}
+.footer .footer-top {
+	padding-top: 40px;
+	position: relative;
+	z-index: 9;
+	width: 100%;
+	max-width: 80%;
+	margin: auto;
+}
+.footer .footer-top .footer-about-content {
+	max-width: 315px;
+}
+.footer .footer-bottom {
+	position: relative;
+	z-index: 9;
+	width: 100%;
+	max-width: 80%;
+	margin: auto;
+}
+.footer-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+.footer .footer-widget.footer-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.footer .footer-widget .footer-logo {
+	margin-bottom: 15px;
+}
+.footer .footer-widget .footer-logo img {
+    max-height: 50px;
+    max-width: 100%;
+}
+.footer .footer-widget .footer-about-content p,
+.footer .footer-widget p {
+	color: #fff;
+}
+.footer .footer-widget .footer-about-content p:last-child {
+	margin-bottom: 0;
+}
+.footer .footer-menu ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+.footer .footer-menu ul li:last-child {
+	margin-bottom: 0;
+}
+.footer .footer-menu ul li a {
+	color: #fff;
+	transition: all 0.4s ease 0s;
+}
+.footer .footer-menu ul li a i {
+	margin-right: 5px;
+}
+.footer .footer-widget.footer-menu ul li a:hover {
+	color: #fff;
+	letter-spacing: 0.5px;
+	padding-right: 10px;
+}
+.footer-contact-info {
+	color: #26292c;
+}
+.footer-contact-info .footer-address {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.footer-contact-info .footer-address span {
+	margin-left: 20px;
+}
+.footer-contact-info .footer-address span i.fa-map-marker-alt {
+	font-size: 20px;
+}
+.footer-contact-info p i {
+	margin-left: 15px;
+}
+.footer .footer-bottom .copyright {
+    padding: 40px 0;
+}
+.home-page .footer .footer-bottom .copyright {
+	border-top: 1px solid #eceff0;
+}
+.footer .footer-bottom .copyright-text p {
+	color: #fff;
+}
+.footer .footer-bottom .copyright-text p a {
+	color: #09e5ab;
+	-webkit-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+.footer .footer-bottom .copyright-text p a:hover {
+	color: #26292c;
+}
+.footer .footer-bottom .copyright-text p.title {
+	font-weight: 400;
+	margin: 10px 0 0;
+}
+.footer .social-icon ul {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.footer .social-icon ul li {
+	margin-left: 22px;
+}
+.footer .social-icon ul li:last-child {
+	margin-right: 0;
+}
+.footer .social-icon ul li a {	
+	color: #fff;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	font-size: 20px;
+	transition: all 0.4s ease 0s;
+}
+.footer .social-icon ul{
+	margin-bottom: 22px;
+	margin-top: 5px;
+}
+.footer .social-icon{
+	text-align: center;
+}
+.footer .social-icon ul li a:hover {
+	color: #1e88e5;
+}
+
+/************ New Style - CSS **********/
+.login-wrapper .loginbox .login-right .login-right-wrap .inputIcon{
+	display: flex;
+	position: relative;
+}
+.login-wrapper .loginbox .login-right .login-right-wrap .inputIcon i{
+	position: absolute;
+    right: 18px;
+    top: 16px;
+    color: #838383;
+}
+.login-wrapper .loginbox .login-right .login-right-wrap .inputIcon input{
+	padding: 25px 45px 25px 25px;
+    background: #F4F6F8;
+    border-radius: 30px;
+	border: none;
+}
+.login-wrapper .loginbox .login-right .login-right-wrap button{
+	background: linear-gradient(270deg, #EE7047 0%, #F40990 100%);
+    border-radius: 30px;
+    border: none;
+    padding: 12px;
+}
+.footer .formDiv{
+	margin-bottom: 26px;
+}
+.footer .formDiv .inputBtn{
+	background: #C4C4C4;
+	display: flex;
+    width: 100%;
+	border-radius: 60px;
+}
+.footer .formDiv .inputBtn input{
+	padding: 0px;
+    border: none;
+    background: transparent;
+	width: 90%;
+	padding: 0px 20px;
+}
+.footer .formDiv .inputBtn button{
+	width: 10%;
+    border-radius: 19px 0px 0px 19px;
+    background: #D52582;
+    border: none;
+    height: 38px;
+	color: #fff;
+	font-size: 22px;
+}
+.footer .formDiv .inputDiv label{
+	color: #fff;
+	margin-bottom: 18px;
+}
+.footer .logoIconDiv{
+	display: flex;
+	justify-content: space-between;
+}
+.footer-menu-para{
+    padding: 0px 40px;
+	position: relative;
+}
+.footer-menu-para::after{
+	content: "";
+    width: 0.1px;
+    height: 100%;
+    position: absolute;
+    background-color: #B6B6B6;
+    top: 0px;
+    right: 0px;
+}
+.footer-menu-para::before{
+	content: "";
+    width: 0.1px;
+    height: 100%;
+    position: absolute;
+    background-color: #B6B6B6;
+    top: 0px;
+    left: 0px;
+}
+.footer-about{
+	padding-right: 90px;
 }

@@ -20,6 +20,7 @@ class CreateBrandProfilesTable extends Migration
             $table->string('brand_category');
             $table->string('brand_logo');
             $table->string('color');
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users'); 
             $table->timestamps();
         });

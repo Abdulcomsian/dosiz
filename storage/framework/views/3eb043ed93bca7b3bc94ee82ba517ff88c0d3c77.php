@@ -144,4 +144,4 @@
 			<!-- /Header Right Menu -->
 			
 		</div>
-		<!-- /Header -->
+		<!-- /Header --><?php /**PATH /Applications/Development/Web/Laravel/dosiz/resources/views/layout/partials/header_admin.blade.php ENDPATH**/ ?>
