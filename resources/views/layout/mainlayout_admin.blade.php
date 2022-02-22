@@ -7,10 +7,11 @@
   <body class="error-page">
   @endif
   <body>
-  @if(!Route::is(['login','register','forgot-password','lock-screen','error-404','error-500']))
+  @if(request()->is('login') || request()->is('register') || request()->is('password/reset'))
+  @else
   @include('layout.partials.header_admin')
- @include('layout.partials.nav_admin')
- @endif
+  @include('layout.partials.nav_admin')
+  @endif
  @yield('content')
  @include('layout.partials.footer_admin-scripts')
   </body>

@@ -38,10 +38,10 @@
         <title>Mentoring - Edit Blog Page</title>
         @endif
         @if(Route::is(['login']))
-        <title>Mentoring - Login</title>
+        <title>Login</title>
         @endif
         @if(Route::is(['register']))
-        <title>Mentoring - Register</title>
+        <title>Register</title>
         @endif
         @if(Route::is(['forgot-password']))
         <title>Mentoring - Forgot Password</title>

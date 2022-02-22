@@ -38,7 +38,7 @@
 							<li class="{{ Request::is('index') ? 'active' : '' }}">
 								<a href="index">Home</a>
 							</li>
-							<li class="has-submenu  <?php if($page=="dashboard" || $page=="book" || $page=="schedule-timings" || $page=="mentee-list" || $page=="profile-mentee"  || $page=="blog" || $page=="add-blog" || $page=="edit-blog" || $page=="chat" || $page=="invoices" || $page=="profile-settings" || $page=="reviews" || $page=="mentor-register") { echo 'active'; } ?>">
+							<li class="has-submenu  <?php if($page=="admin.dashboard" || $page=="book" || $page=="schedule-timings" || $page=="mentee-list" || $page=="profile-mentee"  || $page=="blog" || $page=="add-blog" || $page=="edit-blog" || $page=="chat" || $page=="invoices" || $page=="profile-settings" || $page=="reviews" || $page=="mentor-register") { echo 'active'; } ?>">
 								<a href="">Mentor <i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
 									<li class="<?php if($page=="dashboard") { echo 'active'; } ?>"><a href="dashboard">Mentor Dashboard</a></li>
@@ -113,7 +113,7 @@
 								</ul>
 							</li>
 							<li>
-							<a href="{{route('page')}}" target="_blank">Admin</a>
+							<a href="{{route('dashboard')}}" target="_blank">Admin</a>
 							</li>
 							<li class="login-link">
 								<a href="login">Login / Signup</a>
@@ -123,10 +123,10 @@
 					<ul class="nav header-navbar-rht">
 					@if(Route::is(['pagee','mentor-register','mentee-register']))
 						<li class="nav-item">
-							<a class="nav-link" href="login">Login</a>
+							<a class="nav-link" href="{{route('login')}}">Login</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link header-login" href="register">Register</a>
+							<a class="nav-link header-login" href="{{route('register')}}">Register</a>
 						</li>
 						@endif
 						@if(!Route::is(['pagee','mentor-register','mentee-register']))
@@ -148,7 +148,7 @@
 								</div>
 								<a class="dropdown-item" href="dashboard">Dashboard</a>
 								<a class="dropdown-item" href="profile-settings">Profile Settings</a>
-								<a class="dropdown-item" href="login">Logout</a>
+								<a class="dropdown-item" href="{{route('logout')}}">Logout</a>
 							</div>
 						</li>
 						<!-- /User Menu -->
