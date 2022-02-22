@@ -24,6 +24,8 @@ Route::prefix('admin')->middleware('can:admin')->group(function(){
 
     //category
     Route::resource('/category', 'Admin\categoryController');
+    //product
+    Route::resource('/product', 'Admin\productController');
 
 });
 /********************ADMIN ROUTES END******************************/

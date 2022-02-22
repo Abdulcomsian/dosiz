@@ -8,8 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    use HasFactory;
-    use SoftDeletes;
+    
     protected $guarded = [];
 
     public function category()

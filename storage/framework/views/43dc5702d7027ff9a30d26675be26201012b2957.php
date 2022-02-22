@@ -1,5 +1,5 @@
-@extends('layout.mainlayout_admin')
-@section('content')		
+
+<?php $__env->startSection('content'); ?>		
 <!-- Page Wrapper -->
 <div class="page-wrapper">
                 <div class="content container-fluid">
@@ -101,8 +101,8 @@
 				</div>			
 			</div>
 			<!-- /Page Wrapper -->
-@endsection
-@section('js')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('js'); ?>
 <script>
 $(document).ready(function() {
 
@@ -110,4 +110,5 @@ $(document).ready(function() {
      });
   });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.mainlayout_admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\www\dosiz\resources\views/admin/product/add_product.blade.php ENDPATH**/ ?>

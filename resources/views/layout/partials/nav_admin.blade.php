@@ -42,11 +42,11 @@
 							<!-- <li class="submenu"> 
 								<a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;"> -->
-							<li class="{{ Request::is('admin/products') ? 'active' : '' }}"> 
+							<li class="{{ Request::is('admin/category') ? 'active' : '' }}"> 
 								<a href="{{ url('/admin/category')}}"><span>Categories</span></a>
 							</li>
-							<li class="{{ Request::is('admin/products') ? 'active' : '' }}"> 
-								<a href="products"><span>Products</span></a>
+							<li class="{{ Request::is('admin/product') ? 'active' : '' }}"> 
+								<a href="{{ url('/admin/product') }}"><span>Products</span></a>
 							</li>
 							<li class="{{ Request::is('admin/blog') ? 'active' : '' }}">
 								<a href="{{ url('admin/blog') }}"><span> Blogs </span></a>

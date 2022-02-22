@@ -106,4 +106,11 @@
         <link rel="stylesheet" href="{{asset('assets_admin/plugins/datatables/datatables.min.css')}}">	
 		<!-- Main CSS -->
         <link rel="stylesheet" href="{{asset('assets_admin/css/style.css')}}">
+        <!-- multiple image css -->
+        <link rel="stylesheet" href="{{asset('assets_admin/css/Jquery-ui-min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets_admin/css/image-uploader.min.css')}}">
+
+        
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">
+
         @toastr_css

@@ -42,11 +42,11 @@
 							<!-- <li class="submenu"> 
 								<a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;"> -->
-							<li class="<?php echo e(Request::is('admin/products') ? 'active' : ''); ?>"> 
+							<li class="<?php echo e(Request::is('admin/category') ? 'active' : ''); ?>"> 
 								<a href="<?php echo e(url('/admin/category')); ?>"><span>Categories</span></a>
 							</li>
-							<li class="<?php echo e(Request::is('admin/products') ? 'active' : ''); ?>"> 
-								<a href="products"><span>Products</span></a>
+							<li class="<?php echo e(Request::is('admin/product') ? 'active' : ''); ?>"> 
+								<a href="<?php echo e(url('/admin/product')); ?>"><span>Products</span></a>
 							</li>
 							<li class="<?php echo e(Request::is('admin/blog') ? 'active' : ''); ?>">
 								<a href="<?php echo e(url('admin/blog')); ?>"><span> Blogs </span></a>
