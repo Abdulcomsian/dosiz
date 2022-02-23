@@ -7,7 +7,7 @@
   <body class="error-page">
   @endif
   <body>
-  @if(request()->is('login') || request()->is('/') || request()->is('register') || request()->is('password/reset'))
+  @if(request()->is('login') || request()->is('brand')  || request()->is('/') || request()->is('register') || request()->is('password/reset'))
   @include('layout.partials.header_admin')
   @else
   @include('layout.partials.header_admin')

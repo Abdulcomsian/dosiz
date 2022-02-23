@@ -17,6 +17,10 @@ Route::get('/', function () {
         return view('auth.register',compact('roles'));
     })->name('pagee');
 
+Route::get('/brand', function () {
+        return view('user.home');
+});
+
 
 
 /*****************ADMIN ROUTES*******************/

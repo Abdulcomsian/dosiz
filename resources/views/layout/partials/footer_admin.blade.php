@@ -7,9 +7,62 @@
 						<div class="row">
 							
 							
+						<div class="col-lg-4 col-md-4 desktopHide">
 							
+							<!-- Footer Widget -->
+							<div class="footer-widget footer-about">
+							<div class="footer-logo">
+									<img src="assets_admin/img/logo.png" alt="logo">
+								</div>
+								<div class="formDiv">
+									<form action="">
+										<div class="inputDiv">
+											<label for="">םימח םינוכדיע תלבקל ופרטצה</label>
+											<div class="inputBtn">
+												<input type="text">
+												<button><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="logoIconDiv">
+								
+								<div class="footer-about-content">
+									<div class="social-icon">
+										<ul>
+											<li>
+												<a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+											</li>
+											<li>
+												<a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+											</li>
+											<li>
+												<a href=""><i class="fa fa-telegram" aria-hidden="true"></i></a>
+											</li>
+										   
+										</ul>
+										<ul>
+											<li>
+												<a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+											</li>
+											<li>
+												<a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+											</li>
+											
+											<li>
+												<a href="#" target="_blank"><i class="fa fa-facebook"></i> </a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+								
+							</div>
+							<!-- /Footer Widget -->
 							
-							<div class="col-lg-3 col-md-6">
+						</div>
+							
+							<div class="col-lg-3 col-md-3">
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-menu footer-menu-list">
@@ -24,7 +77,7 @@
 								<!-- /Footer Widget -->
 								
 							</div>
-                            <div class="col-lg-5 col-md-6">
+                            <div class="col-lg-5 col-md-5">
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-menu footer-menu-para">
@@ -62,7 +115,7 @@
 								
 								
 							</div> -->
-                            <div class="col-lg-4 col-md-6">
+                            <div class="col-lg-4 col-md-4 mobileHide">
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-about">
@@ -120,7 +173,13 @@
 					</div>
 				</div>
 				<!-- /Footer Top -->
-				
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 text-center">
+							<img src="{{asset('assets_admin/img/line.svg')}}" alt="">
+						</div>
+					</div>
+				</div>
 				<!-- Footer Bottom -->
                 <div class="footer-bottom">
 					<div class="container-fluid">

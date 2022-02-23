@@ -1,6 +1,7 @@
 	<!-- jQuery -->
 	<script src="{{ asset('assets_admin/js/jquery-3.2.1.min.js') }}"></script>
 		
+		<script src="{{ asset('assets/js/slick.min.js') }}"></script>
 		<!-- Bootstrap Core JS -->
         <script src="{{ asset('assets_admin/js/popper.min.js') }}"></script>
         <script src="{{ asset('assets_admin/js/bootstrap.min.js') }}"></script>
@@ -35,6 +36,14 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js"></script>
         <script type="text/javascript">
         	$('.input-images').imageUploader();
+
+			$('.brandSlider').slick({
+				infinite: true,
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				rtl: true,
+				arrows: true
+			});
         </script>
 		@toastr_js
 		@toastr_render
