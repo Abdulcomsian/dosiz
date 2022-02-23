@@ -137,6 +137,8 @@
 				</li>
 				<li>
 				<img  src="../assets_admin/img/mail.svg" alt=""><a href="">העידי תחילש</a>
+						<a class="dropdown-item" href="{{route('logout')}}">Logout</a>
+					</div>
 				</li>
 				<!-- /User Menu -->
 				

@@ -17,5 +17,6 @@
 
  @include('layout.partials.footer_admin-scripts')
  @include('layout.partials.footer_admin')
+ @yield('js')
   </body>
 </html>
