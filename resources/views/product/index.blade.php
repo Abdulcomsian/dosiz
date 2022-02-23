@@ -51,7 +51,7 @@
 													
 													<td>{{ $product->name}}</td>
 													
-													<td>{{$product->image}}</td>
+													<td> <img src="{{asset($product->image)}}" width="100px" height="100px"></td>
 													<td>{{$product->category->name}}</td>
 													<td>{{$product->price}}</td>
 													<td>{{$product->status}}</td>
@@ -59,8 +59,8 @@
 													<td class="text-right">
 														<div class="actions" style="display:flex;">
 															
-															<a href="{{route('product.show')}}" class="btn btn-sm bg-success-light edit-product"><i class="fe fe-show"></i>Show</a>
-															<a href="{{route('product.edit',$product->id)}}" class="btn btn-sm bg-success-light edit-product"><i class="fe fe-pencil"></i>Edit</a>
+															<a href="{{route('product.show',$product->id)}}" target="_blank" style="height: 33px; margin-left: 10px" class="btn btn-sm bg-primary-light edit-product"><i class="fe fe-eye"></i> Show</a>
+															<a href="{{route('product.edit',$product->id)}}" style="height: 33px; margin-left: 10px" class="btn btn-sm bg-success-light edit-product"><i class="fe fe-pencil"></i> Edit</a>
 															<form method="POST" action="{{ route('product.destroy', $product->id) }}"  id="form_{{$product->id}}" >
 							                                    @method('Delete')
 							                                    @csrf()
@@ -82,9 +82,7 @@
 						                      </tr>
 						                      @endif
 						                    <tbody>
-						                      
-						                     
-										</table>
+						                </table>
 									</div>
 								</div>
 							</div>

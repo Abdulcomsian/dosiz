@@ -23,4 +23,5 @@
 
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="assets/css/style.css">
+		<?php echo toastr_css(); ?>
   <?php /**PATH C:\wamp64\www\dosiz\resources\views/layout/partials/head.blade.php ENDPATH**/ ?>

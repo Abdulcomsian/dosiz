@@ -16,6 +16,8 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users'); 
             $table->string('category_slug')->unique();
             $table->timestamps();
         });
@@ -30,4 +32,6 @@ class CreateCategoriesTable extends Migration
     {
         Schema::dropIfExists('categories');
     }
+
+    
 }

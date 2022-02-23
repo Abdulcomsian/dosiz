@@ -10,7 +10,7 @@
 							<div class="col-sm-12">
 								<h3 class="page-title">Add Category</h3>
 								<ul class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index_admin">Dashboard</a></li>
+									<li class="breadcrumb-item"><a href="{{route('dashboard')}}">Dashboard</a></li>
 									<li class="breadcrumb-item active">Add Category</li>
 								</ul>
 							</div>

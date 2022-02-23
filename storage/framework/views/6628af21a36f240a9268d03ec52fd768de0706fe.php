@@ -125,7 +125,10 @@
 						</div>
 						<a class="dropdown-item" href="profile">My Profile</a>
 						<a class="dropdown-item" href="settings">Settings</a>
-						<a class="dropdown-item" href="<?php echo e(route('logout')); ?>">Logout</a>
+						<a class="dropdown-item" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+						<form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
+                            <?php echo csrf_field(); ?>
+                        </form>
 					</div>
 				</li>
 				<!-- /User Menu -->

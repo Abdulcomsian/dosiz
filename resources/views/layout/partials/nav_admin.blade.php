@@ -6,7 +6,7 @@
 							<li class="menu-title"> 
 								<span><i class="fe fe-home"></i> Main</span>
 							</li>
-							<li class="{{ Request::is('admin/index_admin') ? 'active' : '' }}"> 
+							<li class="{{ Request::is('dashboard/dashboard') ? 'active' : '' }}"> 
 								<a href="{{route('dashboard')}}"><span>Dashboard</span></a>
 							</li>
 							<!-- <li class="{{ Request::is('admin/mentor') ? 'active' : '' }}"> 
@@ -42,11 +42,11 @@
 							<!-- <li class="submenu"> 
 								<a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;"> -->
-							<li class="{{ Request::is('admin/category') ? 'active' : '' }}"> 
-								<a href="{{ url('/admin/category')}}"><span>Categories</span></a>
+							<li class="{{ Request::is('dashboard/category') ? 'active' : '' }}"> 
+								<a href="{{ url('/dashboard/category')}}"><span>Categories</span></a>
 							</li>
-							<li class="{{ Request::is('admin/product') ? 'active' : '' }}"> 
-								<a href="{{ url('/admin/product') }}"><span>Products</span></a>
+							<li class="{{ Request::is('dashboard/product') ? 'active' : '' }}"> 
+								<a href="{{ url('/dashboard/product') }}"><span>Products</span></a>
 							</li>
 							<li class="{{ Request::is('admin/blog') ? 'active' : '' }}">
 								<a href="{{ url('admin/blog') }}"><span> Blogs </span></a>

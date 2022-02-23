@@ -17,18 +17,32 @@ Route::get('/', function () {
     })->name('pagee');
 
 
-
 /*****************ADMIN ROUTES*******************/
-Route::prefix('admin')->middleware('can:admin')->group(function(){
-    Route::get('/dashboard', 'Admin\adminController@dashboard')->name('dashboard');
+Route::prefix('dashboard')->middleware('dashboard')->group(function(){
+    Route::get('/dashboard', 'dashboardController@index')->name('dashboard');
 
     //category
-    Route::resource('/category', 'Admin\categoryController');
+    Route::resource('/category', 'categoryController');
     //product
-    Route::resource('/product', 'Admin\productController');
+    Route::resource('/product', 'productController');
 
 });
 /********************ADMIN ROUTES END******************************/
+
+
+/*****************ADMIN ROUTES*******************/
+Route::prefix('admin')->middleware('can:admin')->group(function(){
+
+});
+/********************ADMIN ROUTES END******************************/
+
+/*****************Brand Manager ROUTES*******************/
+Route::prefix('brand')->middleware('can:brand')->group(function(){
+
+});
+/********************Brand Manager ROUTES END******************************/
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
