@@ -6,19 +6,23 @@
             <div class="login-wrapper">
                 <div class="container">
                     <div class="loginbox">
-                        <div class="login-left">
+                        <!-- <div class="login-left">
                             <img class="img-fluid" src="../assets_admin/img/logo.png" alt="Logo">
-                        </div>
+                        </div> -->
                         <div class="login-right">
                             <div class="login-right-wrap">
-                                <h1>Register</h1>
-                                <p class="account-subtitle">Access to our dashboard</p>
+                                <h1>םשריהל</h1>
+                                <!-- <p class="account-subtitle">Access to our dashboard</p> -->
                                 
                                 <!-- Form -->
                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
                                     <div class="form-group">
-                                        <input class="form-control" type="text" placeholder="Name" id="name" name="name" value="{{ old('name') }}">
+                                        <label for="">םש<span>*</span></label>
+                                        <div class="inputIcon">
+                                            <img src="../../../public/assets_admin/img/user.svg" alt="">
+                                            <input class="form-control" type="text" placeholder="ךמש תא ןזה" id="name" name="name" value="{{ old('name') }}">
+                                        </div>
                                         @error('name')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -26,14 +30,18 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control @error('email') is-invalid @enderror" type="email" id="email" value="{{ old('email') }}" name="email" placeholder="Email">
+                                        <label for="">אימייל<span>*</span></label>
+                                        <div class="inputIcon">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <input class="form-control @error('email') is-invalid @enderror" type="email" id="email" value="{{ old('email') }}" name="email" placeholder="ךלש לאודה תבותכ">
+                                        </div>
                                         @error('email')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <select name="role" id="role" class="form-control">
                                           <option disabled selected>Select Role</option>
                                           @foreach($roles as $all)
@@ -77,20 +85,44 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-                                    </div>
+                                    </div> -->
                                     <div class="form-group">
-                                        <input class="form-control @error('password') is-invalid @enderror" type="password" id="password" name="password" placeholder="Password">
+                                        <label for="">סיסמה<span>* </span></label>
+                                        <div class="inputIcon">
+                                            <i class="fa fa-lock" aria-hidden="true"></i>
+                                            <input class="form-control @error('password') is-invalid @enderror" type="password" id="password" name="password" placeholder="Password">
+                                        </div>
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
+                                    <!-- <div class="form-group">
+                                        
+                                        <input class="form-control @error('password') is-invalid @enderror" type="password" id="confirm_password" name="confirm_password" placeholder="Password">
+                                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div> -->
                                     <div class="form-group">
-                                        <input class="form-control" type="password" id="password-confirm" name="password_confirmation" placeholder="Confirm Password">
+                                        <label for="">המסיס שדחמ סינכת<span>*</span></label>
+                                        <div class="inputIcon">
+                                            <i class="fa fa-lock" aria-hidden="true"></i>
+                                            <input class="form-control" type="password" id="password-confirm" name="password_confirmation" placeholder="Confirm Password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">ןופלט רפסמ<span>*</span></label>
+                                        <div class="inputIcon">
+                                            <i class="fa fa-mobile" aria-hidden="true"></i>
+                                            <input class="form-control" type="text" id="" name="" placeholder="םכלש ןופלטה רפסמ תא ודילקה">
+                                        </div>
                                     </div>
                                     <div class="form-group mb-0">
-                                        <button class="btn btn-primary btn-block" type="submit">Register</button>
+                                        <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
                                     </div>
                                 </form>
                                 <!-- /Form -->
@@ -107,7 +139,7 @@
                                 </div> -->
                                 <!-- /Social Login -->
                                 
-                                <div class="text-center dont-have">Already have an account? <a href="login">Login</a></div>
+                                <div class="text-center dont-have"> ?ןובשח ךל שי רבכ <a href="login">סנכיהל ידכ ןאכ ץחל</a></div>
                             </div>
                         </div>
                     </div>

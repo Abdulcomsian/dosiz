@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-        return view('index');
+    $roles = DB::table('roles')->where('name','!=','admin')->get();
+        return view('auth.register',compact('roles'));
     })->name('pagee');
 
 

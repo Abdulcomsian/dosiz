@@ -7,13 +7,16 @@
   <body class="error-page">
   @endif
   <body>
-  @if(request()->is('login') || request()->is('register') || request()->is('password/reset'))
+  @if(request()->is('login') || request()->is('/') || request()->is('register') || request()->is('password/reset'))
+  @include('layout.partials.header_admin')
   @else
   @include('layout.partials.header_admin')
   @include('layout.partials.nav_admin')
   @endif
  @yield('content')
+
  @include('layout.partials.footer_admin-scripts')
+ @include('layout.partials.footer_admin')
  @yield('js')
   </body>
 </html>

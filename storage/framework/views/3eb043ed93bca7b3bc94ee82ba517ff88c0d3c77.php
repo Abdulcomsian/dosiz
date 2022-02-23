@@ -137,8 +137,6 @@
 				</li>
 				<li>
 				<img  src="../assets_admin/img/mail.svg" alt=""><a href="">העידי תחילש</a>
-						<a class="dropdown-item" href="{{route('logout')}}">Logout</a>
-					</div>
 				</li>
 				<!-- /User Menu -->
 				
@@ -146,4 +144,4 @@
 			<!-- /Header Right Menu -->
 			
 		</div>
-		<!-- /Header -->
+		<!-- /Header --><?php /**PATH /Applications/Development/Web/Laravel/dosiz/resources/views/layout/partials/header_admin.blade.php ENDPATH**/ ?>
