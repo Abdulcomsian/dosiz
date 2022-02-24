@@ -42,9 +42,11 @@
 							<!-- <li class="submenu"> 
 								<a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;"> -->
+							<?php if(Auth::user()->hasRole('Admin')): ?>
 							<li class="<?php echo e(Request::is('dashboard/category') ? 'active' : ''); ?>"> 
 								<a href="<?php echo e(url('/dashboard/category')); ?>"><span>Categories</span></a>
 							</li>
+							<?php endif; ?>
 							<li class="<?php echo e(Request::is('dashboard/product') ? 'active' : ''); ?>"> 
 								<a href="<?php echo e(url('/dashboard/product')); ?>"><span>Products</span></a>
 							</li>

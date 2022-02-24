@@ -42,9 +42,11 @@
 							<!-- <li class="submenu"> 
 								<a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;"> -->
+							@if(Auth::user()->hasRole('Admin'))
 							<li class="{{ Request::is('dashboard/category') ? 'active' : '' }}"> 
 								<a href="{{ url('/dashboard/category')}}"><span>Categories</span></a>
 							</li>
+							@endif
 							<li class="{{ Request::is('dashboard/product') ? 'active' : '' }}"> 
 								<a href="{{ url('/dashboard/product') }}"><span>Products</span></a>
 							</li>
