@@ -6,7 +6,7 @@
 							<li class="menu-title"> 
 								<span><i class="fe fe-home"></i> Main</span>
 							</li>
-							<li class="<?php echo e(Request::is('admin/index_admin') ? 'active' : ''); ?>"> 
+							<li class="<?php echo e(Request::is('dashboard/dashboard') ? 'active' : ''); ?>"> 
 								<a href="<?php echo e(route('dashboard')); ?>"><span>Dashboard</span></a>
 							</li>
 							<!-- <li class="<?php echo e(Request::is('admin/mentor') ? 'active' : ''); ?>"> 
@@ -42,11 +42,11 @@
 							<!-- <li class="submenu"> 
 								<a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;"> -->
-							<li class="<?php echo e(Request::is('admin/category') ? 'active' : ''); ?>"> 
-								<a href="<?php echo e(url('/admin/category')); ?>"><span>Categories</span></a>
+							<li class="<?php echo e(Request::is('dashboard/category') ? 'active' : ''); ?>"> 
+								<a href="<?php echo e(url('/dashboard/category')); ?>"><span>Categories</span></a>
 							</li>
-							<li class="<?php echo e(Request::is('admin/product') ? 'active' : ''); ?>"> 
-								<a href="<?php echo e(url('/admin/product')); ?>"><span>Products</span></a>
+							<li class="<?php echo e(Request::is('dashboard/product') ? 'active' : ''); ?>"> 
+								<a href="<?php echo e(url('/dashboard/product')); ?>"><span>Products</span></a>
 							</li>
 							<li class="<?php echo e(Request::is('admin/blog') ? 'active' : ''); ?>">
 								<a href="<?php echo e(url('admin/blog')); ?>"><span> Blogs </span></a>

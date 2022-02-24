@@ -24,8 +24,9 @@
 						<div class="col-sm-12">
 							<div class="card">
 								<div class="card-body">
-									
+									@if(Auth::user()->hasRole('Brand Manager'))
 									<a href="{{route('category.create')}}" class="btn btn-primary">Add New <i class="fa fa-plus"></i></a><br><br>
+									@endif
 									@if(session()->has('message'))
 					                	<div class="alert alert-success">
 					                  		{{session('message')}}
@@ -37,6 +38,9 @@
 												<tr>
 													<th>Category Name</th>
 													<th>Category Slug</th>
+													@if(Auth::user()->hasRole('Admin'))
+													<th>Brand Manager</th>
+													@endif
 													<th class="text-right">Action</th>
 												</tr>
 											</thead>
@@ -51,6 +55,9 @@
 													</td>
 													
 													<td>{{$category->category_slug}}</td>
+													@if(Auth::user()->hasRole('Admin'))
+													<td>{{ $category->User->name}}</td>
+													@endif
 
 													<td class="text-right">
 														<div class="actions" style="display:flex;">

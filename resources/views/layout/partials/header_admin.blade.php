@@ -138,6 +138,10 @@
 				<li>
 				<img  src="../assets_admin/img/mail.svg" alt=""><a href="">העידי תחילש</a>
 						<a class="dropdown-item" href="{{route('logout')}}">Logout</a>
+						<a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+						<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
 					</div>
 				</li>
 				<!-- /User Menu -->
