@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use DB;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,24 +13,22 @@ use DB;
 |
 */
 Route::get('/', function () {
-    $roles = DB::table('roles')->where('name','!=','admin')->get();
-        return view('auth.register',compact('roles'));
+        return view('index');
     })->name('pagee');
-
-/*****************FRONTEND ROUTES*******************/
-Route::get('/brand', function () {
-        return view('user.home');
-});
-
-
 /*****************ADMIN ROUTES*******************/
 Route::prefix('dashboard')->middleware('dashboard')->group(function(){
     Route::get('/dashboard', 'dashboardController@index')->name('dashboard');
+    Route::get('/get_sub_category/{id}', 'productController@get_sub_category');
 
     //category
     Route::resource('/category', 'categoryController');
     //product
     Route::resource('/product', 'productController');
+    //blog
+    Route::resource('/blog', 'BlogController');  
+
+    //blog
+    Route::resource('/brand_profile', 'BrandProfileController');
 
 });
 /********************ADMIN ROUTES END******************************/
@@ -38,6 +36,11 @@ Route::prefix('dashboard')->middleware('dashboard')->group(function(){
 
 /*****************ADMIN ROUTES*******************/
 Route::prefix('admin')->middleware('can:admin')->group(function(){
+    //category
+    Route::resource('/sub_category', 'Admin\SubCategoryController');
+    
+    //category
+    Route::resource('/city', 'Admin\CityController');
 
 });
 /********************ADMIN ROUTES END******************************/

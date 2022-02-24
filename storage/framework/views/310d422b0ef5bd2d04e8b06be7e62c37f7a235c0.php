@@ -47,14 +47,24 @@
 								<a href="<?php echo e(url('/dashboard/category')); ?>"><span>Categories</span></a>
 							</li>
 							<?php endif; ?>
+							<?php if(Auth::user()->hasRole('Admin')): ?>
+							<li class="<?php echo e(Request::is('admin/sub_category') ? 'active' : ''); ?>"> 
+								<a href="<?php echo e(url('/admin/sub_category')); ?>"><span>Sub Category</span></a>
+							</li>
+							<?php endif; ?>
 							<li class="<?php echo e(Request::is('dashboard/product') ? 'active' : ''); ?>"> 
 								<a href="<?php echo e(url('/dashboard/product')); ?>"><span>Products</span></a>
 							</li>
-							<li class="<?php echo e(Request::is('admin/blog') ? 'active' : ''); ?>">
-								<a href="<?php echo e(url('admin/blog')); ?>"><span> Blogs </span></a>
+							<?php if(Auth::user()->hasRole('Admin')): ?>
+							<li class="<?php echo e(Request::is('admin/city') ? 'active' : ''); ?>"> 
+								<a href="<?php echo e(url('/admin/city')); ?>"><span>City</span></a>
 							</li>
-							<li class="<?php echo e(Request::is('admin/brand-profile') ? 'active' : ''); ?>">
-								<a href="<?php echo e(url('admin/brand-profile')); ?>"><span> Profile </span></a>
+							<?php endif; ?>
+							<li class="<?php echo e(Request::is('dashboard/blog') ? 'active' : ''); ?>">
+								<a href="<?php echo e(url('dashboard/blog')); ?>"><span> Blogs </span></a>
+							</li>
+							<li class="<?php echo e(Request::is('dashboard/brand_profile') ? 'active' : ''); ?>">
+								<a href="<?php echo e(url('dashboard/brand_profile')); ?>"><span> Profile </span></a>
 							</li>
 									<!-- <li><a class="<?php echo e(Request::is('admin/blog-details') ? 'active' : ''); ?>" href="<?php echo e(url('admin/blog-details')); ?>"> Blog Details </a></li> -->
 									<!-- <li><a class="<?php echo e(Request::is('admin/add-blog') ? 'active' : ''); ?>" href="<?php echo e(url('admin/add-blog')); ?>"> Add Blog </a></li> -->

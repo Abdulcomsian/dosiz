@@ -29,5 +29,19 @@ class HelperFunctions
         
         $path  = 'uploads/product_images/';
         return $path;
+    }   
+
+    public static function blogImagePath($user = null)
+    {
+        
+        $path  = 'uploads/blog/';
+        return $path;
+    }   
+
+    public static function brandProfileImagePath($user = null)
+    {
+        
+        $path  = 'uploads/brand_profile/';
+        return $path;
     }
 }
