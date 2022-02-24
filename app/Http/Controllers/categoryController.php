@@ -13,16 +13,7 @@ class categoryController extends Controller
 {
     public function index()
     {
-        $user_id = Auth::id();
-        if(Auth::user()->hasRole('Admin'))
-        {
-            $categories = Category::get();
-        }
-        elseif(Auth::user()->hasRole('Brand Manager'))
-        {
-            $categories = Category::where('user_id',$user_id)->get();
-        }
-        
+        $categories = Category::get();
         return view('category.index', compact('categories'));
     }      
 
@@ -38,7 +29,6 @@ class categoryController extends Controller
 
     public function store(Request $request)
     {
-        $user_id = Auth::id();
         $this->validate($request,[ 
             'name'=>'required', 
             'category_slug'=>'required|unique:categories,name,'.$request->id,
@@ -46,9 +36,7 @@ class categoryController extends Controller
         try {
         $category= new Category;
         $category->name = $request->name;
-        $category->user_id = $user_id;
         $category->category_slug = $request->category_slug;
-
         $category->save();
             toastSuccess('Successfully Added');
             return redirect('dashboard/category');
@@ -62,7 +50,6 @@ class categoryController extends Controller
     public function update(Request $request)
     {
         // dd($request);
-        $user_id = Auth::id();
         $this->validate($request,[ 
             'name'=>'required', 
             // 'category_slug'=>'required|unique:categories,category_slug,'. $request->id .'id',
@@ -70,7 +57,6 @@ class categoryController extends Controller
         try {
         $category= Category::find($request->category_id);
         $category->name = $request->name;
-        $category->user_id = $user_id;
         $category->category_slug = $request->category_slug;
         $category->save();
         toastSuccess('Successfully Update');

@@ -24,7 +24,7 @@
 						<div class="col-sm-12">
 							<div class="card">
 								<div class="card-body">
-									<?php if(Auth::user()->hasRole('Brand Manager')): ?>
+									<?php if(Auth::user()->hasRole('Admin')): ?>
 									<a href="<?php echo e(route('category.create')); ?>" class="btn btn-primary">Add New <i class="fa fa-plus"></i></a><br><br>
 									<?php endif; ?>
 									<?php if(session()->has('message')): ?>
@@ -39,27 +39,18 @@
 												<tr>
 													<th>Category Name</th>
 													<th>Category Slug</th>
-													<?php if(Auth::user()->hasRole('Admin')): ?>
-													<th>Brand Manager</th>
-													<?php endif; ?>
 													<th class="text-right">Action</th>
 												</tr>
 											</thead>
 											<tbody>
 												<?php if(count($categories) > 0): ?>
 												<tr>
-
 													<?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-													
 													<td>
 														<?php echo e($category->name); ?>
 
 													</td>
-													
 													<td><?php echo e($category->category_slug); ?></td>
-													<?php if(Auth::user()->hasRole('Admin')): ?>
-													<td><?php echo e($category->User->name); ?></td>
-													<?php endif; ?>
 
 													<td class="text-right">
 														<div class="actions" style="display:flex;">
