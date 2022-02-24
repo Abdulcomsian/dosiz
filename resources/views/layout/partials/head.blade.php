@@ -8,9 +8,10 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 		
-		<!-- Fontawesome CSS -->
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+		<!-- Fontawesome CSS --> 
+		<link rel="stylesheet" href="{{asset('assets_admin/css/font-awesome.min.css')}}">
+		<link rel="stylesheet" href="{{asset('assets_admin/plugins/fontawesome/css/fontawesome.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets_admin/plugins/fontawesome/css/all.min.css')}}">
 		<!-- Daterangepikcer CSS -->
 		<link rel="stylesheet" href="assets/plugins/daterangepicker/daterangepicker.css">
 		<!-- Datetimepicker CSS -->
@@ -23,5 +24,7 @@
 
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/slick-theme.css')}}">
 		@toastr_css
   

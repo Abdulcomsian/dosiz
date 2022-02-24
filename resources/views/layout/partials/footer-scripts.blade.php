@@ -1,6 +1,7 @@
 <!-- jQuery -->
 <script src="assets/js/jquery.min.js"></script>
 		
+<script src="{{ asset('assets/js/slick.min.js') }}"></script>
 		<!-- Bootstrap Core JS -->
 		<script src="assets/js/popper.min.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
@@ -23,3 +24,39 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6adZVdzTvBpE2yBRK8cDfsss8QXChK0I"></script>
 		<script src="assets/js/map.js"></script>
 		@endif
+
+		<script>
+				$('.brandSlider').slick({
+				infinite: true,
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				rtl: true,
+				arrows: true,
+				responsive: [
+						{
+						breakpoint: 1200,
+						settings: {
+							slidesToShow: 4,
+							slidesToScroll: 1,
+						}
+						},
+						{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1
+						}
+						},
+						{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+						}
+						// You can unslick at a given breakpoint now by adding:
+						// settings: "unslick"
+						// instead of a settings object
+					]
+			});
+		</script>
