@@ -17,6 +17,7 @@ Route::get('/', function () {
         return view('auth.register',compact('roles'));
     })->name('pagee');
 
+/*****************FRONTEND ROUTES*******************/
 Route::get('/brand', function () {
         return view('user.home');
 });
