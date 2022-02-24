@@ -19,7 +19,7 @@
                                     <div class="form-group">
                                         <label for="">םש<span>*</span></label>
                                         <div class="inputIcon">
-                                            <img src="../../../public/assets_admin/img/user.svg" alt="">
+                                            <img src="<?php echo e(asset('assets_admin/img/user.svg')); ?>" alt="">
                                             <input class="form-control" type="text" placeholder="ךמש תא ןזה" id="name" name="name" value="<?php echo e(old('name')); ?>">
                                         </div>
                                         <?php $__errorArgs = ['name'];
@@ -38,7 +38,7 @@ unset($__errorArgs, $__bag); ?>
                                     <div class="form-group">
                                         <label for="">אימייל<span>*</span></label>
                                         <div class="inputIcon">
-                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <img src="<?php echo e(asset('assets_admin/img/email.svg')); ?>" alt="">
                                             <input class="form-control <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -172,7 +172,7 @@ unset($__errorArgs, $__bag); ?>
                                     <div class="form-group">
                                         <label for="">סיסמה<span>* </span></label>
                                         <div class="inputIcon">
-                                            <i class="fa fa-lock" aria-hidden="true"></i>
+                                        <img src="<?php echo e(asset('assets_admin/img/password.svg')); ?>" alt="">
                                             <input class="form-control <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -221,14 +221,14 @@ unset($__errorArgs, $__bag); ?>
                                     <div class="form-group">
                                         <label for="">המסיס שדחמ סינכת<span>*</span></label>
                                         <div class="inputIcon">
-                                            <i class="fa fa-lock" aria-hidden="true"></i>
+                                        <img src="<?php echo e(asset('assets_admin/img/password.svg')); ?>" alt="">
                                             <input class="form-control" type="password" id="password-confirm" name="password_confirmation" placeholder="Confirm Password">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="">ןופלט רפסמ<span>*</span></label>
                                         <div class="inputIcon">
-                                            <i class="fa fa-mobile" aria-hidden="true"></i>
+                                        <img src="<?php echo e(asset('assets_admin/img/mobile.svg')); ?>" alt="">
                                             <input class="form-control" type="text" id="" name="" placeholder="םכלש ןופלטה רפסמ תא ודילקה">
                                         </div>
                                     </div>

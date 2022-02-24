@@ -20,7 +20,7 @@
                                     <div class="form-group">
                                         <label for="">םש<span>*</span></label>
                                         <div class="inputIcon">
-                                            <img src="../../../public/assets_admin/img/user.svg" alt="">
+                                            <img src="{{asset('assets_admin/img/user.svg')}}" alt="">
                                             <input class="form-control" type="text" placeholder="ךמש תא ןזה" id="name" name="name" value="{{ old('name') }}">
                                         </div>
                                         @error('name')
@@ -32,7 +32,7 @@
                                     <div class="form-group">
                                         <label for="">אימייל<span>*</span></label>
                                         <div class="inputIcon">
-                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <img src="{{asset('assets_admin/img/email.svg')}}" alt="">
                                             <input class="form-control @error('email') is-invalid @enderror" type="email" id="email" value="{{ old('email') }}" name="email" placeholder="ךלש לאודה תבותכ">
                                         </div>
                                         @error('email')
@@ -89,7 +89,7 @@
                                     <div class="form-group">
                                         <label for="">סיסמה<span>* </span></label>
                                         <div class="inputIcon">
-                                            <i class="fa fa-lock" aria-hidden="true"></i>
+                                        <img src="{{asset('assets_admin/img/password.svg')}}" alt="">
                                             <input class="form-control @error('password') is-invalid @enderror" type="password" id="password" name="password" placeholder="Password">
                                         </div>
                                         @error('password')
@@ -110,14 +110,14 @@
                                     <div class="form-group">
                                         <label for="">המסיס שדחמ סינכת<span>*</span></label>
                                         <div class="inputIcon">
-                                            <i class="fa fa-lock" aria-hidden="true"></i>
+                                        <img src="{{asset('assets_admin/img/password.svg')}}" alt="">
                                             <input class="form-control" type="password" id="password-confirm" name="password_confirmation" placeholder="Confirm Password">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="">ןופלט רפסמ<span>*</span></label>
                                         <div class="inputIcon">
-                                            <i class="fa fa-mobile" aria-hidden="true"></i>
+                                        <img src="{{asset('assets_admin/img/mobile.svg')}}" alt="">
                                             <input class="form-control" type="text" id="" name="" placeholder="םכלש ןופלטה רפסמ תא ודילקה">
                                         </div>
                                     </div>
