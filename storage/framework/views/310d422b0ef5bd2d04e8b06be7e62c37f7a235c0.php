@@ -7,7 +7,7 @@
 								<span><i class="fe fe-home"></i> Main</span>
 							</li>
 							<li class="<?php echo e(Request::is('admin/index_admin') ? 'active' : ''); ?>"> 
-								<a href="index_admin"><span>Dashboard</span></a>
+								<a href="<?php echo e(route('dashboard')); ?>"><span>Dashboard</span></a>
 							</li>
 							<!-- <li class="<?php echo e(Request::is('admin/mentor') ? 'active' : ''); ?>"> 
 								<a href="mentor"><span>Mentor</span></a>
@@ -43,10 +43,13 @@
 								<a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;"> -->
 							<li class="<?php echo e(Request::is('admin/products') ? 'active' : ''); ?>"> 
+								<a href="<?php echo e(url('/admin/category')); ?>"><span>Categories</span></a>
+							</li>
+							<li class="<?php echo e(Request::is('admin/products') ? 'active' : ''); ?>"> 
 								<a href="products"><span>Products</span></a>
 							</li>
 							<li class="<?php echo e(Request::is('admin/blog') ? 'active' : ''); ?>">
-								<a href="<?php echo e(url('admin/blog')); ?>"><span> Blog </span></a>
+								<a href="<?php echo e(url('admin/blog')); ?>"><span> Blogs </span></a>
 							</li>
 							<li class="<?php echo e(Request::is('admin/brand-profile') ? 'active' : ''); ?>">
 								<a href="<?php echo e(url('admin/brand-profile')); ?>"><span> Profile </span></a>

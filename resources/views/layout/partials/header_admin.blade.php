@@ -125,18 +125,8 @@
 						</div>
 						<a class="dropdown-item" href="profile">My Profile</a>
 						<a class="dropdown-item" href="settings">Settings</a>
-						<a class="dropdown-item" href="login">Logout</a>
-					</div> -->
-					<img  src="../assets_admin/img/home.svg" alt=""><a href=""> תיבה ףד </a>
-				</li>
-				<li>
-				<img  src="../assets_admin/img/lock.svg" alt=""><a href="">תונכרצ ןויכרא</a>
-				</li>
-				<li>
-				<img  src="../assets_admin/img/glases.svg" alt=""><a href="">םירמאמ</a>
-				</li>
-				<li>
-				<img  src="../assets_admin/img/mail.svg" alt=""><a href="">העידי תחילש</a>
+						<a class="dropdown-item" href="{{route('logout')}}">Logout</a>
+					</div>
 				</li>
 				<!-- /User Menu -->
 				

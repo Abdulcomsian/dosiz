@@ -14,5 +14,6 @@
   <?php endif; ?>
  <?php echo $__env->yieldContent('content'); ?>
  <?php echo $__env->make('layout.partials.footer_admin-scripts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+ <?php echo $__env->yieldContent('js'); ?>
   </body>
 </html><?php /**PATH C:\wamp64\www\dosiz\resources\views/layout/mainlayout_admin.blade.php ENDPATH**/ ?>

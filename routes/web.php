@@ -23,6 +23,9 @@ Route::get('/', function () {
 Route::prefix('admin')->middleware('can:admin')->group(function(){
     Route::get('/dashboard', 'Admin\adminController@dashboard')->name('dashboard');
 
+    //category
+    Route::resource('/category', 'Admin\categoryController');
+
 });
 /********************ADMIN ROUTES END******************************/
 Auth::routes();

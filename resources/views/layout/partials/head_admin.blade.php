@@ -106,3 +106,4 @@
         <link rel="stylesheet" href="{{asset('assets_admin/plugins/datatables/datatables.min.css')}}">	
 		<!-- Main CSS -->
         <link rel="stylesheet" href="{{asset('assets_admin/css/style.css')}}">
+        @toastr_css
