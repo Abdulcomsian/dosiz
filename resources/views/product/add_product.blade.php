@@ -75,6 +75,13 @@
 					                                        </select>
 					                                        <div style="color:red;">{{$errors->first('category_id')}}</div> <br>
 					                                    </div>
+
+					                                    <div class="form-group">
+											                <label for="sub_category">Select Sub Category:</label>
+											                <select name="sub_category" class="form-control" >
+											                <option>--Sub Category--</option>
+											                </select>
+											            </div>
 					                                <!-- </div>
 					                                <div class="col-md-6">
 					                                    <div class="form-group">
@@ -131,8 +138,37 @@
 <script>
 $(document).ready(function() {
 
+	jQuery(document).ready(function ()
+    {
+            jQuery('select[name="category_id"]').on('change',function(){
+               var categoryID = jQuery(this).val();
+               console.log(categoryID);
+               if(categoryID)
+               {
+                  jQuery.ajax({
+                     url : '{{url("/dashboard/get_sub_category/")}}' +'/' +categoryID,
+                     type : "GET",
+                     dataType : "json",
+                     success:function(data)
+                     {
+                        console.log(data);
+                        jQuery('select[name="sub_category"]').empty();
+                        jQuery.each(data, function(key,value){
+                           $('select[name="sub_category"]').append('<option value="'+ key +'">'+ value +'</option>');
+                        });
+                     }
+                  });
+               }
+               else
+               {
+                  $('select[name="sub_category"]').empty();
+               }
+            });
+    });
+
     $('.summernote').summernote({
      });
+
 
     
   });

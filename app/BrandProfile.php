@@ -8,12 +8,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class BrandProfile extends Model
 {
-    use HasFactory, SoftDeletes;
 
     protected $guarded = [];
-    // protected $fillable = [
-    //     'brand_name', 'city','brand_category','brand_logo','color',
-    // ];
+    
+
+    protected $casts = [
+        'color' => 'array',
+        'font' => 'array',
+    ];
 
     public function User()
     {

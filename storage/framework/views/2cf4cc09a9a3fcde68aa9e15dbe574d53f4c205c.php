@@ -24,8 +24,9 @@
 						<div class="col-sm-12">
 							<div class="card">
 								<div class="card-body">
-									
+									<?php if(Auth::user()->hasRole('Brand Manager')): ?>
 									<a href="<?php echo e(route('product.create')); ?>" class="btn btn-primary">Add New <i class="fa fa-plus"></i></a><br><br>
+									<?php endif; ?>
 									<?php if(session()->has('message')): ?>
 					                	<div class="alert alert-success">
 					                  		<?php echo e(session('message')); ?>

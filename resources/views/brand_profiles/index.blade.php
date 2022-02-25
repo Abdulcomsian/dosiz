@@ -1,0 +1,103 @@
+@extends('layout.mainlayout_admin')
+@include('layouts.sweetalert.sweetalert_css')
+@section('content')		
+
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row">
+							<div class="col-sm-12">
+								<h3 class="page-title">Brand Profile</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index">Dashboard</a></li>
+									<li class="breadcrumb-item active">Brand Profile</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card">
+								<div class="card-body">
+									@if(Auth::user()->hasRole('Brand Manager'))
+									<a href="{{route('brand_profile.create')}}" class="btn btn-primary">Add New <i class="fa fa-plus"></i></a><br><br>
+									@endif
+									@if(session()->has('message'))
+					                	<div class="alert alert-success">
+					                  		{{session('message')}}
+					                  	</div><br><br>
+					              	@endif
+									<div class="table-responsive">
+										<table class="datatable table table-hover table-center mb-0">
+											<thead>
+												<tr>
+													<th>Brand Name</th>
+													<th>Brand Feature Image</th>
+													<th>Brand Category</th>
+													<th>Brand Status</th>
+													<th class="text-right">Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												@if(count($brand_profiles) > 0)
+												<tr>
+
+													@foreach($brand_profiles as $brand_profile)
+													
+													<td>{{ $brand_profile->name}}</td>
+													
+													<td> <img src="{{asset($brand_profile->image)}}" width="100px" height="100px"></td>
+													<td>{{$brand_profile->category->name}}</td>
+													<td>{{$brand_profile->status}}</td>
+
+													<td class="text-right">
+														<div class="actions" style="display:flex;">
+															
+															<a href="{{route('brand_profile.show',$brand_profile->id)}}" target="_blank" style="height: 33px; margin-left: 10px" class="btn btn-sm bg-primary-light edit-brand_profile"><i class="fe fe-eye"></i> Show</a>
+															<a href="{{route('brand_profile.edit',$brand_profile->id)}}" style="height: 33px; margin-left: 10px" class="btn btn-sm bg-success-light edit-brand_profile"><i class="fe fe-pencil"></i> Edit</a>
+															<form method="POST" action="{{ route('brand_profile.destroy', $brand_profile->id) }}"  id="form_{{$brand_profile->id}}" >
+							                                    @method('Delete')
+							                                    @csrf()
+
+							                                    <button type="submit" id="{{$brand_profile->id}}" class="confirm btn btn-sm bg-danger-light btn-active-color-primary btn-sm">
+							                                        <!--begin::Svg Icon | path: icons/duotone/General/Trash.svg-->
+							                                     <i class="fe fe-trash"></i> Delete
+							                                        <!--end::Svg Icon-->
+							                                    </button>
+							                                </form>
+															
+														</div>
+													</td>
+												</tr>
+												 @endforeach
+												@else
+												<tr>
+						                        <td colspan="6" style="text-align: center;"><strong> No Brand Profile Created Yet </strong></td>
+						                      </tr>
+						                      @endif
+						                    <tbody>
+						                </table>
+									</div>
+								</div>
+							</div>
+						</div>			
+					</div>
+					
+				</div>			
+			</div>
+			<!-- /Page Wrapper -->
+
+		
+@endsection
+
+@section('js')
+@include('layouts.sweetalert.sweetalert_js')
+	<script type="text/javascript">
+		
+	</script>
+@endsection
