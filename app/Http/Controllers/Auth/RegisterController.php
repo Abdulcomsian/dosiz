@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use Auth;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -53,9 +54,6 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'phone' => ['required', 'min:10', 'max:16'],
-            'address' => ['required', 'string', 'min:5', 'max:500'], 
-            'description' => ['required', 'string', 'min:5', 'max:1000'], 
-            'date_of_birth' => ['required'],
             'password' => ['required', 'min:8', 'confirmed'],
         ]);
     }
@@ -72,12 +70,9 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
-            'address' => $data['address'],
-            'description' => $data['description'],
-            'date_of_birth' => $data['date_of_birth'],
             'password' => Hash::make($data['password']),
         ]);
-       $user->assignRole($data['role']);
+       $user->assignRole('Brand Manager');
 
        return $user;
 

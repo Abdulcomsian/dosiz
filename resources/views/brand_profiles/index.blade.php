@@ -24,8 +24,11 @@
 						<div class="col-sm-12">
 							<div class="card">
 								<div class="card-body">
-									@if(Auth::user()->hasRole('Brand Manager'))
+									@if(Auth::user()->hasRole('Brand Manager') && $brand_profiles == null)
 									<a href="{{route('brand_profile.create')}}" class="btn btn-primary">Add New <i class="fa fa-plus"></i></a><br><br>
+									@endif
+									@if(Auth::user()->hasRole('Brand Manager') && $brand_profiles != null)
+									<a href="{{url('brand_profile_id',$b_profile->id)}}"  target="_blank"  class="btn btn-primary">View Website <i class="fa fa-plus"></i></a><br><br>
 									@endif
 									@if(session()->has('message'))
 					                	<div class="alert alert-success">
@@ -39,7 +42,7 @@
 													<th>Brand Name</th>
 													<th>Brand Feature Image</th>
 													<th>Brand Category</th>
-													<th>Brand Status</th>
+													<th>Brand City</th>
 													<th class="text-right">Action</th>
 												</tr>
 											</thead>
@@ -52,8 +55,8 @@
 													<td>{{ $brand_profile->brand_name}}</td>
 													
 													<td> <img src="{{asset($brand_profile->brand_logo)}}" width="100px" height="100px"></td>
-													<td>{{$brand_profile->category_id}}</td>
-													<td>{{$brand_profile->status}}</td>
+													<td>{{$brand_profile->category->name}}</td>
+													<td>{{$brand_profile->city->name}}</td>
 
 													<td class="text-right">
 														<div class="actions" style="display:flex;">
