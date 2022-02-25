@@ -15,13 +15,13 @@
   @if(Route::is(['voice-call','video-call']))
   <body class="call-page">
   @endif
-  @if(!Route::is(['login','register','forgot-password']))
+  <!-- @if(!Route::is(['login','register','forgot-password'])) @endif -->
 @include('layout.partials.header')
-@endif
+
 @yield('content')
-@if(!Route::is(['chat','chat-mentee','voice-call','video-call','login','register','forgot-password']))
+<!-- @if(!Route::is(['chat','chat-mentee','voice-call','video-call','login','register','forgot-password']))@endif -->
 @include('layout.partials.footer')
-@endif
+
 @include('layout.partials.footer-scripts')
   </body>
 </html>
