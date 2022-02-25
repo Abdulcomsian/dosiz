@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
 use Auth;
+use DB;
 use App\Category;
+use App\SubCategory;
 use App\Utils\HelperFunctions;
 use Illuminate\Support\Facades\Redirect;
 
@@ -21,7 +23,7 @@ class productController extends Controller
     public function create()
     {
         $user_id = Auth::id();
-        $categories = Category::where('user_id',$user_id)->get();
+        $categories = Category::get();
         return view('product.add_product', compact('categories'));
     }
 
@@ -54,6 +56,7 @@ class productController extends Controller
         $Product->name = $request->name;
         $Product->user_id = $user_id;
         $Product->product_slug = $request->product_slug;
+        $Product->sub_category_id = $request->sub_category;
         $Product->category_id = $request->category_id;
         $Product->price = $request->price;
         $Product->description = $request->description;
@@ -89,11 +92,12 @@ class productController extends Controller
     {
         try {
             $user_id = Auth::id();
-            $categories = Category::where('user_id',$user_id)->get();
+            $categories = Category::get();
             $product = Product::where('id',$id)->first();
-            return view('product.edit_product', compact('product','categories'));
+            $sub_categories = SubCategory::where('category_id',$product->category_id)->get();
+            return view('product.edit_product', compact('product','categories','sub_categories'));
         } catch (\Exception $exception) {
-            toastError('Something went wrong, try again!');
+            toastError($exception->getMessage());
             return Redirect::back();
         }
     }
@@ -122,6 +126,7 @@ class productController extends Controller
         $Product->name = $request->name;
         $Product->user_id = $user_id;
         $Product->product_slug = $request->product_slug;
+        $Product->sub_category_id = $request->sub_category;
         $Product->category_id = $request->category_id;
         $Product->price = $request->price;
         $Product->description = $request->description;
@@ -170,5 +175,11 @@ class productController extends Controller
             return Redirect::back();
         }
         
+    }
+
+    public function get_sub_category($id)
+    {
+        $get_sub_category = DB::table("sub_categories")->where("category_id",$id)->pluck("name","id");
+        return json_encode($get_sub_category);
     }
 }

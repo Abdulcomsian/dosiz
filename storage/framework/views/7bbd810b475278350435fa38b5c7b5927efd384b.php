@@ -31,6 +31,7 @@
 														<th>Product Name</th>
 														<th>Product Slug</th>
 														<th>Product Category</th>
+														<th>Product Sub Category</th>
 														<th>Product Price</th>
 														<th>Product Description</th>
 														<th>Product Status</th>
@@ -41,6 +42,7 @@
 														<td><?php echo e($product->name); ?></td>
 														<td><?php echo e($product->product_slug); ?></td>
 														<td><?php echo e($product->category->name); ?></td>
+														<td><?php echo e($product->sub_category->name); ?></td>
 														<td><?php echo e($product->price); ?></td>
 														<td><?php echo $product->description; ?></td>
 														<td><?php echo e($product->status); ?></td>
