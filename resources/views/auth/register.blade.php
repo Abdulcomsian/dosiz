@@ -23,11 +23,7 @@
                                             <img src="{{asset('assets_admin/img/user.svg')}}" alt="">
                                             <input class="form-control" type="text" placeholder="ךמש תא ןזה" id="name" name="name" value="{{ old('name') }}">
                                         </div>
-                                        @error('name')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                        <div style="color:red;">{{$errors->first('name')}}</div> <br>
                                     </div>
                                     <div class="form-group">
                                         <label for="">אימייל<span>*</span></label>
@@ -35,11 +31,7 @@
                                             <img src="{{asset('assets_admin/img/email.svg')}}" alt="">
                                             <input class="form-control @error('email') is-invalid @enderror" type="email" id="email" value="{{ old('email') }}" name="email" placeholder="ךלש לאודה תבותכ">
                                         </div>
-                                        @error('email')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                        <div style="color:red;">{{$errors->first('email')}}</div> <br>
                                     </div>
                                     <!-- <div class="form-group">
                                         <select name="role" id="role" class="form-control">
@@ -92,11 +84,7 @@
                                         <img src="{{asset('assets_admin/img/password.svg')}}" alt="">
                                             <input class="form-control @error('password') is-invalid @enderror" type="password" id="password" name="password" placeholder="סיסמה">
                                         </div>
-                                        @error('password')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                        <div style="color:red;">{{$errors->first('password')}}</div> <br>
                                     </div>
                                     <!-- <div class="form-group">
                                         
@@ -120,11 +108,7 @@
                                         <img src="{{asset('assets_admin/img/mobile.svg')}}" alt="">
                                             <input class="form-control" type="number" id="phone" name="phone" placeholder="םכלש ןופלטה רפסמ תא ודילקה">
                                         </div>
-                                        @error('phone')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                        <div style="color:red;">{{$errors->first('phone')}}</div> <br>
                                     </div>
                                     <div class="form-group mb-0">
                                         <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
