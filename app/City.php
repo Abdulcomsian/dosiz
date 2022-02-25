@@ -9,4 +9,9 @@ class City extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function BrandProfile()
+    {
+        return $this->hasMany(BrandProfile::class);
+    }
 }

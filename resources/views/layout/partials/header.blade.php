@@ -25,7 +25,7 @@
 						<img  src="../assets_admin/img/glases.svg" alt=""><a href="">םירמאמ</a>
 					</li>
 					<li class="nav-item">
-						<img  src="../assets_admin/img/mail.svg" alt=""><a href="">העידי תחילש</a>
+						<img  src="../assets_admin/img/mail.svg" alt=""><a href="{{route('register')}}">העידי תחילש</a>
 					</li>
 				</ul>
 			</div>

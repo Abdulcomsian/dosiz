@@ -90,7 +90,7 @@
                                         <label for="">סיסמה<span>* </span></label>
                                         <div class="inputIcon">
                                         <img src="{{asset('assets_admin/img/password.svg')}}" alt="">
-                                            <input class="form-control @error('password') is-invalid @enderror" type="password" id="password" name="password" placeholder="Password">
+                                            <input class="form-control @error('password') is-invalid @enderror" type="password" id="password" name="password" placeholder="סיסמה">
                                         </div>
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
@@ -111,15 +111,20 @@
                                         <label for="">המסיס שדחמ סינכת<span>*</span></label>
                                         <div class="inputIcon">
                                         <img src="{{asset('assets_admin/img/password.svg')}}" alt="">
-                                            <input class="form-control" type="password" id="password-confirm" name="password_confirmation" placeholder="Confirm Password">
+                                            <input class="form-control" type="password" id="password-confirm" name="password_confirmation" placeholder="אשר סיסמה"> <br>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="">ןופלט רפסמ<span>*</span></label>
                                         <div class="inputIcon">
                                         <img src="{{asset('assets_admin/img/mobile.svg')}}" alt="">
-                                            <input class="form-control" type="text" id="" name="" placeholder="םכלש ןופלטה רפסמ תא ודילקה">
+                                            <input class="form-control" type="number" id="phone" name="phone" placeholder="םכלש ןופלטה רפסמ תא ודילקה">
                                         </div>
+                                        @error('phone')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <div class="form-group mb-0">
                                         <button class="btn btn-primary btn-block" type="submit">Sign Up</button>

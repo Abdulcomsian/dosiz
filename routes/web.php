@@ -71,3 +71,9 @@ Route::prefix('brand')->middleware('can:brand')->group(function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/brand_profile_id/{id}', 'BrandProfileController@brand_profile')->name('brand_profile_id');
+Route::get('/products/{id}', 'BrandProfileController@products')->name('brand_profile_id');
+Route::get('/blogs/{id}', 'BrandProfileController@blogs')->name('blogs');  //by city next task
+Route::get('/blog/{id}', 'BrandProfileController@blog')->name('blog'); 
+Route::get('/articles/{id}', 'BrandProfileController@articles')->name('articles'); 

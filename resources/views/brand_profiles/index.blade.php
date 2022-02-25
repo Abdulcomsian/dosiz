@@ -24,8 +24,11 @@
 						<div class="col-sm-12">
 							<div class="card">
 								<div class="card-body">
-									@if(Auth::user()->hasRole('Brand Manager'))
+									@if(Auth::user()->hasRole('Brand Manager') && $brand_profiles == null)
 									<a href="{{route('brand_profile.create')}}" class="btn btn-primary">Add New <i class="fa fa-plus"></i></a><br><br>
+									@endif
+									@if(Auth::user()->hasRole('Brand Manager') && $brand_profiles != null)
+									<a href="{{url('brand_profile_id',$b_profile->id)}}"  target="_blank"  class="btn btn-primary">View Website <i class="fa fa-plus"></i></a><br><br>
 									@endif
 									@if(session()->has('message'))
 					                	<div class="alert alert-success">
@@ -39,7 +42,7 @@
 													<th>Brand Name</th>
 													<th>Brand Feature Image</th>
 													<th>Brand Category</th>
-													<th>Brand Status</th>
+													<th>Brand City</th>
 													<th class="text-right">Action</th>
 												</tr>
 											</thead>
@@ -49,27 +52,18 @@
 
 													@foreach($brand_profiles as $brand_profile)
 													
-													<td>{{ $brand_profile->name}}</td>
+													<td>{{ $brand_profile->brand_name}}</td>
 													
-													<td> <img src="{{asset($brand_profile->image)}}" width="100px" height="100px"></td>
+													<td> <img src="{{asset($brand_profile->brand_logo)}}" width="100px" height="100px"></td>
 													<td>{{$brand_profile->category->name}}</td>
-													<td>{{$brand_profile->status}}</td>
+													<td>{{$brand_profile->city->name}}</td>
 
 													<td class="text-right">
 														<div class="actions" style="display:flex;">
 															
 															<a href="{{route('brand_profile.show',$brand_profile->id)}}" target="_blank" style="height: 33px; margin-left: 10px" class="btn btn-sm bg-primary-light edit-brand_profile"><i class="fe fe-eye"></i> Show</a>
 															<a href="{{route('brand_profile.edit',$brand_profile->id)}}" style="height: 33px; margin-left: 10px" class="btn btn-sm bg-success-light edit-brand_profile"><i class="fe fe-pencil"></i> Edit</a>
-															<form method="POST" action="{{ route('brand_profile.destroy', $brand_profile->id) }}"  id="form_{{$brand_profile->id}}" >
-							                                    @method('Delete')
-							                                    @csrf()
-
-							                                    <button type="submit" id="{{$brand_profile->id}}" class="confirm btn btn-sm bg-danger-light btn-active-color-primary btn-sm">
-							                                        <!--begin::Svg Icon | path: icons/duotone/General/Trash.svg-->
-							                                     <i class="fe fe-trash"></i> Delete
-							                                        <!--end::Svg Icon-->
-							                                    </button>
-							                                </form>
+															
 															
 														</div>
 													</td>
