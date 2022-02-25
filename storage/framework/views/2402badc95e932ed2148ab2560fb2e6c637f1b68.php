@@ -50,10 +50,10 @@
 
 													<?php $__currentLoopData = $brand_profiles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $brand_profile): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 													
-													<td><?php echo e($brand_profile->name); ?></td>
+													<td><?php echo e($brand_profile->brand_name); ?></td>
 													
-													<td> <img src="<?php echo e(asset($brand_profile->image)); ?>" width="100px" height="100px"></td>
-													<td><?php echo e($brand_profile->category->name); ?></td>
+													<td> <img src="<?php echo e(asset($brand_profile->brand_logo)); ?>" width="100px" height="100px"></td>
+													<td><?php echo e($brand_profile->category_id); ?></td>
 													<td><?php echo e($brand_profile->status); ?></td>
 
 													<td class="text-right">
@@ -61,16 +61,7 @@
 															
 															<a href="<?php echo e(route('brand_profile.show',$brand_profile->id)); ?>" target="_blank" style="height: 33px; margin-left: 10px" class="btn btn-sm bg-primary-light edit-brand_profile"><i class="fe fe-eye"></i> Show</a>
 															<a href="<?php echo e(route('brand_profile.edit',$brand_profile->id)); ?>" style="height: 33px; margin-left: 10px" class="btn btn-sm bg-success-light edit-brand_profile"><i class="fe fe-pencil"></i> Edit</a>
-															<form method="POST" action="<?php echo e(route('brand_profile.destroy', $brand_profile->id)); ?>"  id="form_<?php echo e($brand_profile->id); ?>" >
-							                                    <?php echo method_field('Delete'); ?>
-							                                    <?php echo csrf_field(); ?>
-
-							                                    <button type="submit" id="<?php echo e($brand_profile->id); ?>" class="confirm btn btn-sm bg-danger-light btn-active-color-primary btn-sm">
-							                                        <!--begin::Svg Icon | path: icons/duotone/General/Trash.svg-->
-							                                     <i class="fe fe-trash"></i> Delete
-							                                        <!--end::Svg Icon-->
-							                                    </button>
-							                                </form>
+															
 															
 														</div>
 													</td>

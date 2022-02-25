@@ -51,18 +51,31 @@
 					                            </div>
 					                            <!-- <div class="row">
 					                                <div class="col-md-6"> -->
-					                                    <div class="form-group">
-					                                        <label>Product Category</label>
-					                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="category_id" id="category_id">
-					                                            <option selected disabled>Select Category</option>
-					                                            <?php if($categories): ?>
-					                                            <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-					                                            	<option value="<?php echo e($category->id); ?>"><?php echo e($category->name); ?></option>
-					                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-					                                            <?php endif; ?>
-					                                        </select>
-					                                        <div style="color:red;"><?php echo e($errors->first('category_id')); ?></div> <br>
-					                                    </div>
+			                                    <div class="form-group">
+			                                        <label>Brand Category</label>
+			                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="category_id" id="category_id">
+			                                            <option selected disabled>Select Category</option>
+			                                            <?php if($categories): ?>
+			                                            <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+			                                            	<option value="<?php echo e($category->id); ?>"><?php echo e($category->name); ?></option>
+			                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			                                            <?php endif; ?>
+			                                        </select>
+			                                        <div style="color:red;"><?php echo e($errors->first('category_id')); ?></div> <br>
+			                                    </div>
+
+			                                    <div class="form-group">
+																<label>Brand City</label>
+																<select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="city_id" id="city_id">
+																  <option selected disabled>Select City</option>
+																  <?php if($cities): ?>
+																  <?php $__currentLoopData = $cities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+																  	<option value="<?php echo e($city->id); ?>"><?php echo e($city->name); ?></option>
+																  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+																  <?php endif; ?>
+																</select>
+		                                        	<div style="color:red;"><?php echo e($errors->first('city_id')); ?></div> <br>
+			                                    </div>
 
 					                                    
 					                                <!-- </div>

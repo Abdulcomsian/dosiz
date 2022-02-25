@@ -1,5 +1,5 @@
-@extends('layout.mainlayout_admin')
-@section('content')	
+
+<?php $__env->startSection('content'); ?>	
 <!-- Page Wrapper -->
 <div class="page-wrapper">
                 <div class="content container-fluid">
@@ -40,14 +40,14 @@
 												</thead>
 												<tbody>
 													<tr>
-														<td>{{$brand_profile->brand_name}}</td>
-														<td>{{$brand_profile->category->name}}</td>
-														<td>{{$brand_profile->city->name}}</td>
-														<td>{{$brand_profile->user->name}}</td>
-														<td>{{$brand_profile->whatsapp_no}}</td>
-														<td>{!! $brand_profile->description !!}</td>
-														<td>{{$brand_profile->address}}</td>
-														<td>{{$brand_profile->status}}</td>
+														<td><?php echo e($brand_profile->brand_name); ?></td>
+														<td><?php echo e($brand_profile->category->name); ?></td>
+														<td><?php echo e($brand_profile->city->name); ?></td>
+														<td><?php echo e($brand_profile->user->name); ?></td>
+														<td><?php echo e($brand_profile->whatsapp_no); ?></td>
+														<td><?php echo $brand_profile->description; ?></td>
+														<td><?php echo e($brand_profile->address); ?></td>
+														<td><?php echo e($brand_profile->status); ?></td>
 													</tr>
 							                    <tbody>
 											</table>
@@ -73,9 +73,9 @@
 												</thead>
 												<tbody>
 													<tr>
-														@foreach($brand_profile->font as $all)
-														<td>{{$all}}</td>
-														@endforeach
+														<?php $__currentLoopData = $brand_profile->font; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $all): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+														<td><?php echo e($all); ?></td>
+														<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 													</tr>
 
 													
@@ -103,11 +103,11 @@
 												</thead>
 												<tbody>
 													<tr>
-														@foreach($brand_profile->color as $all)
+														<?php $__currentLoopData = $brand_profile->color; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $all): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 														<td>
-															<input class="form-control" type="color" readonly value="{{$all}}" >
+															<input class="form-control" type="color" readonly value="<?php echo e($all); ?>" >
 														</td>
-														@endforeach
+														<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 													</tr>
 													
 													
@@ -133,13 +133,13 @@
 														<h5 class="card-title d-flex justify-content-between">
 															<span>Brand Logo</span> 
 														</h5>
-														<img src="{{asset($brand_profile->brand_logo)}}" width="300px" height="300px"><br>
+														<img src="<?php echo e(asset($brand_profile->brand_logo)); ?>" width="300px" height="300px"><br>
 													</div>
 													<div class="col-lg-6">
 														<h5 class="card-title d-flex justify-content-between">
 															<span>Brand Image</span> 
 														</h5>
-														<img src="{{asset($brand_profile->brand_image)}}" width="300px" height="300px"><br>
+														<img src="<?php echo e(asset($brand_profile->brand_image)); ?>" width="300px" height="300px"><br>
 													</div>
 												<!-- </div> -->
 											<!-- </div> -->
@@ -190,4 +190,5 @@
             <!-- Edit Details Modal -->
 		</div>
 		<!-- /Edit Details Modal -->	
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.mainlayout_admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\www\dosiz\resources\views/brand_profiles/show_brand.blade.php ENDPATH**/ ?>

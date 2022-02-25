@@ -51,18 +51,31 @@
 					                            </div>
 					                            <!-- <div class="row">
 					                                <div class="col-md-6"> -->
-					                                    <div class="form-group">
-					                                        <label>Product Category</label>
-					                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="category_id" id="category_id">
-					                                            <option selected disabled>Select Category</option>
-					                                            @if($categories)
-					                                            @foreach($categories as $category)
-					                                            	<option value="{{$category->id}}">{{$category->name}}</option>
-					                                            @endforeach
-					                                            @endif
-					                                        </select>
-					                                        <div style="color:red;">{{$errors->first('category_id')}}</div> <br>
-					                                    </div>
+			                                    <div class="form-group">
+			                                        <label>Brand Category</label>
+			                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="category_id" id="category_id">
+			                                            <option selected disabled>Select Category</option>
+			                                            @if($categories)
+			                                            @foreach($categories as $category)
+			                                            	<option value="{{$category->id}}">{{$category->name}}</option>
+			                                            @endforeach
+			                                            @endif
+			                                        </select>
+			                                        <div style="color:red;">{{$errors->first('category_id')}}</div> <br>
+			                                    </div>
+
+			                                    <div class="form-group">
+																<label>Brand City</label>
+																<select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="city_id" id="city_id">
+																  <option selected disabled>Select City</option>
+																  @if($cities)
+																  @foreach($cities as $city)
+																  	<option value="{{$city->id}}">{{$city->name}}</option>
+																  @endforeach
+																  @endif
+																</select>
+		                                        	<div style="color:red;">{{$errors->first('city_id')}}</div> <br>
+			                                    </div>
 
 					                                    
 					                                <!-- </div>
