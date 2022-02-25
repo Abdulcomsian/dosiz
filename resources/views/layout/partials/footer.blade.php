@@ -5,77 +5,96 @@
 				<div class="footer-top">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-lg-3 col-md-6">
 							
-								<!-- Footer Widget -->
-								<div class="footer-widget footer-about">
-									<div class="footer-logo">
-										<img src="assets/img/logo.png" alt="logo">
-									</div>
-									<div class="footer-about-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-										<div class="social-icon">
-											<ul>
-												<li>
-													<a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
-												</li>
-												<li>
-													<a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
-												</li>
-												<li>
-													<a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-												</li>
-												<li>
-													<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-												</li>
-												<li>
-													<a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
-												</li>
-											</ul>
+							
+						<div class="col-lg-4 col-md-4 desktopHide">
+							
+							<!-- Footer Widget -->
+							<div class="footer-widget footer-about">
+							<div class="footer-logo">
+									<img src="assets_admin/img/logo.png" alt="logo">
+								</div>
+								<div class="formDiv">
+									<form action="">
+										<div class="inputDiv">
+											<label for="">םימח םינוכדיע תלבקל ופרטצה</label>
+											<div class="inputBtn">
+												<input type="text">
+												<button><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+											</div>
 										</div>
+									</form>
+								</div>
+								<div class="logoIconDiv">
+								
+								<div class="footer-about-content">
+									<div class="social-icon">
+										<ul>
+											<li>
+												<a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+											</li>
+											<li>
+												<a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+											</li>
+											<li>
+												<a href=""><i class="fa fa-telegram" aria-hidden="true"></i></a>
+											</li>
+										   
+										</ul>
+										<ul>
+											<li>
+												<a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+											</li>
+											<li>
+												<a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+											</li>
+											
+											<li>
+												<a href="#" target="_blank"><i class="fa fa-facebook"></i> </a>
+											</li>
+										</ul>
 									</div>
 								</div>
-								<!-- /Footer Widget -->
+								</div>
 								
 							</div>
+							<!-- /Footer Widget -->
 							
-							<div class="col-lg-3 col-md-6">
+						</div>
+							
+							<div class="col-lg-3 col-md-3">
 							
 								<!-- Footer Widget -->
-								<div class="footer-widget footer-menu">
-									<h2 class="footer-title">For Mentee</h2>
+								<div class="footer-widget footer-menu footer-menu-list">
+									<h2 class="footer-title">עוד באתר</h2>
 									<ul>
-										<li><a href="search">Search Mentors</a></li>
-										<li><a href="login">Login</a></li>
-										<li><a href="register">Register</a></li>
-										<li><a href="booking">Booking</a></li>
-										<li><a href="dashboard-mentee">Mentee Dashboard</a></li>
+										<li><a href="appointments">!םיאבה םיכורב</a></li>
+										<li><a href="chat">שומיש יאנת</a></li>
+										<li><a href="login">תויטרפ תוינידמ</a></li>
+										<li><a href="register">רשק רוצ</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->
 								
 							</div>
-							
-							<div class="col-lg-3 col-md-6">
+                            <div class="col-lg-5 col-md-5">
 							
 								<!-- Footer Widget -->
-								<div class="footer-widget footer-menu">
-									<h2 class="footer-title">For Mentors</h2>
-									<ul>
-										<li><a href="appointments">Appointments</a></li>
-										<li><a href="chat">Chat</a></li>
-										<li><a href="login">Login</a></li>
-										<li><a href="register">Register</a></li>
-										<li><a href="dashboard">Mentor Dashboard</a></li>
-									</ul>
+								<div class="footer-widget footer-menu footer-menu-para">
+									<h2 class="footer-title">תוירוגטק</h2>
+									<p>יוליב הנפוא ןוזמ תוקונית ירצומ םיסנניפ םיעצבמ
+                                        הקיאדוי חופיט םיגח םיט'גדג םירבג תיבה ךותב תואירב
+                                        בכר םירפס ן"לדנ החפשמ םידומיל םידלי לוהוכלאו ןיי
+                                        עובשה ןויאיר תבש דובכל שפונו תוריית
+                                    </p>
 								</div>
 								<!-- /Footer Widget -->
 								
 							</div>
 							
-							<div class="col-lg-3 col-md-6">
+							<!-- <div class="col-lg-3 col-md-6">
 							
-								<!-- Footer Widget -->
+								
 								<div class="footer-widget footer-contact">
 									<h2 class="footer-title">Contact Us</h2>
 									<div class="footer-contact-info">
@@ -93,6 +112,59 @@
 										</p>
 									</div>
 								</div>
+								
+								
+							</div> -->
+                            <div class="col-lg-4 col-md-4 mobileHide">
+							
+								<!-- Footer Widget -->
+								<div class="footer-widget footer-about">
+                                    <div class="formDiv">
+                                        <form action="">
+                                            <div class="inputDiv">
+                                                <label for="">םימח םינוכדיע תלבקל ופרטצה</label>
+                                                <div class="inputBtn">
+                                                    <input type="text">
+                                                    <button><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="logoIconDiv">
+                                    <div class="footer-logo">
+										<img src="assets_admin/img/logo.png" alt="logo">
+									</div>
+									<div class="footer-about-content">
+										<div class="social-icon">
+											<ul>
+                                                <li>
+                                                    <a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                                                </li>
+												<li>
+													<a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+												</li>
+                                                <li>
+                                                    <a href=""><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                                                </li>
+                                               
+											</ul>
+                                            <ul>
+                                                <li>
+                                                    <a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                                </li>
+                                                
+												<li>
+													<a href="#" target="_blank"><i class="fa fa-facebook"></i> </a>
+												</li>
+											</ul>
+										</div>
+									</div>
+                                    </div>
+									
+								</div>
 								<!-- /Footer Widget -->
 								
 							</div>
@@ -101,7 +173,13 @@
 					</div>
 				</div>
 				<!-- /Footer Top -->
-				
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 text-center">
+							<img src="{{asset('assets_admin/img/line.svg')}}" alt="">
+						</div>
+					</div>
+				</div>
 				<!-- Footer Bottom -->
                 <div class="footer-bottom">
 					<div class="container-fluid">
@@ -109,9 +187,14 @@
 						<!-- Copyright -->
 						<div class="copyright">
 							<div class="row">
-								<div class="col-12 text-center">
+								<div class="col-6 text-right">
 									<div class="copyright-text">
-										<p class="mb-0">&copy; 2020 Mentoring. All rights reserved.</p>
+										<p class="mb-0">&copy; תונכרצ זיסוד" ל תורומש תויוכזה לכ</p>
+									</div>
+								</div>
+                                <div class="col-6 text-left">
+									<div class="copyright-text">
+										<p class="mb-0">MoranSotto</p>
 									</div>
 								</div>
 							</div>

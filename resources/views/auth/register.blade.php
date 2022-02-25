@@ -1,8 +1,8 @@
-@extends('layout.mainlayout_admin')
+@extends('layout.mainlayout')
 @section('content')     
 
         <!-- Main Wrapper -->
-        <div class="main-wrapper login-body">
+        <div class="main-wrapper login-body register">
             <div class="login-wrapper">
                 <div class="container">
                     <div class="loginbox">
