@@ -15,6 +15,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
         return view('index');
     })->name('pagee');
+
+/*****************FRONTEND ROUTES*******************/
+Route::get('/brand', function () {
+        return view('user.home');
+});
+Route::get('/articleCategory', function () {
+    return view('user.article.articleCategory');
+});
+Route::get('/allArticle', function () {
+    return view('user.article.allarticle');
+});
+Route::get('/detailArticle', function () {
+    return view('user.article.articleDetail');
+});
+
+
 /*****************ADMIN ROUTES*******************/
 Route::prefix('dashboard')->middleware('dashboard')->group(function(){
     Route::get('/dashboard', 'dashboardController@index')->name('dashboard');

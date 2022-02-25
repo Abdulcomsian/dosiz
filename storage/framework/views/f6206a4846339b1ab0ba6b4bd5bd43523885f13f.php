@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>     
 
         <!-- Main Wrapper -->
-        <div class="main-wrapper login-body">
+        <div class="main-wrapper login-body register">
             <div class="login-wrapper">
                 <div class="container">
                     <div class="loginbox">
@@ -260,4 +260,4 @@ unset($__errorArgs, $__bag); ?>
         <!-- /Main Wrapper -->
         
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layout.mainlayout_admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Applications/Development/Web/Laravel/dosiz/resources/views/auth/register.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layout.mainlayout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Applications/Development/Web/Laravel/dosiz/resources/views/auth/register.blade.php ENDPATH**/ ?>

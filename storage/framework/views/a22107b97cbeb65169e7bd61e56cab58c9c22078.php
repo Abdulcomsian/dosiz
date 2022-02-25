@@ -7,17 +7,9 @@
                 <div class="brandMainIntro">
                     <h4 class="commonTitleText">תיללכ הריקס</h4>
                     <h1>סונייקוא חור ונחנא</h1>
-                    <p>
-                        .תוחוקלל רוביחה טאל טאל ליחתמ היה ךכו תירבעב ףוח הז םי .םי תינור םשב העדונ הרהמ דע .הניכמ איה המו תינור תאז ימ תוארלו עיגהל וליחתה םישנא ןזואל הפמ טאל טאל .םתוא תרכומו םידימצו תוארשרש תרצוי התייה איה .רוע יטוחב אלמ ןטק קית התיא האיבהו ביבא לתב םיה ףוח לע םוי לכ תבשל העיגמ התייה )םי תינור( םי תינור 2005 תנשב
-                        .עגמב ותיא אב אוהש םדא לכ לע ךשמתמ םשור ריתומ אוה ןכש וב בשחתהל ךירצש גתומ אוה ןמא םוקמ לכב ,םלוכ תא תרשמ .םלועה יבחרב תעכ םירכמנ לש הרואפתו דוגיב ,םיטישכת
-                   </p>
-                    <p>
-                        .תוחוקלל רוביחה טאל טאל ליחתמ היה ךכו תירבעב ףוח הז םי .םי תינור םשב העדונ הרהמ דע .הניכמ איה המו תינור תאז ימ תוארלו עיגהל וליחתה םישנא ןזואל הפמ טאל טאל .םתוא תרכומו םידימצו תוארשרש תרצוי התייה איה .רוע יטוחב אלמ ןטק קית התיא האיבהו ביבא לתב םיה ףוח לע םוי לכ תבשל העיגמ התייה )םי תינור( םי תינור 2005 תנשב
-                        שכע .םי תינור לש השקה הדובעה תוכזב גתוממ רתויל הכפה
-                    </p>
-                    <p>
-                        כו תירבעב ףוח הז םי .םי תינור םשב העדונ הרהמ דע .הניכמ איה המו תינור תאז ימ תוארלו עיגהל וליחתה םישנא ןזואל הפמ טאל טאל .םתוא תרכומו םידימצו תוארשרש תרצוי התייה איה .רוע יטוחב אלמ ןטק קית התיא האיבהו ביבא לתב םיה ףוח לע םוי לכ תבשל העיגמ התייה )םי תינור( םי תינור 2005 תנשב
-                    </p>
+                    <p>.תוחוקלל רוביחה טאל טאל ליחתמ היה ךכו תירבעב ףוח הז םי .םי תינור םשב העדונ הרהמ דע .הניכמ איה המו תינור תאז ימ תוארלו עיגהל וליחתה םישנא ןזואל הפמ טאל טאל .םתוא תרכומו םידימצו תוארשרש תרצוי התייה איה .רוע יטוחב אלמ ןטק קית התיא האיבהו ביבא לתב םיה ףוח לע םוי לכ תבשל העיגמ התייה )םי תינור( םי תינור 2005 תנשב</p>
+                    <p>.עגמב ותיא אב אוהש םדא לכ לע ךשמתמ םשור ריתומ אוה ןכש וב בשחתהל ךירצש גתומ אוה ןמא םוקמ לכב ,םלוכ תא תרשמ .םלועה יבחרב תעכ םירכמנ AMEN לש הרואפתו דוגיב ,םיטישכת</p>
+                    <p>.בושו בוש םתוא ריזחהו ,הלש תוחוקלה ייחב יתוהמ קלחל ומצע תא ךפה הז וישכע .םי תינור לש השקה הדובעה תוכזב גתוממ רתויל הכפה AMEN</p>
                 </div>
             </div>
             <div class="col-md-6 text-left">
@@ -158,6 +150,9 @@
                 <div class="articleLeftDiv">
                     <div class="articleCard">
                         <div class="row">
+                            <div class="col-md-6 desktopHide">
+                                <img src="<?php echo e(asset('assets/img/user/article1img.png')); ?>" alt="" class="img-fluid">
+                            </div>
                             <div class="col-md-6">
                                 <div class="articleInfo">
                                     <div class="dateInput">
@@ -172,13 +167,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <img src="<?php echo e(asset('assets/img/user/article3.svg')); ?>" alt="" class="img-fluid">
+                            <div class="col-md-6 mobileHide">
+                                <img src="<?php echo e(asset('assets/img/user/article1img.png')); ?>" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
                     <div class="articleCard">
                         <div class="row">
+                            <div class="col-md-6 desktopHide">
+                                <img src="<?php echo e(asset('assets/img/user/articale2img.png')); ?>" alt="" class="img-fluid">
+                            </div>
                             <div class="col-md-6">
                                 <div class="articleInfo">
                                     <div class="dateInput">
@@ -193,8 +191,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <img src="<?php echo e(asset('assets/img/user/article2.svg')); ?>" alt="" class="img-fluid">
+                            <div class="col-md-6 mobileHide">
+                                <img src="<?php echo e(asset('assets/img/user/articale2img.png')); ?>" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -208,5 +206,90 @@
         </div>
     </div>
 </section>
+<section id="contactSection">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h2>רשק ונתיא רוציל ישפוח שיגרת</h2>
+            </div>
+        </div>
+        <div class="contactInfoDiv">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="commonContactDiv">
+                        <div class="iconDiv">
+                            <img src="<?php echo e(asset('assets/img/user/map.svg')); ?>" alt="" class="img-fluid">
+                        </div>
+                        <div class="infoDiv">
+                            <h5>םוקמ</h5>
+                            <p>בקר אותנו</p>
+                            <span>ןאכ תבותכ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="commonContactDiv">
+                        <div class="iconDiv">
+                            <img src="<?php echo e(asset('assets/img/user/call.svg')); ?>" alt="" class="img-fluid">
+                        </div>
+                        <div class="infoDiv">
+                            <h5>7/24 תוריש</h5>
+                            <p>ונילא רשקתה</p>
+                            <span>+1234567890</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="commonContactDiv">
+                        <div class="iconDiv">
+                            <img src="<?php echo e(asset('assets/img/user/message.svg')); ?>" alt="" class="img-fluid">
+                        </div>
+                        <div class="infoDiv">
+                            <h5>הרוש קורז</h5>
+                            <p>ראוד ונל חלש</p>
+                            <span>info@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contactFormDiv">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="formDiv">
+                        <h3>ונילא ךתעדוה תא חלש</h3>
+                        <form action="">
+                            <div class="d-flex">
+                                <div class="inputdiv">
+                                    <input type="text" placeholder="אימייל">
+                                </div>
+                                <div class="inputdiv">
+                                    <input type="text" placeholder="םש">
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="inputdiv">
+                                    <input type="text" placeholder="אשונ">
+                                </div>
+                                <div class="inputdiv">
+                                    <input type="text" placeholder="מספר טלפון">
+                                </div>
+                            </div>
+                            <div class="inputdiv" style="width: 100%; margin: 18px 0px 0px;">
+                                    <textarea name="" id="" cols="30" rows="10" placeholder="שלח עיסוי"></textarea>
+                                </div>
+                                <button class="commonBtn">שלח עיסוי</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="imgDiv">
+                        <img src="<?php echo e(asset('assets/img/user/contactUs.svg')); ?>" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layout.mainlayout_admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Applications/Development/Web/Laravel/dosiz/resources/views/user/home.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layout.mainlayout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Applications/Development/Web/Laravel/dosiz/resources/views/user/home.blade.php ENDPATH**/ ?>

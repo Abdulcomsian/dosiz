@@ -109,8 +109,7 @@
         <!-- multiple image css -->
         <link rel="stylesheet" href="{{asset('assets_admin/css/Jquery-ui-min.css')}}">
         <link rel="stylesheet" href="{{asset('assets_admin/css/image-uploader.min.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/css/slick-theme.css')}}">
+       
 
         
         <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">
