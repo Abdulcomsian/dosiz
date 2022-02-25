@@ -17,6 +17,9 @@ Route::get('/', function () {
     })->name('pagee');
 
 /*****************FRONTEND ROUTES*******************/
+Route::get('/register', function () {
+    return view('auth.register');
+});
 Route::get('/brand', function () {
         return view('user.home');
 });
@@ -28,6 +31,9 @@ Route::get('/allArticle', function () {
 });
 Route::get('/detailArticle', function () {
     return view('user.article.articleDetail');
+});
+Route::get('/productCatalogue', function () {
+    return view('user.product.productCatalogue');
 });
 
 

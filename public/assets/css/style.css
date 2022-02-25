@@ -8553,8 +8553,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background: #DA1081 !important;
     padding: 8px 20px;
 }
-#detailArticle .relatedArticle ul,
-#detailArticle .commonDiv ul{
+#detailArticle ul{
 	list-style: none;
 	padding: 0px;
 	margin: 0px;
@@ -8607,7 +8606,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	color: #7B7B7B;
 }
 #detailArticle .categoryDiv h2,
-#detailArticle  .tagDiv h2{
+#detailArticle  .tagDiv h2,
+#detailArticle .socialHeading{
 	font-size: 24px;
 	font-weight: 600;
 	font-family: PloniDBold;
@@ -8641,17 +8641,150 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	font-size: 18px;
 	color: #7B7B7B;
 }
+#detailArticle .socialDiv{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 #detailArticle .socialDiv .socialInfoDiv{
-	width: 33.3%;
+	width: 32%;
 	text-align: center;
+	display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+	margin-bottom: 10px;
+	
+}
+#detailArticle .socialDiv .socialInfoDiv.youtubeDiv{
+	background-color: #FF5050;
+}
+#detailArticle .socialDiv .socialInfoDiv.twitterDiv{
+	background-color: #1DA1F2;
+}
+#detailArticle .socialDiv .socialInfoDiv.facebookDiv{
+	background-color: #3B5998;
+}
+#detailArticle .socialDiv .socialInfoDiv.gmailDiv{
+	background-color: #00AB6C;
+}
+#detailArticle .socialDiv .socialInfoDiv.vimeoDiv{
+	background-color: #00AB6C;
+}
+#detailArticle .socialDiv .socialInfoDiv.instagramDiv{
+	background-color: #9B45D5;
 }
 #detailArticle .socialDiv .socialInfoDiv p{
 	margin: 0px;
 	font-weight: 500;
+	color: #fff;
 }
 #detailArticle .socialDiv .socialInfoDiv p.totalCount{
-	font-size: 20px;
-    font-weight: 700;
+	font-size: 18px;
+    font-weight: 500;
+}
+#detailArticle .reviewOption{
+	text-align: center;
+	margin-top: 90px;
+}
+#detailArticle .reviewOption ul li {
+	margin-bottom: 35px;
+}
+#detailArticle .reviewOption ul li .iconDiv img,
+#detailArticle .reviewBox .reveiwTagDiv ul li a img,
+#detailArticle .editHeartText ul li a img{
+	width: auto;
+}
+#detailArticle .reviewOption ul li .iconDiv span{
+	margin-left: 13.5px;
+}
+#detailArticle .reviewBox{
+	margin: 30px 0px;
+}
+#detailArticle .reviewBox .reveiwTagDiv ul li a.active{
+	padding: 7px 18px;
+    background: #d52582;
+    color: #fff;
+	border: none;
+}
+#detailArticle .reviewBox .reveiwTagDiv ul,
+#detailArticle .editHeartText ul{
+	display: flex;
+}
+#detailArticle .reviewBox .reveiwTagDiv ul li a{
+	padding: 7px 29px;
+	border: 1px solid #CBCBCB;
+    color: #000000;
+	font-family: PloniMedium;
+	margin-left: 5px;
+}
+#detailArticle .editHeartText ul li a{
+	color: #d52582;
+}
+#detailArticle .editHeartText{
+	margin: 40px 0px;
+}
+#detailArticle .editHeartText ul li{
+	margin-left: 40px;
+}
+#detailArticle .editHeartText ul li a img{
+	margin-right: 12px;
+}
+#detailArticle .reviewForm form .inputDiv input,
+#detailArticle .reviewForm form .inputDiv textarea{
+	background: #E8E8E8;
+	border-radius: 6px;
+	width: 100%;
+	padding: 8px;
+    border: none;
+}
+#detailArticle .reviewForm form .inputDiv{
+	margin-top: 30px
+}
+#detailArticle .reviewForm form .inputDiv label,
+#detailArticle .reviewForm form h5{
+	font-family: PloniDBold;
+	font-size: 16px;
+}
+#detailArticle .reviewForm form .inputDiv label span,
+#detailArticle .reviewForm form label span{
+	color: #DA4430;
+}
+#detailArticle .reviewForm form label{
+	font-family: PloniRegular;
+	font-size: 16px;
+}
+#detailArticle .reviewForm form button{
+	margin-top: 36px;
+}
+/*********** Product Catalogue - CSS ******/
+#productBanner{
+	margin: 180px 0px 100px;
+}
+#productCatalogue{
+	padding-bottom: 50px;
+}
+#productCatalogue h2{
+	font-family: PloniDBold;
+	font-size: 48px
+}
+#productCatalogue .container-fluid{
+	max-width: 70%;
+}
+#productCatalogue .tab-content .active{
+	opacity: 1;
+}
+#productCatalogue .tabDiv .nav-pills{
+	justify-content: center;
+}
+#productCatalogue .tabDiv .nav-pills li{
+	margin: 0px 40px;
+}
+#productCatalogue .tabDiv{
+	margin: 20px;
+    padding: 20px 0px;
+    border-top: 1px solid #A6A6A6;
+    border-bottom: 1px solid #A6A6A6;
 }
 /*********** Media Query ************/
 @media screen and (max-width: 1400px) {
@@ -8664,6 +8797,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	}
 }
 @media screen and (max-width: 1200px) {
+	#detailArticle .tabDiv li{
+		padding: 3px;
+	}
 	#contactSection .commonContactDiv .infoDiv p{
 		font-size: 22px;
 	}
@@ -8751,10 +8887,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .footer .social-icon ul {
         margin-bottom: 10px;
     }
+	#detailArticle .relatedArticle li .articleDiv .articleInfo p{
+		font-size: 12px;
+	}
 }
 
 @media screen and (max-width: 768px) {
-	.articleCard{
+	.leftDiv{
+		display: none;
+	}
+	.articleCard,
+	#detailArticle img{
 		margin-bottom: 30px;
 	}
 	.articleCategory .articleLeftDiv{

@@ -83,9 +83,56 @@
                             </div>
                         </div>
                     </div>
+                    <div class="reviewBox">
+                        <div class="reveiwTagDiv">
+                            <ul>
+                                <li>
+                                    <a class="active" href="">םיגת <img src="{{asset('assets/img/user/tagIcon.png')}}" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="">םיגת</a>
+                                </li>
+                                <li>
+                                    <a href="">םיגת</a>
+                                </li>
+                                <li>
+                                    <a href="">םיגת</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="editHeartText">
+                            <ul>
+                                <li>
+                                    <a href="">?תבהא <img src="{{asset('assets/img/user/heartIcon2.png')}}" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="">ךתעד עומשל חמשנ <img src="{{asset('assets/img/user/edit.png')}}" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="reviewForm">
+                            <form action="">
+                                <h5>הבוגת תביתכ</h5>
+                                <label> םינמוסמ הבוחה תודש .רתאב גצוי אל ליימיאה <span>*</span></label>
+                                <div class="inputDiv">
+                                    <label for="">םש <span>*</span></label>
+                                    <input type="text">
+                                </div>
+                                <div class="inputDiv">
+                                    <label for="">םש <span>*</span></label>
+                                    <input type="text">
+                                </div>
+                                <div class="inputDiv">
+                                    <label for="">םש <span>*</span></label>
+                                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                                </div>
+                                <button class="commonBtn">חלש</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 leftDiv">
                 <div class="tabDiv">
                     <ul class="nav nav-pills">
                         <li class="active"><a data-toggle="pill" href="#home" class="active">רושק</a></li>
@@ -401,16 +448,100 @@
                         </li>
                     </ul>
                 </div>
+                <h2 class="socialHeading">עקוב אחרינו</h2>
                 <div class="socialDiv">
-                    <div class="socialInfoDiv">
+                    <div class="socialInfoDiv youtubeDiv">
                         <p>
-                            <div class="iconDiv"></div>
+                            <div class="iconDiv">
+                                <img src="{{asset('assets/img/user/youtube.png')}}" alt="">
+                            </div>
                             <div class="socialInfo">
                                 <p class="totalCount">34,456</p>
                                 <p>Subscribers</p>
                             </div>
                         </p>
                     </div>
+                    <div class="socialInfoDiv twitterDiv">
+                        <p>
+                            <div class="iconDiv">
+                                <img src="{{asset('assets/img/user/twittee.png')}}" alt="">
+                            </div>
+                            <div class="socialInfo">
+                                <p class="totalCount">34,456</p>
+                                <p>Followers</p>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="socialInfoDiv facebookDiv">
+                        <p>
+                            <div class="iconDiv">
+                                <img src="{{asset('assets/img/user/facebookIcon.png')}}" alt="">
+                            </div>
+                            <div class="socialInfo">
+                                <p class="totalCount">34,456</p>
+                                <p>Fans</p>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="socialInfoDiv gmailDiv">
+                        <p>
+                            <div class="iconDiv">
+                                <img src="{{asset('assets/img/user/gmail.png')}}" alt="">
+                            </div>
+                            <div class="socialInfo">
+                                <p class="totalCount">34,456</p>
+                                <p>Followers</p>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="socialInfoDiv vimeoDiv">
+                        <p>
+                            <div class="iconDiv">
+                                <img src="{{asset('assets/img/user/vimeo.png')}}" alt="">
+                            </div>
+                            <div class="socialInfo">
+                                <p class="totalCount">34,456</p>
+                                <p>Followers</p>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="socialInfoDiv instagramDiv">
+                        <p>
+                            <div class="iconDiv">
+                                <img src="{{asset('assets/img/user/facebookIcon.png')}}" alt="">
+                            </div>
+                            <div class="socialInfo">
+                                <p class="totalCount">34,456</p>
+                                <p>Followers</p>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="reviewOption">
+                    <p>?See more like this</p>
+                    <ul>
+                        <li>
+                            <div class="iconDiv">
+                                <span>28</span>
+                                <img src="{{asset('assets/img/user/heartIcon.png')}}" alt="">
+                               
+                            </div>
+                        </li>
+                        <li>
+                            <div class="iconDiv">
+                                <span>21</span>
+                                <img src="{{asset('assets/img/user/commentIcon.png')}}" alt="">
+                               
+                            </div>
+                        </li>
+                        <li>
+                            <div class="iconDiv">
+                                <span style="opacity:0;">21</span>
+                                <img src="{{asset('assets/img/user/savedIcon.png')}}" alt="">
+                               
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
