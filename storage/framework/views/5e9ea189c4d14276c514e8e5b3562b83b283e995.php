@@ -59,4 +59,39 @@
 						// instead of a settings object
 					]
 			});
+			$('.productSlider').slick({
+				infinite: true,
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				rtl: true,
+				arrows: true,
+				responsive: [
+						{
+						breakpoint: 992,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1,
+						}
+						},
+						{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 5,
+							slidesToScroll: 1
+						}
+						},
+						{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: 4,
+							slidesToScroll: 1
+						}
+						}
+					]
+			});
+			$(".productSlider .sliderImg img").click(function(){
+				console.log("here")
+				var src=$(this).attr("src");
+				$(".sliderDiv .mainImg img").attr("src", src)
+			})
 		</script><?php /**PATH /Applications/Development/Web/Laravel/dosiz/resources/views/layout/partials/footer-scripts.blade.php ENDPATH**/ ?>

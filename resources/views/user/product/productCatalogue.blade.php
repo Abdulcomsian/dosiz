@@ -35,20 +35,1229 @@
                 <div class="col-12">
                     <div class="tab-content">
                         <div id="home" class="tab-pane fade in active">
-                            <h3>HOME</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="productCommon">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center mt-20">
+                                    <button class="commonBtn">דוע הלג</button>
+                                </div>
+                            </div>
                         </div>
                         <div id="menu1" class="tab-pane fade">
-                            <h3>Menu 1</h3>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="productCommon">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center mt-20">
+                                    <button class="commonBtn">דוע הלג</button>
+                                </div>
+                            </div>
                         </div>
                         <div id="menu2" class="tab-pane fade">
-                            <h3>Menu 2</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                        <div class="productCommon">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center mt-20">
+                                    <button class="commonBtn">דוע הלג</button>
+                                </div>
+                            </div>
                         </div>
                         <div id="menu3" class="tab-pane fade">
-                            <h3>Menu 3</h3>
-                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <div class="productCommon">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="sliderCommonDiv">
+                                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                                            <div class="ratingDiv">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="brandInfo">
+                                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                                <p>₪ 490.00-₪ 590.00</p>
+                                                <p class="price">₪ 531.00-₪ 441.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center mt-20">
+                                    <button class="commonBtn">דוע הלג</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="sliderSection">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h2>םישדח םירצומ םי תינור</h2>
+                <div class="brandSlider">
+                    <div class="sliderCommonDiv">
+                        <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                        <div class="ratingDiv">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <div class="brandInfo">
+                            <h5>ןטק ףדצ – CROSS דימצ</h5>
+                            <p>₪ 490.00-₪ 590.00</p>
+                            <p class="price">₪ 531.00-₪ 441.00</p>
+                        </div>
+                    </div>
+                    <div class="sliderCommonDiv">
+                        <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                        <div class="ratingDiv">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <div class="brandInfo">
+                            <h5>ןטק ףדצ – CROSS דימצ</h5>
+                            <p>₪ 490.00-₪ 590.00</p>
+                            <p class="price">₪ 531.00-₪ 441.00</p>
+                        </div>
+                    </div>
+                    <div class="sliderCommonDiv">
+                        <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                        <div class="ratingDiv">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <div class="brandInfo">
+                            <h5>ןטק ףדצ – CROSS דימצ</h5>
+                            <p>₪ 490.00-₪ 590.00</p>
+                            <p class="price">₪ 531.00-₪ 441.00</p>
+                        </div>
+                    </div>
+                    <div class="sliderCommonDiv">
+                        <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                        <div class="ratingDiv">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <div class="brandInfo">
+                            <h5>ןטק ףדצ – CROSS דימצ</h5>
+                            <p>₪ 490.00-₪ 590.00</p>
+                            <p class="price">₪ 531.00-₪ 441.00</p>
+                        </div>
+                    </div>
+                    <div class="sliderCommonDiv">
+                        <img src="{{asset('assets/img/user/brand5.svg')}}" alt="" class="img-fluid">
+                        <div class="ratingDiv">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <div class="brandInfo">
+                            <h5>ןטק ףדצ – CROSS דימצ</h5>
+                            <p>₪ 490.00-₪ 590.00</p>
+                            <p class="price">₪ 531.00-₪ 441.00</p>
+                        </div>
+                    </div>
+                    <div class="sliderCommonDiv">
+                        <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                        <div class="ratingDiv">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <div class="brandInfo">
+                            <h5>ןטק ףדצ – CROSS דימצ</h5>
+                            <p>₪ 490.00-₪ 590.00</p>
+                            <p class="price">₪ 531.00-₪ 441.00</p>
                         </div>
                     </div>
                 </div>

@@ -35,6 +35,9 @@ Route::get('/detailArticle', function () {
 Route::get('/productCatalogue', function () {
     return view('user.product.productCatalogue');
 });
+Route::get('/productDetail', function () {
+    return view('user.product.productDetail');
+});
 
 
 /*****************ADMIN ROUTES*******************/

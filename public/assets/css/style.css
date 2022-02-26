@@ -7890,6 +7890,9 @@ div.dataTables_wrapper div.dataTables_filter input{
 .mt-80{
 	margin-top: 80px;
 }
+.mt-20{
+	margin-top: 20px;
+}
 .desktopHide {
     display: none;
 }
@@ -8121,7 +8124,8 @@ div.dataTables_wrapper div.dataTables_filter input{
 	font-weight: 600;
 }
 
-#sliderSection .brandSlider .sliderCommonDiv {
+#sliderSection .brandSlider .sliderCommonDiv,
+.sliderCommonDiv {
     background: #FFFFFF;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
     border-radius: 6px;
@@ -8131,21 +8135,27 @@ div.dataTables_wrapper div.dataTables_filter input{
     margin: 0px 10px;
 }
 
-#sliderSection .brandSlider .sliderCommonDiv .ratingDiv {
+#sliderSection .brandSlider .sliderCommonDiv .ratingDiv,
+.sliderCommonDiv .ratingDiv {
     padding: 5px;
 }
 
-#sliderSection .brandSlider .sliderCommonDiv .ratingDiv i {
+#sliderSection .brandSlider .sliderCommonDiv .ratingDiv i,
+.sliderCommonDiv .ratingDiv i {
     color: #FBCD08;
 }
 
 #sliderSection .brandSlider .sliderCommonDiv .ratingDiv i:nth-child(1),
 #sliderSection .brandSlider .sliderCommonDiv .ratingDiv i:nth-child(2),
-#sliderSection .brandSlider .sliderCommonDiv .ratingDiv i:nth-child(3) {
+#sliderSection .brandSlider .sliderCommonDiv .ratingDiv i:nth-child(3),
+.sliderCommonDiv .ratingDiv i:nth-child(1),
+.sliderCommonDiv .ratingDiv i:nth-child(2),
+.sliderCommonDiv .ratingDiv i:nth-child(3) {
     color: #fbcd0873;
 }
 
-#sliderSection .brandSlider .sliderCommonDiv .brandInfo h5 {
+#sliderSection .brandSlider .sliderCommonDiv .brandInfo h5,
+.sliderCommonDiv .brandInfo h5 {
     font-weight: 500;
     color: #333333;
 	font-family: PloniMedium;
@@ -8153,17 +8163,21 @@ div.dataTables_wrapper div.dataTables_filter input{
 }
 
 #sliderSection .brandSlider .sliderCommonDiv .brandInfo h5,
-#sliderSection .brandSlider .sliderCommonDiv .brandInfo p {
+#sliderSection .brandSlider .sliderCommonDiv .brandInfo p,
+.sliderCommonDiv .brandInfo h5,
+.sliderCommonDiv .brandInfo p {
     font-size: 12px;
     margin-bottom: 5px;
 }
 
-#sliderSection .brandSlider .sliderCommonDiv .brandInfo p.price {
+#sliderSection .brandSlider .sliderCommonDiv .brandInfo p.price,
+.sliderCommonDiv .brandInfo p.price {
     color: #DA1081;
     text-decoration: none;
 }
 
-#sliderSection .brandSlider .sliderCommonDiv .brandInfo p {
+#sliderSection .brandSlider .sliderCommonDiv .brandInfo p,
+.sliderCommonDiv .brandInfo p {
     color: #BCBCBC;
     font-weight: 400;
     text-decoration: line-through;
@@ -8607,7 +8621,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 #detailArticle .categoryDiv h2,
 #detailArticle  .tagDiv h2,
-#detailArticle .socialHeading{
+#detailArticle .socialHeading,
+.relatedArticle h2{
 	font-size: 24px;
 	font-weight: 600;
 	font-family: PloniDBold;
@@ -8786,6 +8801,51 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-top: 1px solid #A6A6A6;
     border-bottom: 1px solid #A6A6A6;
 }
+#productCatalogue .productCommon .sliderCommonDiv{
+	margin-bottom: 20px !important;
+	margin: 0px;
+	width: 100%;
+}
+#productCatalogue .productCommon .sliderCommonDiv img{
+	width: 100%;
+}
+#productBanner img{
+	width: 100%;
+}
+#productCatalogue .tabDiv .nav-pills li{
+	margin: 0px 20px;
+}
+/*********** Product Detail *********/
+.productDetail img{
+	width: auto !important;
+}
+.productDetail .productReviewDetail{
+	margin: 20px 0px;
+}
+.productDetail .productReviewDetail ul{
+	display: flex;
+}
+.productDetail .productReviewDetail ul li span{
+	margin: 20px;
+}
+.productDetail .productSlider{
+	margin: 20px;
+}
+.productDetail .productSlider .sliderImg img{
+	margin: auto;
+}
+.productDetail .productSlider button{
+	height: 100% !important;
+	border-radius: 0px;
+	width: 18px !important;
+}
+.sliderDiv .mainImg img{
+	width: 100% !important;
+}
+.productDetail .relatedArticle li{
+	width: 100%;
+	max-width: 80%;
+}
 /*********** Media Query ************/
 @media screen and (max-width: 1400px) {
 	#articleSection .articleLeftDiv .articleCard .articleInfo .readMore{
@@ -8797,6 +8857,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	}
 }
 @media screen and (max-width: 1200px) {
+	#productCatalogue .container-fluid{
+		max-width: 90%;
+	}
 	#detailArticle .tabDiv li{
 		padding: 3px;
 	}
@@ -8832,6 +8895,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @media screen and (max-width: 992px) {
+	
+	.productDetail .productSlider button.slick-next{
+		right: -25px !important;
+	}
+	.productDetail .productSlider button.slick-prev{
+		left: -25px !important;
+	}
+	.productDetail .relatedArticle li{
+		max-width: 100%;
+	}
+	#productCatalogue .tabDiv .nav-pills{
+		justify-content: space-between;
+	}
 	#contactSection .commonContactDiv .infoDiv p{
 		font-size: 18px;
 	}
@@ -8893,6 +8969,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @media screen and (max-width: 768px) {
+	.productDetail .productReviewDetail img{
+		margin: 0px !important;
+	}
+	#productCatalogue .tabDiv .nav-pills li {
+		margin: 0px 10px;
+	}	
+	#productCatalogue .container-fluid{
+		max-width: 100%;
+	}
+	#productCatalogue .productCommon .sliderCommonDiv{
+		max-width: 60%;
+		margin: auto;
+	}
 	.leftDiv{
 		display: none;
 	}
@@ -9002,5 +9091,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 @media screen and (max-width: 480px) {
 	#sliderSection h2{
 		text-align: center;
+	}
+	#productCatalogue .productCommon .sliderCommonDiv{
+		max-width: 100%;
 	}
 }
