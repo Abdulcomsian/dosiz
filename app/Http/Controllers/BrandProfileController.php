@@ -20,9 +20,9 @@ class BrandProfileController extends Controller
     public function index()
     {
         $user_id = Auth::id();
-        $brand_profiles = BrandProfile::get();
-        $b_profile = BrandProfile::where('user_id',$user_id)->first();
-        return view('brand_profiles.index', compact('brand_profiles' ,'b_profile'));
+        $brand_profile = BrandProfile::where('user_id',$user_id)->first();
+        // dd($brand_profile);
+        return view('brand_profiles.index', compact('brand_profile' ));
     }      
 
     public function create()

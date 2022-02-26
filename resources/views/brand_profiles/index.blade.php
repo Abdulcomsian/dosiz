@@ -24,11 +24,11 @@
 						<div class="col-sm-12">
 							<div class="card">
 								<div class="card-body">
-									@if(Auth::user()->hasRole('Brand Manager') && $brand_profiles == null)
+									@if(Auth::user()->hasRole('Brand Manager') && $brand_profile == null)
 									<a href="{{route('brand_profile.create')}}" class="btn btn-primary">Add New <i class="fa fa-plus"></i></a><br><br>
 									@endif
-									@if(Auth::user()->hasRole('Brand Manager') && $brand_profiles != null)
-									<a href="{{url('brand_profile_id',$b_profile->id)}}"  target="_blank"  class="btn btn-primary">View Website <i class="fa fa-plus"></i></a><br><br>
+									@if(Auth::user()->hasRole('Brand Manager') && $brand_profile != null)
+									<a href="{{url('brand_profile_id',$brand_profile->id)}}"  target="_blank"  class="btn btn-primary">View Website <i class="fa fa-plus"></i></a><br><br>
 									@endif
 									@if(session()->has('message'))
 					                	<div class="alert alert-success">
@@ -47,16 +47,14 @@
 												</tr>
 											</thead>
 											<tbody>
-												@if(count($brand_profiles) > 0)
+												@if($brand_profile != null)
 												<tr>
-
-													@foreach($brand_profiles as $brand_profile)
 													
-													<td>{{ $brand_profile->brand_name}}</td>
+													<td>{{ $brand_profile->brand_name ?? ''}}</td>
 													
-													<td> <img src="{{asset($brand_profile->brand_logo)}}" width="100px" height="100px"></td>
-													<td>{{$brand_profile->category->name}}</td>
-													<td>{{$brand_profile->city->name}}</td>
+													<td> <img src="{{asset($brand_profile->brand_logo ?? '')}}" width="100px" height="100px"></td>
+													<td>{{$brand_profile->category->name ?? ''}}</td>
+													<td>{{$brand_profile->city->name ?? ''}}</td>
 
 													<td class="text-right">
 														<div class="actions" style="display:flex;">
@@ -68,7 +66,6 @@
 														</div>
 													</td>
 												</tr>
-												 @endforeach
 												@else
 												<tr>
 						                        <td colspan="6" style="text-align: center;"><strong> No Brand Profile Created Yet </strong></td>

@@ -126,6 +126,7 @@
             <div class="col-12">
                 <h2><a href="{{url('articles',$brand_profile->id)}}" >םלוכ תא ןכדעי ונלש םינורחאה םיגולבה</a></h2>
             </div>
+            @if($blog_1 != null)
             <div class="col-md-4">
                 <div class="articleRightDiv">
                     <div class="articleCard">
@@ -146,8 +147,31 @@
                     </div>
                 </div>
             </div>
+            @else
+            <div class="col-md-4">
+                <div class="articleRightDiv">
+                    <div class="articleCard">
+                        <img src="{{asset('assets/img/user/article1.svg')}}" alt="" class="img-fluid">
+                        <div class="articleInfo">
+                            <div class="dateInput">
+                                <input type="date">
+                            </div>
+                            <h3>2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס</h3>
+                            <p> תומקרהמ ,בטיה בשוחמ םי תינור לש בוציעו בוציע לכ .ךלת  ךרוא דעו תלפכמה אלש ןאל ,"סיכב הפילק ,תונוהבב לוח"</p>
+                            <div class="readMore">
+                                <p>
+                                    <a href="">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endif
+
             <div class="col-md-8">
                 <div class="articleLeftDiv">
+                    @if($blog_2 != null)
                     <div class="articleCard">
                         <div class="row">
                             <div class="col-md-6 desktopHide">
@@ -173,6 +197,33 @@
                             </div>
                         </div>
                     </div>
+                    @else
+                    <div class="articleCard">
+                        <div class="row">
+                            <div class="col-md-6 desktopHide">
+                                <img src="{{asset('assets/img/user/article1img.png')}}" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="articleInfo">
+                                    <div class="dateInput">
+                                        <input type="date">
+                                    </div>
+                                    <h3>2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס</h3>
+                                    <p> תומקרהמ ,בטיה בשוחמ םי תינור לש בוציעו בוציע לכ .ךלת  ךרוא דעו תלפכמה אלש ןאל ,"סיכב הפילק ,תונוהבב לוח"</p>
+                                    <div class="readMore">
+                                        <p>
+                                            <a href="">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mobileHide">
+                                <img src="{{asset('assets/img/user/article1img.png')}}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+                    @if($blog_3 != null)
                     <div class="articleCard">
                         <div class="row">
                             <div class="col-md-6 desktopHide">
@@ -197,6 +248,32 @@
                             </div>
                         </div>
                     </div>
+                    @else
+                    <div class="articleCard">
+                        <div class="row">
+                            <div class="col-md-6 desktopHide">
+                                <img src="{{asset('assets/img/user/articale2img.png')}}" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="articleInfo">
+                                    <div class="dateInput">
+                                        <input type="date">
+                                    </div>
+                                    <h3>2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס</h3>
+                                    <p> תומקרהמ ,בטיה בשוחמ םי תינור לש בוציעו בוציע לכ .ךלת  ךרוא דעו תלפכמה אלש ןאל ,"סיכב הפילק ,תונוהבב לוח"</p>
+                                    <div class="readMore">
+                                        <p>
+                                            <a href="">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mobileHide">
+                                <img src="{{asset('assets/img/user/articale2img.png')}}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    @endif
                 </div>
             </div>
             <div class="col-12 text-center mt-60">
