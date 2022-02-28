@@ -243,6 +243,7 @@ class BrandProfileController extends Controller
         $blog_1 = Blog::where('user_id',$user->id)->first();
         $blog_2 = Blog::where('user_id',$user->id)->skip(1)->first();
         $blog_3 = Blog::where('user_id',$user->id)->skip(2)->first();
+        // dd($brand_profile->color['header_color']);
         return view('brand_profiles.website.index',compact('brand_profile','blog_1','blog_2','blog_3','user'));
     }
 

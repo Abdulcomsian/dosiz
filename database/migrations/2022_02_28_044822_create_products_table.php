@@ -26,7 +26,10 @@ class CreateProductsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users'); 
             
-            $table->integer('price');
+            $table->integer('old_from_price');
+            $table->integer('old_to_price');
+            $table->integer('new_from_price');
+            $table->integer('new_to_price');
             $table->longText('description');
             $table->tinyInteger('status')->default('1');
             $table->timestamps();

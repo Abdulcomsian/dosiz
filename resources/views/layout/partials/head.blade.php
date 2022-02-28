@@ -24,6 +24,27 @@
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 		<link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
+
         <link rel="stylesheet" href="{{asset('assets/css/slick-theme.css')}}">
+        <style type="text/css">
+        	.header {
+        		background:{{$brand_profile->color['header_color'] ?? '#2B004F'}}  ;
+        	}
+        	.footer {
+        		background:{{$brand_profile->color['footer_color'] ?? '#2B004F'}}  ;
+        	}
+
+        	.loadMore, .commonBtn
+        	{
+        		background: {{$brand_profile->color['button_color'] ?? 'linear-gradient(292deg, #EE7047 0%, #F40990 100%)'}}  ;
+        	}
+        	body {
+        		color: {{$brand_profile->color['text_color'] ?? '#26292c'}}  ;
+        	}
+        	 h1, h2, h3, h4, h5, h6 , a{
+        	 	color: {{$brand_profile->color['title_color'] ?? '#26292c'}}  ;
+        	 }
+        	
+        </style>
 		@toastr_css
   

@@ -12,7 +12,7 @@
 							<!-- Footer Widget -->
 							<div class="footer-widget footer-about">
 							<div class="footer-logo">
-									<img src="assets_admin/img/logo.png" alt="logo">
+									<img src="{{$brand_profile->brand_logo ?? 'assets_admin/img/logo.png'}} " alt="logo">
 								</div>
 								<div class="formDiv">
 									<form action="">
@@ -132,7 +132,7 @@
                                     </div>
                                     <div class="logoIconDiv">
                                     <div class="footer-logo">
-										<img src="assets_admin/img/logo.png" alt="logo">
+										<img src="{{asset($brand_profile->brand_logo) ?? 'assets_admin/img/logo.png'}}" alt="logo">
 									</div>
 									<div class="footer-about-content">
 										<div class="social-icon">
