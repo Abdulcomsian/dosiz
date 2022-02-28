@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use App\Product;
 use Auth;
 use DB;
-use App\ProductCategory;
+use App\Category;
+use App\BrandProfile;
 use App\Utils\HelperFunctions;
 use Illuminate\Support\Facades\Redirect;
 
@@ -21,9 +22,16 @@ class productController extends Controller
 
     public function create()
     {
+        try {
         $user_id = Auth::id();
-        $categories = ProductCategory::get();
-        return view('product.add_product', compact('categories'));
+        $brand_profile = BrandProfile::where('user_id',$user_id)->first();
+        $category = Category::where('id',$brand_profile->category_id)->first();
+        $categories = Category::get();
+        return view('product.add_product', compact('categories','category'));
+        } catch (\Exception $exception) {
+            toastError($exception->getMessage());
+            return Redirect::back();
+        }
     }
 
     public function show($id)
@@ -45,7 +53,7 @@ class productController extends Controller
             'name'=>'required', 
             'product_slug'=>'required|unique:products,name,'.$request->id,
             'image'=>'required', 
-            'product_category_id'=>'required', 
+            'category_id'=>'required', 
             'description'=>'required', 
             'status'=>'required', 
 
@@ -55,7 +63,7 @@ class productController extends Controller
         $Product->name = $request->name;
         $Product->user_id = $user_id;
         $Product->product_slug = $request->product_slug; 
-        $Product->product_category_id = $request->product_category_id;
+        $Product->category_id = $request->category_id;
         $Product->old_from_price = $request->old_from_price;
         $Product->old_to_price = $request->old_to_price;
         $Product->new_from_price = $request->new_from_price;
@@ -93,7 +101,7 @@ class productController extends Controller
     {
         try {
             $user_id = Auth::id();
-            $categories = ProductCategory::get();
+            $categories = Category::get();
             $product = Product::where('id',$id)->first();
             return view('product.edit_product', compact('product','categories'));
         } catch (\Exception $exception) {
@@ -109,7 +117,7 @@ class productController extends Controller
         $this->validate($request,[ 
             'name'=>'required', 
             'product_slug'=>'required|unique:products,name,'.$request->id,
-            'product_category_id'=>'required', 
+            'category_id'=>'required', 
             'description'=>'required', 
             'status'=>'required', 
 
@@ -126,7 +134,7 @@ class productController extends Controller
         $Product->name = $request->name;
         $Product->user_id = $user_id;
         $Product->product_slug = $request->product_slug;
-        $Product->product_category_id = $request->product_category_id;
+        $Product->category_id = $request->category_id;
         $Product->old_from_price = $request->old_from_price;
         $Product->old_to_price = $request->old_to_price;
         $Product->new_from_price = $request->new_from_price;
@@ -179,9 +187,9 @@ class productController extends Controller
         
     }
 
-    public function get_sub_category($id)
-    {
-        $get_sub_category = DB::table("sub_categories")->where("category_id",$id)->pluck("name","id");
-        return json_encode($get_sub_category);
-    }
+    // public function get_sub_category($id)
+    // {
+    //     $get_sub_category = DB::table("sub_categories")->where("category_id",$id)->pluck("name","id");
+    //     return json_encode($get_sub_category);
+    // }
 }

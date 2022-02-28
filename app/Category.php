@@ -17,6 +17,11 @@ class Category extends Model
         return $this->hasMany(Blog::class);
     }
 
+    public function product()
+    {
+        return $this->hasMany(Product::class);
+    }
+
     public function BrandProfile()
     {
         return $this->hasOne(BrandProfile::class);

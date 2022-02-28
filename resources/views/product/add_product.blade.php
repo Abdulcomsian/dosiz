@@ -98,16 +98,16 @@ Add Product
 					                            <!-- <div class="row">
 					                                <div class="col-md-6"> -->
 					                                    <div class="form-group">
-					                                        <label>Product Category</label>
-					                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="product_category_id" id="product_category_id">
+					                                        <label>Category</label>
+					                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="category_id" id="category_id">
 					                                            <option selected disabled>Select Category</option>
 					                                            @if($categories)
-					                                            @foreach($categories as $category)
-					                                            	<option value="{{$category->id}}">{{$category->category_name}}</option>
+					                                            @foreach($categories as $all)
+					                                            	<option value="{{$all->id}}" {{ $category->id == $all->id ? 'selected' : 'disabled' }} >{{$all->name}}</option>
 					                                            @endforeach
 					                                            @endif
 					                                        </select>
-					                                        <div style="color:red;">{{$errors->first('product_category_id')}}</div> <br>
+					                                        <div style="color:red;">{{$errors->first('category_id')}}</div> <br>
 					                                    </div>
 
 					                                <!-- </div>

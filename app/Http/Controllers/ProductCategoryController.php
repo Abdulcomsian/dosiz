@@ -36,7 +36,7 @@ class ProductCategoryController extends Controller
         ]);
         try {
         $product_category= new ProductCategory;
-        $product_category->category_name = $request->category_name;
+        $product_category->category_id = $request->category_id;
         $product_category->category_slug = $request->category_slug;
         $product_category->user_id = $user_id;
         $product_category->save();
@@ -58,7 +58,7 @@ class ProductCategoryController extends Controller
         ]);
         try {
         $product_category= ProductCategory::find($request->category_id);
-        $product_category->category_name = $request->category_name;
+        $product_category->category_id = $request->category_id;
         $product_category->category_slug = $request->category_slug;
         $product_category->save();
         toastSuccess('Successfully Update');

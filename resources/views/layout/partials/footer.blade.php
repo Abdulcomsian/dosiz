@@ -12,7 +12,9 @@
 							<!-- Footer Widget -->
 							<div class="footer-widget footer-about">
 							<div class="footer-logo">
+								@if(isset($brand_profile))
 									<img src="{{$brand_profile->brand_logo ?? 'assets_admin/img/logo.png'}} " alt="logo">
+								@endif
 								</div>
 								<div class="formDiv">
 									<form action="">
@@ -132,7 +134,9 @@
                                     </div>
                                     <div class="logoIconDiv">
                                     <div class="footer-logo">
+                                    	@if(isset($brand_profile))
 										<img src="{{asset($brand_profile->brand_logo) ?? 'assets_admin/img/logo.png'}}" alt="logo">
+										@endif
 									</div>
 									<div class="footer-about-content">
 										<div class="social-icon">

@@ -98,15 +98,15 @@ Edit Product
 					                            </div>
 			                                    <div class="form-group">
 			                                        <label>Product Category</label>
-			                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="product_category_id" id="product_category_id">
+			                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="category_id" id="category_id">
 			                                            <option disabled>Select Category</option>
 			                                            @if($categories)
 			                                            @foreach($categories as $category)
-			                                            	<option value="{{$category->id}}" {{ $product->category_id == $category->id ? 'selected' : '' }} >{{$category->category_name}}</option>
+			                                            	<option value="{{$category->id}}" {{ $product->category_id == $category->id ? 'selected' : 'disabled' }} >{{$category->name}}</option>
 			                                            @endforeach
 			                                            @endif
 			                                        </select>
-			                                        <div style="color:red;">{{$errors->first('product_category_id')}}</div> <br>
+			                                        <div style="color:red;">{{$errors->first('category_id')}}</div> <br>
 			                                    </div>
 					                            <div class="form-group">
 					                                <label>Product Description</label>

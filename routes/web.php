@@ -34,7 +34,6 @@ Route::get('/detailArticle', function () {
 /*****************ADMIN ROUTES*******************/
 Route::prefix('dashboard')->middleware('dashboard')->group(function(){
     Route::get('/dashboard', 'dashboardController@index')->name('dashboard');
-    Route::get('/get_sub_category/{id}', 'productController@get_sub_category');
 
     //category
     Route::resource('/category', 'categoryController');
@@ -46,17 +45,13 @@ Route::prefix('dashboard')->middleware('dashboard')->group(function(){
     //blog
     Route::resource('/brand_profile', 'BrandProfileController');
 
-    //product category
-    Route::resource('/p_category', 'ProductCategoryController');
-
 });
 /********************ADMIN ROUTES END******************************/
 
 
 /*****************ADMIN ROUTES*******************/
 Route::prefix('admin')->middleware('can:admin')->group(function(){
-    //category
-    Route::resource('/sub_category', 'Admin\SubCategoryController');
+   
     
     //category
     Route::resource('/city', 'Admin\CityController');

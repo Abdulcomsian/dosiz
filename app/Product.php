@@ -14,18 +14,15 @@ class Product extends Model
         'images' => 'array',
     ];
 
-    public function product_category()
-    {
-        return $this->belongsTo(ProductCategory::class);
-    }
 
     public function User()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function sub_category()
+    public function category()
     {
-        return $this->belongsTo(SubCategory::class);
+        return $this->belongsTo(Category::class);
     }
+
 }

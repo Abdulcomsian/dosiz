@@ -1,4 +1,4 @@
-<!-- Sidebar -->
+Sidebar -->
 <div class="sidebar" id="sidebar">
                 <div class="sidebar-inner slimscroll">
 					<div id="sidebar-menu" class="sidebar-menu">
@@ -42,21 +42,21 @@
 							<!-- <li class="submenu"> 
 								<a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;"> -->
-							@if(Auth::user()->hasRole('Admin'))
+							<!-- @if(Auth::user()->hasRole('Admin')) -->
 							<li class="{{ Request::is('dashboard/category') ? 'active' : '' }}"> 
 								<a href="{{ url('/dashboard/category')}}"><span>Categories</span></a>
 							</li>
-							@endif
-							@if(Auth::user()->hasRole('Admin'))
+							<!-- @endif -->
+							<!-- @if(Auth::user()->hasRole('Admin'))
 							<li class="{{ Request::is('admin/sub_category') ? 'active' : '' }}"> 
 								<a href="{{ url('/admin/sub_category')}}"><span>Sub Category</span></a>
 							</li>
-							@endif
+							@endif --><!-- 
 							@if(Auth::user()->hasRole('Brand Manager') || Auth::user()->hasRole('Admin'))
 							<li class="{{ Request::is('dashboard/p_category') ? 'active' : '' }}"> 
 								<a href="{{ url('/dashboard/p_category')}}"><span>Product Categories</span></a>
 							</li>
-							@endif
+							@endif -->
 							<li class="{{ Request::is('dashboard/product') ? 'active' : '' }}"> 
 								<a href="{{ url('/dashboard/product') }}"><span>Products</span></a>
 							</li>
@@ -148,4 +148,4 @@
 					</div>
                 </div>
             </div>
-			<!-- /Sidebar -->
+			<!-- /Sidebar

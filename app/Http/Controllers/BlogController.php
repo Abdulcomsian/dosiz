@@ -8,6 +8,7 @@ use App\Blog;
 use Auth;
 use DB;
 use App\Category;
+use App\BrandProfile;
 use App\SubCategory;
 use App\Utils\HelperFunctions;
 use Illuminate\Support\Facades\Redirect;
@@ -22,9 +23,16 @@ class BlogController extends Controller
 
     public function create()
     {
-        $user_id = Auth::id();
-        $categories = Category::get();
-        return view('blog.add_blog', compact('categories'));
+        try {
+            $user_id = Auth::id();
+            $brand_profile = BrandProfile::where('user_id',$user_id)->first();
+            $category = Category::where('id',$brand_profile->category_id)->first();
+            $categories = Category::get();
+            return view('blog.add_blog', compact('categories','category'));
+        } catch (\Exception $exception) {
+            toastError($exception->getMessage());
+            return Redirect::back();
+        }
     }
 
     public function show($id)
@@ -54,7 +62,6 @@ class BlogController extends Controller
         $blog= new Blog;
         $blog->name = $request->name;
         $blog->user_id = $user_id;
-        $blog->sub_category_id = $request->sub_category;
         $blog->category_id = $request->category_id;
         $blog->description = $request->description;
         if ($request->file('image')) {
@@ -79,7 +86,7 @@ class BlogController extends Controller
         toastSuccess('Successfully Added');
         return redirect('dashboard/blog');
         } catch (\Exception $exception) {
-            dd($exception->getMessage());
+            // dd($exception->getMessage());
             toastError($exception->getMessage());
             return Redirect::back();
         }
@@ -91,8 +98,7 @@ class BlogController extends Controller
             $user_id = Auth::id();
             $categories = Category::get();
             $blog = Blog::where('id',$id)->first();
-            $sub_categories = SubCategory::where('category_id',$blog->category_id)->get();
-            return view('blog.edit_blog', compact('blog','categories','sub_categories'));
+            return view('blog.edit_blog', compact('blog','categories'));
         } catch (\Exception $exception) {
             toastError($exception->getMessage());
             return Redirect::back();
@@ -121,7 +127,6 @@ class BlogController extends Controller
         }
         $blog->name = $request->name;
         $blog->user_id = $user_id;
-        $blog->sub_category_id = $request->sub_category;
         $blog->category_id = $request->category_id;
         $blog->description = $request->description;
         if ($request->file('image')) {

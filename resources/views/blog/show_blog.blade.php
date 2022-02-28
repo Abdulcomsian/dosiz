@@ -33,7 +33,6 @@ Blog Detail
 													<tr>
 														<th>Blog Name</th>
 														<th>Blog Category</th>
-														<th>Blog Sub Category</th>
 														<th>Blog Description</th>
 														<th>Blog Status</th>
 													</tr>
@@ -42,7 +41,6 @@ Blog Detail
 													<tr>
 														<td>{{$blog->name}}</td>
 														<td>{{$blog->category->name}}</td>
-														<td>{{$blog->sub_category->name}}</td>
 														<td>{!! $blog->description !!}</td>
 														<td>{{$blog->status}}</td>
 													</tr>

@@ -6543,6 +6543,7 @@ html.menu-opened body {
 	z-index: 999;
 }
 .header {
+	background:#2B004F;
     border-bottom: 1px solid #f0f0f0;
     left: 0;
     position: fixed;
