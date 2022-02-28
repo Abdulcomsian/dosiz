@@ -1,5 +1,8 @@
 
 @extends('layout.mainlayout_admin')
+@section('title')
+Dashboard 
+@endsection
 @section('content')     
             <!-- Page Wrapper -->
             <div class="page-wrapper">

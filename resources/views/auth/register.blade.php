@@ -1,4 +1,7 @@
 @extends('layout.mainlayout')
+@section('title')
+Register 
+@endsection
 @section('content')     
 
         <!-- Main Wrapper -->
@@ -33,20 +36,7 @@
                                         </div>
                                         <div style="color:red;">{{$errors->first('email')}}</div> <br>
                                     </div>
-                                    <!-- <div class="form-group">
-                                        <select name="role" id="role" class="form-control">
-                                          <option disabled selected>Select Role</option>
-                                          @foreach($roles as $all)
-                                          <option value="{{ $all->name }}">{{ $all->name }}</option>
-                                          @endforeach
-                                        </select>
-                                        @error('role')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group">
+                                    <!--                                     <div class="form-group">
                                         <input class="form-control @error('phone') is-invalid @enderror" type="text" id="phone" value="{{ old('phone') }}" name="phone" placeholder="Enter Phone Number">
                                         @error('phone')
                                             <span class="invalid-feedback" role="alert">

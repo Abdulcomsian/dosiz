@@ -41,7 +41,7 @@ class ProductCategoryController extends Controller
         $product_category->user_id = $user_id;
         $product_category->save();
             toastSuccess('Successfully Added');
-            return redirect('brand/p_category');
+            return redirect('dashboard/p_category');
         } catch (\Exception $exception) {
             dd($exception->getMessage());
             toastError('Something went wrong, try again');
@@ -62,7 +62,7 @@ class ProductCategoryController extends Controller
         $product_category->category_slug = $request->category_slug;
         $product_category->save();
         toastSuccess('Successfully Update');
-        return redirect('brand/p_category');
+        return redirect('dashboard/p_category');
         
         } catch (\Exception $exception) {
             // dd($exception->getMessage());
