@@ -42,7 +42,8 @@ Products
 													<th>Product Name</th>
 													<th>Product Feature Image</th>
 													<th>Product Category</th>
-													<th>Product Price</th>
+													<th>Product Orignal Price</th>
+													<th>Product Discount Price</th>
 													<th>Product Status</th>
 													<th class="text-right">Action</th>
 												</tr>
@@ -57,7 +58,8 @@ Products
 													
 													<td> <img src="{{asset($product->image)}}" width="100px" height="100px"></td>
 													<td>{{$product->product_category->category_name}}</td>
-													<td>{{$product->price}}</td>
+													<td>{{$product->old_from_price}} - {{$product->old_to_price}}</td>
+													<td>{{$product->new_from_price}} - {{$product->new_to_price}}</td>
 													<td>{{$product->status}}</td>
 
 													<td class="text-right">
