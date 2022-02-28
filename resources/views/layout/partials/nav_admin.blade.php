@@ -46,6 +46,10 @@
 							<li class="{{ Request::is('dashboard/category') ? 'active' : '' }}"> 
 								<a href="{{ url('/dashboard/category')}}"><span>Categories</span></a>
 							</li>
+							@elseif(Auth::user()->hasRole('Brand Manager'))
+							<li class="{{ Request::is('brand/p_category') ? 'active' : '' }}"> 
+								<a href="{{ url('/brand/p_category')}}"><span>Categories</span></a>
+							</li>
 							@endif
 							@if(Auth::user()->hasRole('Admin'))
 							<li class="{{ Request::is('admin/sub_category') ? 'active' : '' }}"> 
