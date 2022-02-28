@@ -27,6 +27,7 @@
 
         <link rel="stylesheet" href="{{asset('assets/css/slick-theme.css')}}">
         <style type="text/css">
+        	@if($brand_profile)
         	.header {
         		background:{{$brand_profile->color['header_color'] ?? '#2B004F'}}  ;
         	}
@@ -43,7 +44,8 @@
         	}
         	 h1, h2, h3, h4, h5, h6 , a{
         	 	color: {{$brand_profile->color['title_color'] ?? '#26292c'}}  ;
-        	 }
+        	}
+        	@endif
         	
         </style>
 		@toastr_css
