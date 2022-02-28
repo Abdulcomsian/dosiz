@@ -14,9 +14,9 @@ class Product extends Model
         'images' => 'array',
     ];
 
-    public function category()
+    public function product_category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(ProductCategory::class);
     }
 
     public function User()

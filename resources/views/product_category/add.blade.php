@@ -26,12 +26,12 @@
 									<!-- Add details -->
 									<div class="row">
 										<div class="col-12 blog-details">
-											<form action="{{ route('category.store') }}" method="post">
+											<form action="{{ route('p_category.store') }}" method="post">
                 								@csrf
 					                            <div class="form-group">
 					                                <label>Category Name</label>
-					                                <input class="form-control" id="name" name="name" placeholder="Enter Category Name" type="text">
-			                                        <div style="color:red;">{{$errors->first('name')}}</div> <br>
+					                                <input class="form-control" id=" category_name" name=" category_name" placeholder="Enter Category Name" type="text">
+			                                        <div style="color:red;">{{$errors->first(' category_name')}}</div> <br>
 					                            </div>
 					                            <div class="form-group">
 					                                <label>Category Slug</label>
@@ -39,7 +39,7 @@
 					                                <div style="color:red;">{{$errors->first('category_slug')}}</div> <br>
 					                            </div>
 					                            <div class="m-t-20 text-center">
-					                                <button class="btn btn-primary btn-lg">Publish Category</button>
+					                                <button class="btn btn-primary btn-lg">Publish Product Category</button>
 					                            </div>
 					                        </form>
 										</div>

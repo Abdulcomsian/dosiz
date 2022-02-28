@@ -24,8 +24,8 @@
 						<div class="col-sm-12">
 							<div class="card">
 								<div class="card-body">
-									@if(Auth::user()->hasRole('Admin'))
-									<a href="{{route('category.create')}}" class="btn btn-primary">Add New <i class="fa fa-plus"></i></a><br><br>
+									@if(Auth::user()->hasRole('Brand Manager'))
+									<a href="{{route('p_category.create')}}" class="btn btn-primary">Add New <i class="fa fa-plus"></i></a><br><br>
 									@endif
 									@if(session()->has('message'))
 					                	<div class="alert alert-success">
@@ -46,7 +46,7 @@
 												<tr>
 													@foreach($product_categories as $p_category)
 													<td>
-														{{ $p_category->name}}
+														{{ $p_category->category_name}}
 													</td>
 													<td>{{$p_category->category_slug}}</td>
 
@@ -56,7 +56,7 @@
 																<i class="fe fe-pencil"></i>
 																Edit
 															</a>
-															<form method="POST" action="{{ route('category.destroy', $p_category->id) }}"  id="form_{{$p_category->id}}" >
+															<form method="POST" action="{{ route('p_category.destroy', $p_category->id) }}"  id="form_{{$p_category->id}}" >
 							                                    @method('Delete')
 							                                    @csrf()
 
@@ -104,12 +104,12 @@
 							</div>
 							<div class="card">
 								<div class="card-body">
-					                <form id="update_category" method="post" autocomplete="off" action="{{ route('category.update',1) }}" novalidate="novalidate" class="bv-form"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+					                <form id="update_category" method="post" autocomplete="off" action="{{ route('p_category.update',1) }}" novalidate="novalidate" class="bv-form"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
 					                @method('PUT')
 					                @csrf
 					                    <div class="form-group">
 					                        <label>Category Name</label>
-					                        <input class="form-control" type="text" value="" name="name" id="name" data-bv-field="name">
+					                        <input class="form-control" type="text" value="" name="category_name" id="category_name" data-bv-field="category_name">
 											<input class="form-control" type="hidden" value="8" name="category_id" id="category_id">
 					                    </div>
 					                    <div class="form-group">
@@ -138,7 +138,7 @@
 	<script type="text/javascript">
 		function edit_cat(data)
 		{
-			$("#name").val(data['name']); 
+			$("#category_name").val(data['category_name']); 
 			$("#category_slug").val(data['category_slug']); 
 			$("#category_id").val(data['id']); 
 			$("#edit_modal").modal();

@@ -64,7 +64,7 @@ Route::prefix('admin')->middleware('can:admin')->group(function(){
 /*****************Brand Manager ROUTES*******************/
 Route::prefix('brand')->middleware('can:brand')->group(function(){
     //category
-    Route::resource('/category', 'ProductCategoryController');
+    Route::resource('/p_category', 'ProductCategoryController');
 
 });
 /********************Brand Manager ROUTES END******************************/

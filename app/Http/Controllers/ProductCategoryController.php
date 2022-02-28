@@ -19,7 +19,7 @@ class ProductCategoryController extends Controller
 
     public function create()
     {
-        return view('category.add');
+        return view('product_category.add');
     }
 
     public function show($id)
@@ -29,17 +29,19 @@ class ProductCategoryController extends Controller
 
     public function store(Request $request)
     {
+        $user_id = Auth::id();
         $this->validate($request,[ 
-            'name'=>'required', 
-            'category_slug'=>'required|unique:categories,name,'.$request->id,
+            'category_name'=>'required', 
+            'category_slug'=>'required|unique:product_categories,category_name,'.$request->id,
         ]);
         try {
-        $category= new Category;
-        $category->name = $request->name;
-        $category->category_slug = $request->category_slug;
-        $category->save();
+        $product_category= new ProductCategory;
+        $product_category->category_name = $request->category_name;
+        $product_category->category_slug = $request->category_slug;
+        $product_category->user_id = $user_id;
+        $product_category->save();
             toastSuccess('Successfully Added');
-            return redirect('dashboard/category');
+            return redirect('brand/p_category');
         } catch (\Exception $exception) {
             dd($exception->getMessage());
             toastError('Something went wrong, try again');
@@ -51,16 +53,16 @@ class ProductCategoryController extends Controller
     {
         // dd($request);
         $this->validate($request,[ 
-            'name'=>'required', 
+            'category_name'=>'required', 
             // 'category_slug'=>'required|unique:categories,category_slug,'. $request->id .'id',
         ]);
         try {
-        $category= Category::find($request->category_id);
-        $category->name = $request->name;
-        $category->category_slug = $request->category_slug;
-        $category->save();
+        $product_category= ProductCategory::find($request->category_id);
+        $product_category->category_name = $request->category_name;
+        $product_category->category_slug = $request->category_slug;
+        $product_category->save();
         toastSuccess('Successfully Update');
-        return redirect('dashboard/category');
+        return redirect('brand/p_category');
         
         } catch (\Exception $exception) {
             // dd($exception->getMessage());
@@ -72,7 +74,7 @@ class ProductCategoryController extends Controller
     public function destroy($id)
     {
         try {
-            Category::FindorFail($id)->delete();
+            ProductCategory::FindorFail($id)->delete();
             toastr()->success('Successfully Deleted');
             return back();
         } catch (\Exception $exception) {

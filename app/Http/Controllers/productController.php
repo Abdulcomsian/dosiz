@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use Auth;
 use DB;
-use App\Category;
-use App\SubCategory;
+use App\ProductCategory;
 use App\Utils\HelperFunctions;
 use Illuminate\Support\Facades\Redirect;
 
@@ -23,7 +22,7 @@ class productController extends Controller
     public function create()
     {
         $user_id = Auth::id();
-        $categories = Category::get();
+        $categories = ProductCategory::get();
         return view('product.add_product', compact('categories'));
     }
 
@@ -46,7 +45,7 @@ class productController extends Controller
             'name'=>'required', 
             'product_slug'=>'required|unique:products,name,'.$request->id,
             'image'=>'required', 
-            'category_id'=>'required', 
+            'product_category_id'=>'required', 
             'description'=>'required', 
             'status'=>'required', 
 
@@ -55,9 +54,8 @@ class productController extends Controller
         $Product= new Product;
         $Product->name = $request->name;
         $Product->user_id = $user_id;
-        $Product->product_slug = $request->product_slug;
-        $Product->sub_category_id = $request->sub_category;
-        $Product->category_id = $request->category_id;
+        $Product->product_slug = $request->product_slug; 
+        $Product->product_category_id = $request->product_category_id;
         $Product->price = $request->price;
         $Product->description = $request->description;
         if ($request->file('image')) {
@@ -92,10 +90,9 @@ class productController extends Controller
     {
         try {
             $user_id = Auth::id();
-            $categories = Category::get();
+            $categories = ProductCategory::get();
             $product = Product::where('id',$id)->first();
-            $sub_categories = SubCategory::where('category_id',$product->category_id)->get();
-            return view('product.edit_product', compact('product','categories','sub_categories'));
+            return view('product.edit_product', compact('product','categories'));
         } catch (\Exception $exception) {
             toastError($exception->getMessage());
             return Redirect::back();
@@ -109,7 +106,7 @@ class productController extends Controller
         $this->validate($request,[ 
             'name'=>'required', 
             'product_slug'=>'required|unique:products,name,'.$request->id,
-            'category_id'=>'required', 
+            'product_category_id'=>'required', 
             'description'=>'required', 
             'status'=>'required', 
 
@@ -126,8 +123,7 @@ class productController extends Controller
         $Product->name = $request->name;
         $Product->user_id = $user_id;
         $Product->product_slug = $request->product_slug;
-        $Product->sub_category_id = $request->sub_category;
-        $Product->category_id = $request->category_id;
+        $Product->product_category_id = $request->product_category_id;
         $Product->price = $request->price;
         $Product->description = $request->description;
         if ($request->file('image')) {

@@ -31,7 +31,6 @@
 														<th>Product Name</th>
 														<th>Product Slug</th>
 														<th>Product Category</th>
-														<th>Product Sub Category</th>
 														<th>Product Price</th>
 														<th>Product Description</th>
 														<th>Product Status</th>
@@ -41,8 +40,7 @@
 													<tr>
 														<td>{{$product->name}}</td>
 														<td>{{$product->product_slug}}</td>
-														<td>{{$product->category->name}}</td>
-														<td>{{$product->sub_category->name}}</td>
+														<td>{{$product->product_category->category_name}}</td>
 														<td>{{$product->price}}</td>
 														<td>{!! $product->description !!}</td>
 														<td>{{$product->status}}</td>
