@@ -36,7 +36,7 @@
                                 <h3>{!!$article->description!!}</p>
                                 <div class="readMore">
                                     <p>
-                                        <a href="{{url('blog',$article->id)}}">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                        <a href="{{url('article',$article->id)}}">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                                     </p>
                                 </div>
                             </div>

@@ -23,98 +23,118 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h2><a href="{{url('products',$brand_profile->id)}}" >םישדח םירצומ םי תינור</a></h2>
+                <h2>םישדח םירצומ םי תינור</h2>
                 <div class="brandSlider">
-                    <div class="sliderCommonDiv">
-                        <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
-                        <div class="ratingDiv">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
+                    @if($products)
+                        @foreach($products as $product)
+                        <div class="sliderCommonDiv">
+                            <img src="{{asset($product->image ?? '')}}" alt="" class="img-fluid">
+                            <div class="ratingDiv">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div class="brandInfo">
+                                <h5>{{ $product->name}}</h5>
+                                <p>₪ {{$product->old_from_price}}-₪ {{$product->old_to_price}}</p>
+                                <p class="price">₪ {{$product->new_from_price}}-₪ {{$product->new_to_price}}</p>
+                            </div>
                         </div>
-                        <div class="brandInfo">
-                            <h5>ןטק ףדצ – CROSS דימצ</h5>
-                            <p>₪ 490.00-₪ 590.00</p>
-                            <p class="price">₪ 531.00-₪ 441.00</p>
+                        @endforeach
+                    @else
+                        <div class="sliderCommonDiv">
+                            <img src="{{asset('assets/img/user/brand1.svg')}}" alt="" class="img-fluid">
+                            <div class="ratingDiv">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div class="brandInfo">
+                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                <p>₪ 490.00-₪ 590.00</p>
+                                <p class="price">₪ 531.00-₪ 441.00</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="sliderCommonDiv">
-                        <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
-                        <div class="ratingDiv">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
+                        <div class="sliderCommonDiv">
+                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                            <div class="ratingDiv">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div class="brandInfo">
+                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                <p>₪ 490.00-₪ 590.00</p>
+                                <p class="price">₪ 531.00-₪ 441.00</p>
+                            </div>
                         </div>
-                        <div class="brandInfo">
-                            <h5>ןטק ףדצ – CROSS דימצ</h5>
-                            <p>₪ 490.00-₪ 590.00</p>
-                            <p class="price">₪ 531.00-₪ 441.00</p>
+                        <div class="sliderCommonDiv">
+                            <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
+                            <div class="ratingDiv">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div class="brandInfo">
+                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                <p>₪ 490.00-₪ 590.00</p>
+                                <p class="price">₪ 531.00-₪ 441.00</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="sliderCommonDiv">
-                        <img src="{{asset('assets/img/user/brand3.svg')}}" alt="" class="img-fluid">
-                        <div class="ratingDiv">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
+                        <div class="sliderCommonDiv">
+                            <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
+                            <div class="ratingDiv">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div class="brandInfo">
+                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                <p>₪ 490.00-₪ 590.00</p>
+                                <p class="price">₪ 531.00-₪ 441.00</p>
+                            </div>
                         </div>
-                        <div class="brandInfo">
-                            <h5>ןטק ףדצ – CROSS דימצ</h5>
-                            <p>₪ 490.00-₪ 590.00</p>
-                            <p class="price">₪ 531.00-₪ 441.00</p>
+                        <div class="sliderCommonDiv">
+                            <img src="{{asset('assets/img/user/brand5.svg')}}" alt="" class="img-fluid">
+                            <div class="ratingDiv">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div class="brandInfo">
+                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                <p>₪ 490.00-₪ 590.00</p>
+                                <p class="price">₪ 531.00-₪ 441.00</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="sliderCommonDiv">
-                        <img src="{{asset('assets/img/user/brand4.svg')}}" alt="" class="img-fluid">
-                        <div class="ratingDiv">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
+                        <div class="sliderCommonDiv">
+                            <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
+                            <div class="ratingDiv">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div class="brandInfo">
+                                <h5>ןטק ףדצ – CROSS דימצ</h5>
+                                <p>₪ 490.00-₪ 590.00</p>
+                                <p class="price">₪ 531.00-₪ 441.00</p>
+                            </div>
                         </div>
-                        <div class="brandInfo">
-                            <h5>ןטק ףדצ – CROSS דימצ</h5>
-                            <p>₪ 490.00-₪ 590.00</p>
-                            <p class="price">₪ 531.00-₪ 441.00</p>
-                        </div>
-                    </div>
-                    <div class="sliderCommonDiv">
-                        <img src="{{asset('assets/img/user/brand5.svg')}}" alt="" class="img-fluid">
-                        <div class="ratingDiv">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                        </div>
-                        <div class="brandInfo">
-                            <h5>ןטק ףדצ – CROSS דימצ</h5>
-                            <p>₪ 490.00-₪ 590.00</p>
-                            <p class="price">₪ 531.00-₪ 441.00</p>
-                        </div>
-                    </div>
-                    <div class="sliderCommonDiv">
-                        <img src="{{asset('assets/img/user/brand2.svg')}}" alt="" class="img-fluid">
-                        <div class="ratingDiv">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                        </div>
-                        <div class="brandInfo">
-                            <h5>ןטק ףדצ – CROSS דימצ</h5>
-                            <p>₪ 490.00-₪ 590.00</p>
-                            <p class="price">₪ 531.00-₪ 441.00</p>
-                        </div>
-                    </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -140,7 +160,7 @@
                             <p> {!!asset($blog_1->description ?? '')!!} </p>
                             <div class="readMore">
                                 <p>
-                                    <a href="">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                    <a href="{{url('article',$blog_1->id)}}">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                                 </p>
                             </div>
                         </div>
@@ -160,7 +180,7 @@
                             <p> תומקרהמ ,בטיה בשוחמ םי תינור לש בוציעו בוציע לכ .ךלת  ךרוא דעו תלפכמה אלש ןאל ,"סיכב הפילק ,תונוהבב לוח"</p>
                             <div class="readMore">
                                 <p>
-                                    <a href="">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                    <a href="#">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                                 </p>
                             </div>
                         </div>
@@ -187,7 +207,7 @@
                                     <p> {!!asset($blog_2->description ?? '')!!} </p>
                                     <div class="readMore">
                                         <p>
-                                            <a href="">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                            <a href="{{url('article',$blog_2->id)}}">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                                         </p>
                                     </div>
                                 </div>
@@ -212,7 +232,7 @@
                                     <p> תומקרהמ ,בטיה בשוחמ םי תינור לש בוציעו בוציע לכ .ךלת  ךרוא דעו תלפכמה אלש ןאל ,"סיכב הפילק ,תונוהבב לוח"</p>
                                     <div class="readMore">
                                         <p>
-                                            <a href="">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                            <a href="#">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                                         </p>
                                     </div>
                                 </div>
@@ -238,7 +258,7 @@
                                     <p>{!!asset($blog_3->description ?? '')!!} </p>
                                     <div class="readMore">
                                         <p>
-                                            <a href="">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                            <a href="{{url('article',$blog_3->id)}}">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                                         </p>
                                     </div>
                                 </div>
@@ -263,7 +283,7 @@
                                     <p> תומקרהמ ,בטיה בשוחמ םי תינור לש בוציעו בוציע לכ .ךלת  ךרוא דעו תלפכמה אלש ןאל ,"סיכב הפילק ,תונוהבב לוח"</p>
                                     <div class="readMore">
                                         <p>
-                                            <a href="">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                            <a href="#">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                                         </p>
                                     </div>
                                 </div>

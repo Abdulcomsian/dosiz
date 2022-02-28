@@ -75,4 +75,5 @@ Route::get('/brand_profile_id/{id}', 'BrandProfileController@brand_profile')->na
 Route::get('/products/{id}', 'BrandProfileController@products')->name('brand_profile_id');
 Route::get('/blogs/{id}', 'BrandProfileController@blogs')->name('blogs');  //by city next task
 Route::get('/blog/{id}', 'BrandProfileController@blog')->name('blog'); 
+Route::get('/article/{id}', 'BrandProfileController@article')->name('article'); 
 Route::get('/articles/{id}', 'BrandProfileController@articles')->name('articles'); 

@@ -49,6 +49,7 @@
 											<tbody>
 												@if($brand_profile != null)
 												<tr>
+													@if(Auth::user()->hasRole('Brand Manager'))
 													
 													<td>{{ $brand_profile->brand_name ?? ''}}</td>
 													
@@ -65,6 +66,25 @@
 															
 														</div>
 													</td>
+													@else
+														@foreach($brand_profile as $all)
+														<td>{{ $all->brand_name ?? ''}}</td>
+													
+														<td> <img src="{{asset($all->brand_logo ?? '')}}" width="100px" height="100px"></td>
+														<td>{{$all->category->name ?? ''}}</td>
+														<td>{{$all->city->name ?? ''}}</td>
+
+														<td class="text-right">
+															<div class="actions" style="display:flex;">
+																
+																<a href="{{route('brand_profile.show',$all->id)}}" target="_blank" style="height: 33px; margin-left: 10px" class="btn btn-sm bg-primary-light edit-all"><i class="fe fe-eye"></i> Show</a>
+																<a href="{{route('brand_profile.edit',$all->id)}}" style="height: 33px; margin-left: 10px" class="btn btn-sm bg-success-light edit-brand_profile"><i class="fe fe-pencil"></i> Edit</a>
+																
+																
+															</div>
+														</td>
+														@endforeach
+													@endif
 												</tr>
 												@else
 												<tr>
