@@ -1,5 +1,8 @@
 @extends('layout.mainlayout_admin')
 @include('layouts.sweetalert.sweetalert_css')
+@section('title')
+Sub Category 
+@endsection
 @section('content')		
 
 			<!-- Page Wrapper -->

@@ -1,4 +1,7 @@
 @extends('layout.mainlayout_admin')
+@section('title')
+Show Product 
+@endsection
 @section('content')	
 <!-- Page Wrapper -->
 <div class="page-wrapper">

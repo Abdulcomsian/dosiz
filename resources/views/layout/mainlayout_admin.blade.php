@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     @include('layout.partials.head_admin')
+    <title>@yield('title')</title>
   </head>
   @if(Route::is(['error-404','error-500']))
   <body class="error-page">

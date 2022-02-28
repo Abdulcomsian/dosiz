@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-        return view('index');
+        return view('auth.register');
     })->name('pagee');
 
 /*****************FRONTEND ROUTES*******************/
@@ -46,6 +46,9 @@ Route::prefix('dashboard')->middleware('dashboard')->group(function(){
     //blog
     Route::resource('/brand_profile', 'BrandProfileController');
 
+    //product category
+    Route::resource('/p_category', 'ProductCategoryController');
+
 });
 /********************ADMIN ROUTES END******************************/
 
@@ -63,8 +66,7 @@ Route::prefix('admin')->middleware('can:admin')->group(function(){
 
 /*****************Brand Manager ROUTES*******************/
 Route::prefix('brand')->middleware('can:brand')->group(function(){
-    //category
-    Route::resource('/p_category', 'ProductCategoryController');
+    
 
 });
 /********************Brand Manager ROUTES END******************************/

@@ -1,4 +1,7 @@
 @extends('layout.mainlayout_admin')
+@section('title')
+Edit Blog 
+@endsection
 @section('content')		
 <!-- Page Wrapper -->
 <div class="page-wrapper">

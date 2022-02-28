@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     @include('layout.partials.head')
+    <title>@yield('title')</title>
   </head>
   @if(Route::is(['map-grid']))
   <body class="map-page">
