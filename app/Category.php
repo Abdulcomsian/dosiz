@@ -27,4 +27,9 @@ class Category extends Model
         return $this->hasOne(BrandProfile::class);
     }
 
+    public function SubCategory()
+    {
+        return $this->hasMany(SubCategory::class);
+    }
+
 }

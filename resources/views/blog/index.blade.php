@@ -55,7 +55,8 @@ Blogs
 													<td>{{ $blog->name}}</td>
 													
 													<td> <img src="{{asset($blog->image)}}" width="100px" height="100px"></td>
-													<td>{{$blog->category_id}}</td>
+													<td>{{$blog->category->name}}</td>
+													<td>{{$blog->sub_category->name}}</td>
 													<td>{{$blog->price}}</td>
 													<td>{{$blog->status}}</td>
 

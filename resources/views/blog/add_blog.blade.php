@@ -54,16 +54,23 @@ Add Blog
 					                                <div class="col-md-6"> -->
 					                                    <div class="form-group">
 					                                        <label>Blog Category</label>
-					                                        <select class="select select2-hidden-accessible form-control" readonly tabindex="-1" aria-hidden="true" name="category_id" id="category_id">
+					                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="category_id" id="category_id">
 					                                            <option selected disabled>Select Category</option>
 					                                            @if($categories)
-					                                            @foreach($categories as $all)
-					                                            	<option value="{{$all->id}}" {{ $category->id == $all->id ? 'selected' : 'disabled' }}   >{{$all->name}}</option>
+					                                            @foreach($categories as $category)
+					                                            	<option value="{{$category->id}}">{{$category->name}}</option>
 					                                            @endforeach
 					                                            @endif
 					                                        </select>
 					                                        <div style="color:red;">{{$errors->first('category_id')}}</div> <br>
 					                                    </div>
+
+					                                    <div class="form-group">
+											                <label for="sub_category">Select Sub Category:</label>
+											                <select name="sub_category" class="form-control" >
+											                <option>--Sub Category--</option>
+											                </select>
+											            </div>
 
 					                                <!-- </div>
 					                                <div class="col-md-6">
@@ -123,30 +130,30 @@ $(document).ready(function() {
 
 	jQuery(document).ready(function ()
     {
-            // jQuery('select[name="categordy_id"]').on('change',function(){
-            //    var categoryID = jQuery(this).val();
-            //    console.log(categoryID);
-            //    if(categoryID)
-            //    {
-            //       jQuery.ajax({
-            //          url : '{{url("/dashboard/get_sub_category/")}}' +'/' +categoryID,
-            //          type : "GET",
-            //          dataType : "json",
-            //          success:function(data)
-            //          {
-            //             console.log(data);
-            //             jQuery('select[name="sub_category"]').empty();
-            //             jQuery.each(data, function(key,value){
-            //                $('select[name="sub_category"]').append('<option value="'+ key +'">'+ value +'</option>');
-            //             });
-            //          }
-            //       });
-            //    }
-            //    else
-            //    {
-            //       $('select[name="sub_category"]').empty();
-            //    }
-            // });
+        jQuery('select[name="category_id"]').on('change',function(){
+           var categoryID = jQuery(this).val();
+           console.log(categoryID);
+           if(categoryID)
+           {
+              jQuery.ajax({
+                 url : '{{url("/dashboard/get_sub_category/")}}' +'/' +categoryID,
+                 type : "GET",
+                 dataType : "json",
+                 success:function(data)
+                 {
+                    console.log(data);
+                    jQuery('select[name="sub_category"]').empty();
+                    jQuery.each(data, function(key,value){
+                       $('select[name="sub_category"]').append('<option value="'+ key +'">'+ value +'</option>');
+                    });
+                 }
+              });
+           }
+           else
+           {
+              $('select[name="sub_category"]').empty();
+           }
+        });
     });
 
     $('.summernote').summernote({

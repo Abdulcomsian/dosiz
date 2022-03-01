@@ -1,4 +1,5 @@
 @extends('layout.mainlayout')
+@include('layouts.sweetalert.sweetalert_css')
 @section('content') 
 <section id="brandBanner">
     <div class="container-fluid">
@@ -389,4 +390,61 @@
         </div>
     </div>
 </section>
+
+
+@endsection
+<!-- The Modal -->
+  <div class="modal" id="email_subscriber">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <div class="modal-body">
+            <div class="form-content p-2">
+                <div class="modal-header border-0">
+                    <h4 class="modal-title">Subscribe</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <form id="update_category" method="post" autocomplete="off" action="{{ route('subscriber.store') }}" novalidate="novalidate" class="bv-form"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                        @csrf
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input class="form-control" type="text" value="" name="name" id="name" data-bv-field="name">
+                                <input class="form-control" type="hidden" value="{{$brand_profile->id}}" name="brand_profile_id" id="brand_profile_id">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input class="form-control" type="email" name="email" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input class="form-control" type="number" name="phone" id="phone">
+                            </div>
+                            <div class="mt-4">
+                                <button class="btn btn-primary" name="form_submit" value="submit" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+@section('js')
+@include('layouts.sweetalert.sweetalert_js')
+    <script type="text/javascript">
+        jQuery(document).ready(function ()
+        {
+            const myTimeout = setTimeout(myGreeting, 3000);
+
+            function myGreeting() {
+              $("#email_subscriber").modal();
+            }
+        });
+    </script>
 @endsection

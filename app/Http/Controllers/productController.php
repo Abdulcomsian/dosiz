@@ -8,6 +8,7 @@ use App\Product;
 use Auth;
 use DB;
 use App\Category;
+use App\SubCategory;
 use App\BrandProfile;
 use App\Utils\HelperFunctions;
 use Illuminate\Support\Facades\Redirect;
@@ -24,10 +25,8 @@ class productController extends Controller
     {
         try {
         $user_id = Auth::id();
-        $brand_profile = BrandProfile::where('user_id',$user_id)->first();
-        $category = Category::where('id',$brand_profile->category_id)->first();
         $categories = Category::get();
-        return view('product.add_product', compact('categories','category'));
+        return view('product.add_product', compact('categories'));
         } catch (\Exception $exception) {
             toastError($exception->getMessage());
             return Redirect::back();
@@ -64,6 +63,7 @@ class productController extends Controller
         $Product->user_id = $user_id;
         $Product->product_slug = $request->product_slug; 
         $Product->category_id = $request->category_id;
+        $Product->sub_category_id = $request->sub_category;
         $Product->old_from_price = $request->old_from_price;
         $Product->old_to_price = $request->old_to_price;
         $Product->new_from_price = $request->new_from_price;
@@ -103,7 +103,8 @@ class productController extends Controller
             $user_id = Auth::id();
             $categories = Category::get();
             $product = Product::where('id',$id)->first();
-            return view('product.edit_product', compact('product','categories'));
+            $sub_categories = SubCategory::where('category_id',$product->category_id)->get();
+            return view('product.edit_product', compact('product','categories','sub_categories'));
         } catch (\Exception $exception) {
             toastError($exception->getMessage());
             return Redirect::back();
@@ -134,6 +135,7 @@ class productController extends Controller
         $Product->name = $request->name;
         $Product->user_id = $user_id;
         $Product->product_slug = $request->product_slug;
+        $Product->sub_category_id = $request->sub_category;
         $Product->category_id = $request->category_id;
         $Product->old_from_price = $request->old_from_price;
         $Product->old_to_price = $request->old_to_price;
@@ -187,9 +189,9 @@ class productController extends Controller
         
     }
 
-    // public function get_sub_category($id)
-    // {
-    //     $get_sub_category = DB::table("sub_categories")->where("category_id",$id)->pluck("name","id");
-    //     return json_encode($get_sub_category);
-    // }
+    public function get_sub_category($id)
+    {
+        $get_sub_category = DB::table("sub_categories")->where("category_id",$id)->pluck("name","id");
+        return json_encode($get_sub_category);
+    }
 }

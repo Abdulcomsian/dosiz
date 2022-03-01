@@ -25,10 +25,8 @@ class BlogController extends Controller
     {
         try {
             $user_id = Auth::id();
-            $brand_profile = BrandProfile::where('user_id',$user_id)->first();
-            $category = Category::where('id',$brand_profile->category_id)->first();
             $categories = Category::get();
-            return view('blog.add_blog', compact('categories','category'));
+            return view('blog.add_blog', compact('categories'));
         } catch (\Exception $exception) {
             toastError($exception->getMessage());
             return Redirect::back();
@@ -62,6 +60,7 @@ class BlogController extends Controller
         $blog= new Blog;
         $blog->name = $request->name;
         $blog->user_id = $user_id;
+        $blog->sub_category_id = $request->sub_category;
         $blog->category_id = $request->category_id;
         $blog->description = $request->description;
         if ($request->file('image')) {
@@ -98,7 +97,8 @@ class BlogController extends Controller
             $user_id = Auth::id();
             $categories = Category::get();
             $blog = Blog::where('id',$id)->first();
-            return view('blog.edit_blog', compact('blog','categories'));
+            $sub_categories = SubCategory::where('category_id',$blog->category_id)->get();
+            return view('blog.edit_blog', compact('blog','categories','sub_categories'));
         } catch (\Exception $exception) {
             toastError($exception->getMessage());
             return Redirect::back();
@@ -127,6 +127,7 @@ class BlogController extends Controller
         }
         $blog->name = $request->name;
         $blog->user_id = $user_id;
+        $blog->sub_category_id = $request->sub_category;
         $blog->category_id = $request->category_id;
         $blog->description = $request->description;
         if ($request->file('image')) {

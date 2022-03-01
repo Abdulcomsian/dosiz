@@ -102,12 +102,23 @@ Edit Product
 			                                            <option disabled>Select Category</option>
 			                                            @if($categories)
 			                                            @foreach($categories as $category)
-			                                            	<option value="{{$category->id}}" {{ $product->category_id == $category->id ? 'selected' : 'disabled' }} >{{$category->name}}</option>
+			                                            	<option value="{{$category->id}}" {{ $product->category_id == $category->id ? 'selected' : '' }} >{{$category->name}}</option>
 			                                            @endforeach
 			                                            @endif
 			                                        </select>
 			                                        <div style="color:red;">{{$errors->first('category_id')}}</div> <br>
 			                                    </div>
+			                                    <div class="form-group">
+											                <label for="sub_category">Select Sub Category:</label>
+											                <select name="sub_category" class="form-control" >
+											                <option>--Sub Category--</option>
+											                @if($sub_categories)
+				                                            @foreach($sub_categories as $sub_category)
+				                                            	<option value="{{$sub_category->id}}" {{ $product->sub_category_id == $sub_category->id ? 'selected' : '' }} >{{$sub_category->name}}</option>
+				                                            @endforeach
+				                                            @endif
+											                </select>
+											            </div>
 					                            <div class="form-group">
 					                                <label>Product Description</label>
 					                                <textarea cols="30" rows="6" class="form-control summernote" name="description"  value="" id="description" >{!! $product->description !!}</textarea>

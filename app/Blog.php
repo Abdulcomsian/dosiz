@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Blog extends Model
 {
     protected $fillable = [
-        'name', 'image','images','phone','description','status','category_id',
+        'name', 'image','images','phone','description','status','category_id','sub_category_id ',
     ];
 
     protected $casts = [
@@ -17,5 +17,10 @@ class Blog extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function sub_category()
+    {
+        return $this->belongsTo(SubCategory::class);
     }
 }

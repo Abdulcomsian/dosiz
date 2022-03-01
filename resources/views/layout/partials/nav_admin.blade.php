@@ -47,11 +47,12 @@ Sidebar -->
 								<a href="{{ url('/dashboard/category')}}"><span>Categories</span></a>
 							</li>
 							<!-- @endif -->
-							<!-- @if(Auth::user()->hasRole('Admin'))
-							<li class="{{ Request::is('admin/sub_category') ? 'active' : '' }}"> 
-								<a href="{{ url('/admin/sub_category')}}"><span>Sub Category</span></a>
+							@if(Auth::user()->hasRole('Admin'))
+							<li class="{{ Request::is('dashboard/sub_category') ? 'active' : '' }}"> 
+								<a href="{{ url('/dashboard/sub_category')}}"><span>Sub Category</span></a>
 							</li>
-							@endif --><!-- 
+							@endif
+							<!-- 
 							@if(Auth::user()->hasRole('Brand Manager') || Auth::user()->hasRole('Admin'))
 							<li class="{{ Request::is('dashboard/p_category') ? 'active' : '' }}"> 
 								<a href="{{ url('/dashboard/p_category')}}"><span>Product Categories</span></a>
@@ -70,6 +71,9 @@ Sidebar -->
 							</li>
 							<li class="{{ Request::is('dashboard/brand_profile') ? 'active' : '' }}">
 								<a href="{{ url('dashboard/brand_profile') }}"><span> Profile </span></a>
+							</li>
+							<li class="{{ Request::is('dashboard/subscribe') ? 'active' : '' }}">
+								<a href="{{ url('dashboard/subscribe') }}"><span> Subscribers </span></a>
 							</li>
 									<!-- <li><a class="{{ Request::is('admin/blog-details') ? 'active' : '' }}" href="{{ url('admin/blog-details') }}"> Blog Details </a></li> -->
 									<!-- <li><a class="{{ Request::is('admin/add-blog') ? 'active' : '' }}" href="{{ url('admin/add-blog') }}"> Add Blog </a></li> -->
