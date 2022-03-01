@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', function () {
         return view('auth.register');
-    })->name('pagee');
+    });
 
 /*****************FRONTEND ROUTES*******************/
 Route::get('/brand', function () {

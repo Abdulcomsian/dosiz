@@ -9,12 +9,17 @@
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
 			</button>
+			@if(isset($brand_profile))
 				<a href="{{ url('brand_profile_id',$brand_profile->id)}}" class="logo logo-small">
 					@if(isset($brand_profile))
 					<img src="{{asset($brand_profile->brand_logo) ?? '../assets_admin/img/logo.png'}} " style="width:50px; height:50px;" alt="Logo">
 					@endif
 				</a>
-
+				@else
+				<a href="{{ url('/register')}}" class="logo logo-small">
+					<img src="../assets_admin/img/logo.png" alt="Logo">
+				</a>
+			@endif
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 					@if(isset($brand_profile))
