@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-6 text-left">
                 <div class="brandMainImg">
-                    <img src="{{asset($brand_profile->brand_image ?? '')}}" alt="" class="img-fluid"> 
+                    <img src="{{asset($brand_profile->brand_image ?? '')}}" style="width: 590px; height:561px;" alt="" class="img-fluid"> 
                 </div>
             </div>
         </div>
@@ -28,8 +28,8 @@
                 <div class="brandSlider">
                     @if($products)
                         @foreach($products as $product)
-                        <div class="sliderCommonDiv">
-                            <img src="{{asset($product->image ?? '')}}" alt="" class="img-fluid">
+                        <div class="sliderCommonDiv" style="width:20px !important;">
+                            <img src="{{asset($product->image ?? '')}}" alt="" style="width:188.27px; height:205.69px;" class="img-fluid">
                             <div class="ratingDiv">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -151,7 +151,7 @@
             <div class="col-md-4">
                 <div class="articleRightDiv">
                     <div class="articleCard">
-                        <img src="{{asset($blog_1->image ?? '')}}" alt="" class="img-fluid">
+                        <img src="{{asset($blog_1->image ?? '')}}" alt="" style="width:446.59px; height:301.78px;" class="img-fluid">
                         <div class="articleInfo">
                             <div class="dateInput">
                                 <img src="{{asset('assets_admin/img/calendar.png')}}" alt="" style="width:18px !important; height: 18px !important;">
@@ -196,7 +196,7 @@
                     <div class="articleCard">
                         <div class="row">
                             <div class="col-md-6 desktopHide">
-                                <img src="{{asset($blog_2->image ?? '')}}" alt="" class="img-fluid">
+                                <img src="{{asset($blog_2->image ?? '')}}" alt="" style="width:378.96px; height:287.03px;" class="img-fluid">
                             </div>
                             <div class="col-md-6">
                                 <div class="articleInfo">
@@ -248,7 +248,7 @@
                     <div class="articleCard">
                         <div class="row">
                             <div class="col-md-6 desktopHide">
-                                <img src="{{asset($blog_3->image ?? '')}}" alt="" class="img-fluid">
+                                <img src="{{asset($blog_3->image ?? '')}}" alt="" style="width:378.96px; height:287.03px;" class="img-fluid">
                             </div>
                             <div class="col-md-6">
                                 <div class="articleInfo">
@@ -440,7 +440,7 @@
     <script type="text/javascript">
         jQuery(document).ready(function ()
         {
-            const myTimeout = setTimeout(myGreeting, 3000);
+            const myTimeout = setTimeout(myGreeting, 10000);
 
             function myGreeting() {
               $("#email_subscriber").modal();

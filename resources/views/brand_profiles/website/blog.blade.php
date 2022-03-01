@@ -20,7 +20,7 @@
                             <h3>{!! $articles->description!!} </h3>
                             <p>{!! $articles->description!!}</p>
                             <div class="detailImg">
-                                <img src="{{asset($articles->image)}}" alt="">
+                                <img src="{{asset($articles->image)}}" style="width:769.07px; height:532.36px;" alt="">
                             </div>
                             <div class="sharingOption">
                                 <ul>
@@ -59,7 +59,7 @@
                             <div class="articleSuggestion">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <img src="{{asset($articles->images[0])}}" alt="">
+                                        <img src="{{asset($articles->images[0])}}" style="width:350px; height:379px;" alt="">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="sugesstionInfo">
@@ -89,19 +89,23 @@
                     <div id="home" class="tab-pane fade in active show">
                         <div class="relatedArticle">
                             <ul>
+                                @if(isset($side_blogs))
+                                @foreach($side_blogs as $side_blog)
                                 <li>
                                     <div class="articleDiv">
                                         <div class="imgDiv">
-                                            <img src="{{asset('assets/img/user/realtedArticle1.png')}}" alt="">
+                                            <img src="{{asset($side_blog->image)}}" alt="">
                                         </div>
                                         <div class="articleInfo">
                                             <div class="dateDiv">
-                                                <p><a href="">  תואירב /</a> 24 Oct,2021 </p>
+                                                <p><a href="">  תואירב /</a> {{ $side_blog->created_at }} </p>
                                             </div>
-                                            <p> תומקרהמ ,בטיה בשוחמ םי תינור לש בוציעו הפילק ,תונוהבב לוח"</p>
+                                            <p>{{ $side_blog->name }} </p>
                                         </div>
                                     </div>
                                 </li>
+                                @endforeach
+                                @else
                                 <li>
                                     <div class="articleDiv">
                                         <div class="imgDiv">
@@ -167,6 +171,7 @@
                                         </div>
                                     </div>
                                 </li>
+                                @endif
                             </ul>
                         </div>
                     </div>

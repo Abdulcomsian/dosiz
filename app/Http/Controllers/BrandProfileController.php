@@ -273,10 +273,11 @@ class BrandProfileController extends Controller
     public function article($blog_id)
     {
         $articles = Blog::where('id',$blog_id)->first();
+        $user_id = Auth::id();
         $user = User::where('id',$articles->user_id)->first();
         $brand_profile = BrandProfile::where('user_id',$user->id)->first();
-        // dd($brand_profile);
-        return view('brand_profiles.website.blog',compact('articles','brand_profile'));
+        $side_blogs = Blog::where('user_id',$user_id)->latest()->get();
+        return view('brand_profiles.website.blog',compact('articles','brand_profile','side_blogs'));
     }
 
     public function articles($brand_id)
