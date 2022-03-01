@@ -20,14 +20,10 @@ class Product extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function category()
+    public function product_category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(ProductCategory::class);
     }
 
-    public function sub_category()
-    {
-        return $this->belongsTo(SubCategory::class);
-    }
 
 }
