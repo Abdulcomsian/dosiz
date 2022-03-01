@@ -98,7 +98,7 @@
                                         </div>
                                         <div class="articleInfo">
                                             <div class="dateDiv">
-                                                <p><a href="">  תואירב /</a> {{ $side_blog->created_at }} </p>
+                                                <p><a href="">  תואירב /</a> {{ date('Y/m/d', strtotime($side_blog->created_at)) }} </p>
                                             </div>
                                             <p>{{ $side_blog->name }} </p>
                                         </div>
