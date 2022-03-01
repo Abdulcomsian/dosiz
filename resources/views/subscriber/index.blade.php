@@ -24,7 +24,7 @@
 						<div class="col-sm-12">
 							<div class="card">
 								<div class="card-body">
-								<a href="{{route('sub_category.create')}}" class="btn btn-primary">Excel Sheet <i class="fa fa-download"></i></a><br><br>
+								<a href="{{url('dashboard/export')}}" class="btn btn-primary">Excel Sheet <i class="fa fa-download"></i></a><br><br>
 								<!-- <a href="{{route('sub_category.create')}}"  class="btn btn-success">Send Email To all <i class="fa fa-send"></i></a><br><br> -->
 									<div class="table-responsive">
 										<table class="datatable table table-hover table-center mb-0">

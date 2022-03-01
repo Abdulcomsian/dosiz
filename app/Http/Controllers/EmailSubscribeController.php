@@ -9,6 +9,9 @@ use App\BrandProfile;
 use Auth;
 use DB;
 use Illuminate\Support\Facades\Redirect;
+use App\Exports\SubscribersExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class EmailSubscribeController extends Controller
 {
@@ -108,5 +111,10 @@ class EmailSubscribeController extends Controller
             return Redirect::back();
         }
         
+    }
+
+    public function export() 
+    {
+        return Excel::download(new SubscribersExport, 'subscribers.xlsx');
     }
 }

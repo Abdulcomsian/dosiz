@@ -47,6 +47,8 @@ Route::prefix('dashboard')->middleware('dashboard')->group(function(){
     //blog
     Route::resource('/subscribe', 'EmailSubscribeController');
 
+    Route::get('/export/', 'EmailSubscribeController@export');
+
 });
 /********************ADMIN ROUTES END******************************/
 
