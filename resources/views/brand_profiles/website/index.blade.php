@@ -357,27 +357,32 @@
                 <div class="col-md-7">
                     <div class="formDiv">
                         <h3>ונילא ךתעדוה תא חלש</h3>
-                        <form action="">
+                        <form action="" method="post" >
+                            @csrf
                             <div class="d-flex">
                                 <div class="inputdiv">
-                                    <input type="text" placeholder="אימייל">
+                                    <input type="text" name="first_name" id="first_name" value="" placeholder="אימייל">
+                                    <div style="color:red;">{{$errors->first('first_name')}}</div> <br>
                                 </div>
                                 <div class="inputdiv">
-                                    <input type="text" placeholder="םש">
+                                    <input type="text" name="last_name" id="last_name" value="" placeholder="םש">
+                                    <div style="color:red;">{{$errors->first('last_name')}}</div> <br>
                                 </div>
                             </div>
                             <div class="d-flex">
                                 <div class="inputdiv">
-                                    <input type="text" placeholder="אשונ">
+                                    <input type="email" name="email" id="email" value="" placeholder="אשונ">
+                                    <div style="color:red;">{{$errors->first('email')}}</div> <br>
                                 </div>
                                 <div class="inputdiv">
-                                    <input type="text" placeholder="מספר טלפון">
+                                    <input type="number" name="phone" id="phone" value="" placeholder="מספר טלפון">
+                                    <div style="color:red;">{{$errors->first('phone')}}</div> <br>
                                 </div>
                             </div>
                             <div class="inputdiv" style="width: 100%; margin: 18px 0px 0px;">
-                                    <textarea name="" id="" cols="30" rows="10" placeholder="שלח עיסוי"></textarea>
+                                    <textarea name="subject" id="subject" cols="30" rows="10" placeholder="שלח עיסוי"></textarea>
                                 </div>
-                                <button class="commonBtn">שלח עיסוי</button>
+                                <button style="submit" class="commonBtn">שלח עיסוי</button>
                         </form>
                     </div>
                 </div>
