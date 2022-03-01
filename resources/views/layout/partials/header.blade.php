@@ -10,11 +10,21 @@
 				<span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
 			</button>
 				<a href="index_admin" class="logo logo-small">
-					<img src="{{asset($brand_profile->brand_logo) ?? '../assets_admin/img/logo.png'}} " alt="Logo">
+					@if(isset($brand_profile))
+					<img src="{{asset($brand_profile->brand_logo) ?? '../assets_admin/img/logo.png'}} " style="width:50px; height:50px;" alt="Logo">
+					@endif
 				</a>
 
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					@if(isset($brand_profile))
+					<li class="nav-item active">
+						<img  src="../assets_admin/img/home.svg" alt=""><a href=""> תיבה ףד </a>
+					</li>
+					<li class="nav-item">
+						<img  src="../assets_admin/img/lock.svg" alt=""><a href="">תונכרצ ןויכרא</a>
+					</li>
+					@else
 					<li class="nav-item active">
 						<img  src="../assets_admin/img/home.svg" alt=""><a href=""> תיבה ףד </a>
 					</li>
@@ -27,6 +37,7 @@
 					<li class="nav-item">
 						<img  src="../assets_admin/img/mail.svg" alt=""><a href="{{route('register')}}">העידי תחילש</a>
 					</li>
+					@endif
 				</ul>
 			</div>
 			</nav>

@@ -8,6 +8,7 @@ use App\Blog;
 use Auth;
 use DB;
 use App\Category;
+use App\BrandProfile;
 use App\SubCategory;
 use App\Utils\HelperFunctions;
 use Illuminate\Support\Facades\Redirect;
@@ -22,9 +23,14 @@ class BlogController extends Controller
 
     public function create()
     {
-        $user_id = Auth::id();
-        $categories = Category::get();
-        return view('blog.add_blog', compact('categories'));
+        try {
+            $user_id = Auth::id();
+            $categories = Category::get();
+            return view('blog.add_blog', compact('categories'));
+        } catch (\Exception $exception) {
+            toastError($exception->getMessage());
+            return Redirect::back();
+        }
     }
 
     public function show($id)
@@ -79,7 +85,7 @@ class BlogController extends Controller
         toastSuccess('Successfully Added');
         return redirect('dashboard/blog');
         } catch (\Exception $exception) {
-            dd($exception->getMessage());
+            // dd($exception->getMessage());
             toastError($exception->getMessage());
             return Redirect::back();
         }

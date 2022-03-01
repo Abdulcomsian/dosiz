@@ -71,6 +71,7 @@ Add Blog
 											                <option>--Sub Category--</option>
 											                </select>
 											            </div>
+
 					                                <!-- </div>
 					                                <div class="col-md-6">
 					                                    <div class="form-group">
@@ -129,30 +130,30 @@ $(document).ready(function() {
 
 	jQuery(document).ready(function ()
     {
-            jQuery('select[name="category_id"]').on('change',function(){
-               var categoryID = jQuery(this).val();
-               console.log(categoryID);
-               if(categoryID)
-               {
-                  jQuery.ajax({
-                     url : '{{url("/dashboard/get_sub_category/")}}' +'/' +categoryID,
-                     type : "GET",
-                     dataType : "json",
-                     success:function(data)
-                     {
-                        console.log(data);
-                        jQuery('select[name="sub_category"]').empty();
-                        jQuery.each(data, function(key,value){
-                           $('select[name="sub_category"]').append('<option value="'+ key +'">'+ value +'</option>');
-                        });
-                     }
-                  });
-               }
-               else
-               {
-                  $('select[name="sub_category"]').empty();
-               }
-            });
+        jQuery('select[name="category_id"]').on('change',function(){
+           var categoryID = jQuery(this).val();
+           console.log(categoryID);
+           if(categoryID)
+           {
+              jQuery.ajax({
+                 url : '{{url("/dashboard/get_sub_category/")}}' +'/' +categoryID,
+                 type : "GET",
+                 dataType : "json",
+                 success:function(data)
+                 {
+                    console.log(data);
+                    jQuery('select[name="sub_category"]').empty();
+                    jQuery.each(data, function(key,value){
+                       $('select[name="sub_category"]').append('<option value="'+ key +'">'+ value +'</option>');
+                    });
+                 }
+              });
+           }
+           else
+           {
+              $('select[name="sub_category"]').empty();
+           }
+        });
     });
 
     $('.summernote').summernote({

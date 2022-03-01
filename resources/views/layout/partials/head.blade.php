@@ -27,7 +27,8 @@
 
         <link rel="stylesheet" href="{{asset('assets/css/slick-theme.css')}}">
         <style type="text/css">
-        	@if($brand_profile)
+        	@if(isset($brand_profile))
+        	
         	.header {
         		background:{{$brand_profile->color['header_color'] ?? '#2B004F'}}  ;
         	}

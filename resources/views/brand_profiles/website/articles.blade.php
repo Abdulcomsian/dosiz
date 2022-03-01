@@ -27,7 +27,7 @@
                                     <img src="{{asset('assets/img/user/heart.png')}}" alt="">
                                 </span>
                             </div>
-                        <img src="{{asset($article->image ?? '')}}" alt="" class="img-fluid">
+                        <img src="{{asset($article->image ?? '')}}" alt="" style="width:396px; height:268px;" class="img-fluid">
                             <div class="articleInfo">
                                 <div class="dateInput">
                                     <img src="{{asset('assets_admin/img/calendar.png')}}" alt="" style="width:18px !important; height: 18px !important;">
@@ -36,7 +36,7 @@
                                 <h3>{!!$article->description!!}</p>
                                 <div class="readMore">
                                     <p>
-                                        <a href="{{url('blog',$article->id)}}">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                        <a href="{{url('article',$article->id)}}">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                                     </p>
                                 </div>
                             </div>

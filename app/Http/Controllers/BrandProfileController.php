@@ -20,8 +20,16 @@ class BrandProfileController extends Controller
     public function index()
     {
         $user_id = Auth::id();
-        $brand_profile = BrandProfile::where('user_id',$user_id)->first();
+        
         // dd($brand_profile);
+        if(Auth::user()->hasRole('Admin'))
+        {
+            $brand_profile = BrandProfile::get();
+        }
+        else
+        {
+            $brand_profile = BrandProfile::where('user_id',$user_id)->first();
+        }
         return view('brand_profiles.index', compact('brand_profile' ));
     }      
 
@@ -239,12 +247,13 @@ class BrandProfileController extends Controller
     public function brand_profile($brand_id)
     {
         $brand_profile = BrandProfile::where('id',$brand_id)->first();
+        $products = Product::where('user_id',$brand_profile->user_id)->get();
         $user = User::where('id',$brand_profile->user_id)->first();
         $blog_1 = Blog::where('user_id',$user->id)->first();
         $blog_2 = Blog::where('user_id',$user->id)->skip(1)->first();
         $blog_3 = Blog::where('user_id',$user->id)->skip(2)->first();
-        // dd($brand_profile->color['header_color']);
-        return view('brand_profiles.website.index',compact('brand_profile','blog_1','blog_2','blog_3','user'));
+        // dd($blog_1,$blog_2,$blog_3);
+        return view('brand_profiles.website.index',compact('brand_profile','blog_1','blog_2','blog_3','user','products'));
     }
 
     public function products($brand_id)
@@ -259,14 +268,17 @@ class BrandProfileController extends Controller
         $brand_profile = BrandProfile::where('id',$brand_id)->first();
         $blogs = Blog::where('user_id',$brand_profile->user_id)->get();
         return view('brand_profiles.website.blogs',compact('blogs','brand_profile'));
-    }
+    } 
 
-    public function blog($brand_id)
+    public function article($blog_id)
     {
-        $brand_profile = BrandProfile::where('id',$brand_id)->first();
-        $blog = Blog::where('user_id',$brand_profile->user_id)->get();
-        return view('brand_profiles.website.blog',compact('blog','brand_profile'));
-    }  
+        $articles = Blog::where('id',$blog_id)->first();
+        $user_id = Auth::id();
+        $user = User::where('id',$articles->user_id)->first();
+        $brand_profile = BrandProfile::where('user_id',$user->id)->first();
+        $side_blogs = Blog::where('user_id',$user_id)->latest()->get();
+        return view('brand_profiles.website.blog',compact('articles','brand_profile','side_blogs'));
+    }
 
     public function articles($brand_id)
     {
@@ -274,4 +286,5 @@ class BrandProfileController extends Controller
         $articles = Blog::where('user_id',$brand_profile->user_id)->get();
         return view('brand_profiles.website.articles',compact('articles','brand_profile'));
     }
+
 }

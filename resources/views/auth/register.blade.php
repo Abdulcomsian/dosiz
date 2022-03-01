@@ -101,7 +101,7 @@ Register
                                         <div style="color:red;">{{$errors->first('phone')}}</div> <br>
                                     </div>
                                     <div class="form-group mb-0">
-                                        <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
+                                        <button class="btn btn-primary btn-block" type="submit">הירשם</button>
                                     </div>
                                 </form>
                                 <!-- /Form -->
