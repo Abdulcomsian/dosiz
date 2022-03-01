@@ -21,7 +21,14 @@ class EmailSubscribeController extends Controller
         {
             $user_id = Auth::id();
             $brand_profile = BrandProfile::where('user_id',$user_id)->first();
-            $subscribers = Subscriber::where('brand_profile_id',$brand_profile->id)->get();
+            if($brand_profile)
+            {
+                $subscribers = Subscriber::where('brand_profile_id',$brand_profile->id)->get();
+            }
+            else{
+                toastError('Kindly Complete your profile first');
+                return Redirect::back();
+            }
         }
         else
         {
