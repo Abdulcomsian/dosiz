@@ -31,7 +31,7 @@ Route::get('/detailArticle', function () {
 });
 
 /*****************ADMIN ROUTES*******************/
-Route::prefix('dashboard')->middleware('dashboard')->group(function(){
+Route::prefix('dashboard')->middleware(['auth','dashboard'])->group(function(){
     Route::get('/dashboard', 'dashboardController@index')->name('dashboard');
     Route::get('/get_sub_category/{id}', 'productController@get_sub_category');
     //category
