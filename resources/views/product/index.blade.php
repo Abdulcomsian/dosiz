@@ -58,8 +58,8 @@ Products
 													
 													<td> <img src="{{asset($product->image)}}" width="100px" height="100px"></td>
 													<td>{{$product->product_category->category_name}}</td>
-													<td>{{$product->old_from_price}} - {{$product->old_to_price}}</td>
-													<td>{{$product->new_from_price}} - {{$product->new_to_price}}</td>
+													<td>{{$product->price}}</td>
+													<td>{{$product->discount_price}}</td>
 													<td>{{$product->status}}</td>
 
 													<td class="text-right">

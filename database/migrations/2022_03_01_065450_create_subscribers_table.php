@@ -22,7 +22,7 @@ class CreateSubscribersTable extends Migration
             $table->string('address')->nullable();
             $table->unsignedBigInteger('brand_profile_id');
             $table->foreign('brand_profile_id')->references('id')->on('brand_profiles');
-            $table->tinyInteger('status')->default('1');
+            $table->tinyInteger('type');
             $table->timestamps();
         });
     }

@@ -45,8 +45,8 @@ Show Product
 														<td>{{$product->name}}</td>
 														<td>{{$product->product_slug}}</td>
 														<td>{{$product->product_category->category_name}}</td>
-														<td>{{$product->old_from_price}} - {{$product->old_to_price}}</td>
-														<td>{{$product->new_from_price}} - {{$product->new_to_price}}</td>
+														<td>{{$product->price}}</td>
+														<td>{{$product->discount_price}}</td>
 														<td>{!! $product->description !!}</td>
 														<td>{{$product->status}}</td>
 													</tr>

@@ -65,10 +65,8 @@ class productController extends Controller
         $Product->user_id = $user_id;
         $Product->product_slug = $request->product_slug; 
         $Product->product_category_id = $request->product_category_id;
-        $Product->old_from_price = $request->old_from_price;
-        $Product->old_to_price = $request->old_to_price;
-        $Product->new_from_price = $request->new_from_price;
-        $Product->new_to_price = $request->new_to_price;
+        $Product->price = $request->price;
+        $Product->discount_price = $request->discount_price;
         $Product->description = $request->description;
         if ($request->file('image')) {
             $filePath = HelperFunctions::productImagePath();
@@ -136,10 +134,8 @@ class productController extends Controller
         $Product->user_id = $user_id;
         $Product->product_slug = $request->product_slug;
         $Product->product_category_id = $request->product_category_id;
-        $Product->old_from_price = $request->old_from_price;
-        $Product->old_to_price = $request->old_to_price;
-        $Product->new_from_price = $request->new_from_price;
-        $Product->new_to_price = $request->new_to_price;
+        $Product->price = $request->price;
+        $Product->discount_price = $request->discount_price;
         $Product->description = $request->description;
         if ($request->file('image')) {
             $filePath = HelperFunctions::productImagePath();

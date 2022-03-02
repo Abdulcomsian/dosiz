@@ -50,44 +50,22 @@ Add Product
 					                                </div>
 					                            </div>
 
-					                            <div class="row">
-						                            <div class="col-6">
-						                                <label>Product Orignal Price From</label>
-						                                <div>
-						                                    <input class="form-control" type="number" name="old_from_price" id="old_from_price" placeholder="Enter Orignal Price From">
-						                                    <div style="color:red;">{{$errors->first('old_from_price')}}</div> <br>
-						                                    
-						                                </div>
-						                            </div>
-					                            
-						                            <div class="col-6">
-						                                <label>Product Orignal Price to</label>
-						                                <div>
-						                                    <input class="form-control" type="number" name="old_to_price" id="old_to_price" placeholder="Enter Orignal Price To">
-						                                    <div style="color:red;">{{$errors->first('old_to_price')}}</div> <br>
-						                                    
-						                                </div>
-						                            </div>
+					                            <div class="form-group">
+					                                <label>Product Orignal Price</label>
+					                                <div>
+					                                    <input class="form-control" type="number" name="price" id="price" placeholder="Enter Orignal Price">
+					                                    <div style="color:red;">{{$errors->first('price')}}</div> <br>
+					                                    
+					                                </div>
 						                        </div>
-						                        <div class="row">
-						                            <div class="col-6">
-						                                <label>Product Discount Price From</label>
-						                                <div>
-						                                    <input class="form-control" type="number" name="new_from_price" id="new_from_price" placeholder="Enter Discount Price From">
-						                                    <div style="color:red;">{{$errors->first('new_from_price')}}</div> <br>
-						                                    
-						                                </div>
-						                            </div>
 						                        
-
-						                            <div class="col-6">
-						                                <label>Product Discount Price To</label>
-						                                <div>
-						                                    <input class="form-control" type="number" name="new_to_price" id="new_to_price" placeholder="Enter Discount Price To">
-						                                    <div style="color:red;">{{$errors->first('new_to_price')}}</div> <br>
-						                                    
-						                                </div>
-						                            </div>
+						                        <div class="form-group">
+					                                <label>Product Discount Price</label>
+					                                <div>
+					                                    <input class="form-control" type="number" name="discount_price" id="discount_price" placeholder="Enter Discount Price">
+					                                    <div style="color:red;">{{$errors->first('discount_price')}}</div> <br>
+					                                    
+					                                </div>
 					                            </div>
 
 					                            <div class="uploadDiv" style="padding-left: 10px;">
