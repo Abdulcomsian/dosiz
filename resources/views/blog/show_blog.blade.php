@@ -32,6 +32,8 @@ Blog Detail
 												<thead>
 													<tr>
 														<th>Blog Name</th>
+														<th>Blog Title</th>
+														<th>Blog Sub Title</th>
 														<th>Blog Category</th>
 														<th>Blog Sub Category</th>
 														<th>Blog Description</th>
@@ -41,6 +43,8 @@ Blog Detail
 												<tbody>
 													<tr>
 														<td>{{$blog->name}}</td>
+														<td>{{$blog->title}}</td>
+														<td>{{$blog->sub_title}}</td>
 														<td>{{$blog->category->name}}</td>
 														<td>{{$blog->sub_category->name}}</td>
 														<td>{!! $blog->description !!}</td>

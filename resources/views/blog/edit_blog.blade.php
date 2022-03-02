@@ -35,6 +35,16 @@
 					                                <div style="color:red;">{{$errors->first('name')}}</div> <br>
 					                            </div>
 					                            <div class="form-group">
+					                                <label>Blog Title</label>
+					                                <input class="form-control" type="text" name="title" id="title" value="{{ $blog->title }}" placeholder="Enter Title">
+					                                <div style="color:red;">{{$errors->first('title')}}</div> <br>
+					                            </div>
+					                            <div class="form-group">
+					                                <label>Blog Sub Title</label>
+					                                <input class="form-control" type="text" name="sub_title" id="sub_title" value="{{ $blog->sub_title }}" placeholder="Enter Sub Title">
+					                                <div style="color:red;">{{$errors->first('sub_title')}}</div> <br>
+					                            </div>
+					                            <div class="form-group">
 					                                <label>Blog Feature Image</label>
 					                                <div>
 					                                    <input class="form-control" type="file" name="image" id="image">

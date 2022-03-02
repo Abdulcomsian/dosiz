@@ -19,9 +19,15 @@ class BlogController extends Controller
     {
         $user_id = Auth::id();
         $brand_profile = BrandProfile::where('user_id',$user_id)->first();
-        if($brand_profile)
+        if(Auth::user()->hasRole('Admin'))
         {
             $blogs = Blog::get();
+            return view('blog.index', compact('blogs'));
+        }
+
+        if($brand_profile)
+        {
+            $blogs = Blog::where('user_id',$user_id)->get();
             return view('blog.index', compact('blogs'));
         }
         else{
@@ -59,6 +65,8 @@ class BlogController extends Controller
         $this->validate($request,[ 
             'name'=>'required', 
             'image'=>'required', 
+            'title'=>'required', 
+            'sub_title'=>'required', 
             'category_id'=>'required', 
             'description'=>'required', 
             'status'=>'required', 
@@ -67,6 +75,8 @@ class BlogController extends Controller
         try {
         $blog= new Blog;
         $blog->name = $request->name;
+        $blog->title = $request->title;
+        $blog->sub_title = $request->sub_title;
         $blog->user_id = $user_id;
         $blog->sub_category_id = $request->sub_category;
         $blog->category_id = $request->category_id;
@@ -120,7 +130,9 @@ class BlogController extends Controller
         // dd($request->all());
         $user_id = Auth::id();
         $this->validate($request,[ 
-            'name'=>'required', 
+            'name'=>'required',
+            'title'=>'required', 
+            'sub_title'=>'required', 
             'category_id'=>'required', 
             'description'=>'required', 
             'status'=>'required', 
@@ -136,6 +148,8 @@ class BlogController extends Controller
              $new_array[]= $img;
         }
         $blog->name = $request->name;
+        $blog->title = $request->title;
+        $blog->sub_title = $request->sub_title;
         $blog->user_id = $user_id;
         $blog->sub_category_id = $request->sub_category;
         $blog->category_id = $request->category_id;
