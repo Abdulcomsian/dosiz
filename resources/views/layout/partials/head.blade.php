@@ -46,6 +46,21 @@
         	 h1, h2, h3, h4, h5, h6 , a{
         	 	color: {{$brand_profile->color['title_color'] ?? '#26292c'}}  ;
         	}
+        	.header .navbar-nav>li a {
+        		font-family: {{$brand_profile->font['header_font'] ?? 'PloniMedium'}}  ;
+        	}
+
+        	.footer-title , .footer .footer-widget p , .inputDiv label , .copyright-text .mb-0 {
+        		font-family: {{$brand_profile->font['footer_font'] ?? 'PloniMedium'}}  ;
+        	}
+
+        	h1, h2, h3, h4, h5, h6 , a{
+        		font-family: {{$brand_profile->font['title_font'] ?? 'PloniDBold'}}  ;
+        	}
+
+        	button {
+        		font-family: {{$brand_profile->font['button_font'] ?? 'PloniDBold'}}  ;
+        	}
         	@endif
         	
         </style>

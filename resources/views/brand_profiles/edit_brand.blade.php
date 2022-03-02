@@ -99,25 +99,25 @@
 					                              <div class="col-md-6"> 
 																<label>Brand Header Font</label>
 															   <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="header_font" id="header_font">
-			                                            <option selected disabled>Select Font Size</option>
-			                                            	<option value="8px" {{ $brand_profile->font['header_font'] == '8px' ? 'selected' : '' }}>8px</option>
-			                                            	<option value="9px" {{ $brand_profile->font['header_font'] == '9px' ? 'selected' : '' }}>9px</option>
-			                                            	<option value="10px" {{ $brand_profile->font['header_font'] == '10px' ? 'selected' : '' }}>10px</option>
-			                                            	<option value="11px" {{ $brand_profile->font['header_font'] == '11px' ? 'selected' : '' }}>11px</option>
-			                                            	<option value="12px" {{ $brand_profile->font['header_font'] == '12px' ? 'selected' : '' }}>12px</option>
-			                                            	<option value="13px" {{ $brand_profile->font['header_font'] == '13px' ? 'selected' : '' }}>13px</option>
-			                                            	<option value="14px" {{ $brand_profile->font['header_font'] == '14px' ? 'selected' : '' }}>14px</option>
-			                                            	<option value="15px" {{ $brand_profile->font['header_font'] == '15px' ? 'selected' : '' }}>15px</option>
-			                                            	<option value="16px" {{ $brand_profile->font['header_font'] == '16px' ? 'selected' : '' }}>16px</option>
-			                                            	<option value="17px" {{ $brand_profile->font['header_font'] == '17px' ? 'selected' : '' }}>17px</option>
-			                                            	<option value="18px" {{ $brand_profile->font['header_font'] == '18px' ? 'selected' : '' }}>18px</option>
-			                                            	<option value="19px" {{ $brand_profile->font['header_font'] == '19px' ? 'selected' : '' }}>19px</option>
-			                                            	<option value="20px" {{ $brand_profile->font['header_font'] == '20px' ? 'selected' : '' }}>20px</option>
-			                                            	<option value="21px" {{ $brand_profile->font['header_font'] == '21px' ? 'selected' : '' }}>21px</option>
-			                                            	<option value="22px" {{ $brand_profile->font['header_font'] == '22px' ? 'selected' : '' }}>22px</option>
-			                                            	<option value="23px" {{ $brand_profile->font['header_font'] == '23px' ? 'selected' : '' }}>23px</option>
-			                                            	<option value="24px" {{ $brand_profile->font['header_font'] == '24px' ? 'selected' : '' }}>24px</option>
-			                                            	<option value="25px" {{ $brand_profile->font['header_font'] == '25px' ? 'selected' : '' }}>25px</option>
+			                                            <option selected disabled>Select Font Family</option>
+			                                            	<option value="Calibri Light (Headings)" {{ $brand_profile->font['header_font'] == 'Calibri Light (Headings)' ? 'selected' : '' }}>Calibri Light (Headings)</option>
+			                                            	<option value="Calibri (Body)" {{ $brand_profile->font['header_font'] == 'Calibri (Body)' ? 'selected' : '' }}>Calibri (Body)</option>
+			                                            	<option value="Algerian" {{ $brand_profile->font['header_font'] == 'Algerian' ? 'selected' : '' }}>Algerian</option>
+			                                            	<option value="Gill Sans Ultra Bold" {{ $brand_profile->font['header_font'] == 'Gill Sans Ultra Bold' ? 'selected' : '' }}>Gill Sans Ultra Bold</option>
+			                                            	<option value="Times New Roman" {{ $brand_profile->font['header_font'] == 'Times New Roman' ? 'selected' : '' }}>Times New Roman</option>
+			                                            	<option value="Gill Sans MT Condensed" {{ $brand_profile->font['header_font'] == 'Gill Sans MT Condensed' ? 'selected' : '' }}>Gill Sans MT Condensed</option>
+			                                            	<option value="Arial" {{ $brand_profile->font['header_font'] == 'Arial' ? 'selected' : '' }}>Arial</option>
+			                                            	<option value="Bahnschrift" {{ $brand_profile->font['header_font'] == 'Bahnschrift' ? 'selected' : '' }}>Bahnschrift</option>
+			                                            	<option value="Blackadder ITC" {{ $brand_profile->font['header_font'] == 'Blackadder ITC' ? 'selected' : '' }}>Blackadder ITC</option>
+			                                            	<option value="Bernard MT Condensed" {{ $brand_profile->font['header_font'] == 'Bernard MT Condensed' ? 'selected' : '' }}>Bernard MT Condensed</option>
+			                                            	<option value="Castellar" {{ $brand_profile->font['header_font'] == 'Castellar' ? 'selected' : '' }}>Castellar</option>
+			                                            	<option value="Bradley Hand ITC" {{ $brand_profile->font['header_font'] == 'Bradley Hand ITC' ? 'selected' : '' }}>Bradley Hand ITC</option>
+			                                            	<option value="Curlz MT" {{ $brand_profile->font['header_font'] == 'Curlz MT' ? 'selected' : '' }}>Curlz MT</option>
+			                                            	<option value="Forte" {{ $brand_profile->font['header_font'] == 'Forte' ? 'selected' : '' }}>Forte</option>
+			                                            	<option value="Bradley Hand ITC" {{ $brand_profile->font['header_font'] == 'Bradley Hand ITC' ? 'selected' : '' }}>Bradley Hand ITC</option>
+			                                            	<option value="Bahnschrift SemiLight Condensed" {{ $brand_profile->font['header_font'] == 'Bahnschrift SemiLight Condensed' ? 'selected' : '' }}>Bahnschrift SemiLight Condensed</option>
+			                                            	<option value="Bodoni MT Black" {{ $brand_profile->font['header_font'] == 'Bodoni MT Black' ? 'selected' : '' }}>Bodoni MT Black</option>
+			                                            	<option value="Copperplate Gothic Light" {{ $brand_profile->font['header_font'] == 'Copperplate Gothic Light' ? 'selected' : '' }}>Copperplate Gothic Light</option>
 			                                        </select>
 															   <div style="color:red;">{{$errors->first('header_font')}}</div> <br>
 															</div>
@@ -132,25 +132,25 @@
 					                              <div class="col-md-6"> 
 																<label>Brand Footer Font</label>
 															   <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="footer_font" id="footer_font">
-			                                            <option selected disabled>Select Font Size</option>
-			                                            	<option value="8px" {{ $brand_profile->font['footer_font'] == '8px' ? 'selected' : '' }}>8px</option>
-			                                            	<option value="9px" {{ $brand_profile->font['footer_font'] == '9px' ? 'selected' : '' }}>9px</option>
-			                                            	<option value="10px" {{ $brand_profile->font['footer_font'] == '10px' ? 'selected' : '' }}>10px</option>
-			                                            	<option value="11px" {{ $brand_profile->font['footer_font'] == '11px' ? 'selected' : '' }}>11px</option>
-			                                            	<option value="12px" {{ $brand_profile->font['footer_font'] == '12px' ? 'selected' : '' }}>12px</option>
-			                                            	<option value="13px" {{ $brand_profile->font['footer_font'] == '13px' ? 'selected' : '' }}>13px</option>
-			                                            	<option value="14px" {{ $brand_profile->font['footer_font'] == '14px' ? 'selected' : '' }}>14px</option>
-			                                            	<option value="15px" {{ $brand_profile->font['footer_font'] == '15px' ? 'selected' : '' }}>15px</option>
-			                                            	<option value="16px" {{ $brand_profile->font['footer_font'] == '16px' ? 'selected' : '' }}>16px</option>
-			                                            	<option value="17px" {{ $brand_profile->font['footer_font'] == '17px' ? 'selected' : '' }}>17px</option>
-			                                            	<option value="18px" {{ $brand_profile->font['footer_font'] == '18px' ? 'selected' : '' }}>18px</option>
-			                                            	<option value="19px" {{ $brand_profile->font['footer_font'] == '19px' ? 'selected' : '' }}>19px</option>
-			                                            	<option value="20px" {{ $brand_profile->font['footer_font'] == '20px' ? 'selected' : '' }}>20px</option>
-			                                            	<option value="21px" {{ $brand_profile->font['footer_font'] == '21px' ? 'selected' : '' }}>21px</option>
-			                                            	<option value="22px" {{ $brand_profile->font['footer_font'] == '22px' ? 'selected' : '' }}>22px</option>
-			                                            	<option value="23px" {{ $brand_profile->font['footer_font'] == '23px' ? 'selected' : '' }}>23px</option>
-			                                            	<option value="24px" {{ $brand_profile->font['footer_font'] == '24px' ? 'selected' : '' }}>24px</option>
-			                                            	<option value="25px" {{ $brand_profile->font['footer_font'] == '25px' ? 'selected' : '' }}>25px</option>
+			                                            <option selected disabled>Select Font Family</option>
+			                                            	<option value="Calibri Light (Headings)" {{ $brand_profile->font['footer_font'] == 'Calibri Light (Headings)' ? 'selected' : '' }}>Calibri Light (Headings)</option>
+			                                            	<option value="Calibri (Body)" {{ $brand_profile->font['footer_font'] == 'Calibri (Body)' ? 'selected' : '' }}>Calibri (Body)</option>
+			                                            	<option value="Algerian" {{ $brand_profile->font['footer_font'] == 'Algerian' ? 'selected' : '' }}>Algerian</option>
+			                                            	<option value="Gill Sans Ultra Bold" {{ $brand_profile->font['footer_font'] == 'Gill Sans Ultra Bold' ? 'selected' : '' }}>Gill Sans Ultra Bold</option>
+			                                            	<option value="Times New Roman" {{ $brand_profile->font['footer_font'] == 'Times New Roman' ? 'selected' : '' }}>Times New Roman</option>
+			                                            	<option value="Gill Sans MT Condensed" {{ $brand_profile->font['footer_font'] == 'Gill Sans MT Condensed' ? 'selected' : '' }}>Gill Sans MT Condensed</option>
+			                                            	<option value="Arial" {{ $brand_profile->font['footer_font'] == 'Arial' ? 'selected' : '' }}>Arial</option>
+			                                            	<option value="Bahnschrift" {{ $brand_profile->font['footer_font'] == 'Bahnschrift' ? 'selected' : '' }}>Bahnschrift</option>
+			                                            	<option value="Blackadder ITC" {{ $brand_profile->font['footer_font'] == 'Blackadder ITC' ? 'selected' : '' }}>Blackadder ITC</option>
+			                                            	<option value="Bernard MT Condensed" {{ $brand_profile->font['footer_font'] == 'Bernard MT Condensed' ? 'selected' : '' }}>Bernard MT Condensed</option>
+			                                            	<option value="Castellar" {{ $brand_profile->font['footer_font'] == 'Castellar' ? 'selected' : '' }}>Castellar</option>
+			                                            	<option value="Bradley Hand ITC" {{ $brand_profile->font['footer_font'] == 'Bradley Hand ITC' ? 'selected' : '' }}>Bradley Hand ITC</option>
+			                                            	<option value="Curlz MT" {{ $brand_profile->font['footer_font'] == 'Curlz MT' ? 'selected' : '' }}>Curlz MT</option>
+			                                            	<option value="Forte" {{ $brand_profile->font['footer_font'] == 'Forte' ? 'selected' : '' }}>Forte</option>
+			                                            	<option value="Bradley Hand ITC" {{ $brand_profile->font['footer_font'] == 'Bradley Hand ITC' ? 'selected' : '' }}>Bradley Hand ITC</option>
+			                                            	<option value="Bahnschrift SemiLight Condensed" {{ $brand_profile->font['footer_font'] == 'Bahnschrift SemiLight Condensed' ? 'selected' : '' }}>Bahnschrift SemiLight Condensed</option>
+			                                            	<option value="Bodoni MT Black" {{ $brand_profile->font['footer_font'] == 'Bodoni MT Black' ? 'selected' : '' }}>Bodoni MT Black</option>
+			                                            	<option value="Copperplate Gothic Light" {{ $brand_profile->font['footer_font'] == 'Copperplate Gothic Light' ? 'selected' : '' }}>Copperplate Gothic Light</option>
 			                                        </select>
 															   <div style="color:red;">{{$errors->first('footer_font')}}</div> <br>
 															   
@@ -166,25 +166,25 @@
 					                              <div class="col-md-6"> 
 																<label>Brand Buttons Font</label>
 															   <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="button_font" id="button_font">
-			                                            <option selected disabled>Select Font Size</option>
-			                                            	<option value="8px" {{ $brand_profile->font['button_font'] == '8px' ? 'selected' : '' }}>8px</option>
-			                                            	<option value="9px" {{ $brand_profile->font['button_font'] == '9px' ? 'selected' : '' }}>9px</option>
-			                                            	<option value="10px" {{ $brand_profile->font['button_font'] == '10px' ? 'selected' : '' }}>10px</option>
-			                                            	<option value="11px" {{ $brand_profile->font['button_font'] == '11px' ? 'selected' : '' }}>11px</option>
-			                                            	<option value="12px" {{ $brand_profile->font['button_font'] == '12px' ? 'selected' : '' }}>12px</option>
-			                                            	<option value="13px" {{ $brand_profile->font['button_font'] == '13px' ? 'selected' : '' }}>13px</option>
-			                                            	<option value="14px" {{ $brand_profile->font['button_font'] == '14px' ? 'selected' : '' }}>14px</option>
-			                                            	<option value="15px" {{ $brand_profile->font['button_font'] == '15px' ? 'selected' : '' }}>15px</option>
-			                                            	<option value="16px" {{ $brand_profile->font['button_font'] == '16px' ? 'selected' : '' }}>16px</option>
-			                                            	<option value="17px" {{ $brand_profile->font['button_font'] == '17px' ? 'selected' : '' }}>17px</option>
-			                                            	<option value="18px" {{ $brand_profile->font['button_font'] == '18px' ? 'selected' : '' }}>18px</option>
-			                                            	<option value="19px" {{ $brand_profile->font['button_font'] == '19px' ? 'selected' : '' }}>19px</option>
-			                                            	<option value="20px" {{ $brand_profile->font['button_font'] == '20px' ? 'selected' : '' }}>20px</option>
-			                                            	<option value="21px" {{ $brand_profile->font['button_font'] == '21px' ? 'selected' : '' }}>21px</option>
-			                                            	<option value="22px" {{ $brand_profile->font['button_font'] == '22px' ? 'selected' : '' }}>22px</option>
-			                                            	<option value="23px" {{ $brand_profile->font['button_font'] == '23px' ? 'selected' : '' }}>23px</option>
-			                                            	<option value="24px" {{ $brand_profile->font['button_font'] == '24px' ? 'selected' : '' }}>24px</option>
-			                                            	<option value="25px" {{ $brand_profile->font['button_font'] == '25px' ? 'selected' : '' }}>25px</option>
+			                                            <option selected disabled>Select Font Family</option>
+			                                            	<option value="Calibri Light (Headings)" {{ $brand_profile->font['button_font'] == 'Calibri Light (Headings)' ? 'selected' : '' }}>Calibri Light (Headings)</option>
+			                                            	<option value="Calibri (Body)" {{ $brand_profile->font['button_font'] == 'Calibri (Body)' ? 'selected' : '' }}>Calibri (Body)</option>
+			                                            	<option value="Algerian" {{ $brand_profile->font['button_font'] == 'Algerian' ? 'selected' : '' }}>Algerian</option>
+			                                            	<option value="Gill Sans Ultra Bold" {{ $brand_profile->font['button_font'] == 'Gill Sans Ultra Bold' ? 'selected' : '' }}>Gill Sans Ultra Bold</option>
+			                                            	<option value="Times New Roman" {{ $brand_profile->font['button_font'] == 'Times New Roman' ? 'selected' : '' }}>Times New Roman</option>
+			                                            	<option value="Gill Sans MT Condensed" {{ $brand_profile->font['button_font'] == 'Gill Sans MT Condensed' ? 'selected' : '' }}>Gill Sans MT Condensed</option>
+			                                            	<option value="Arial" {{ $brand_profile->font['button_font'] == 'Arial' ? 'selected' : '' }}>Arial</option>
+			                                            	<option value="Bahnschrift" {{ $brand_profile->font['button_font'] == 'Bahnschrift' ? 'selected' : '' }}>Bahnschrift</option>
+			                                            	<option value="Blackadder ITC" {{ $brand_profile->font['button_font'] == 'Blackadder ITC' ? 'selected' : '' }}>Blackadder ITC</option>
+			                                            	<option value="Bernard MT Condensed" {{ $brand_profile->font['button_font'] == 'Bernard MT Condensed' ? 'selected' : '' }}>Bernard MT Condensed</option>
+			                                            	<option value="Castellar" {{ $brand_profile->font['button_font'] == 'Castellar' ? 'selected' : '' }}>Castellar</option>
+			                                            	<option value="Bradley Hand ITC" {{ $brand_profile->font['button_font'] == 'Bradley Hand ITC' ? 'selected' : '' }}>Bradley Hand ITC</option>
+			                                            	<option value="Curlz MT" {{ $brand_profile->font['button_font'] == 'Curlz MT' ? 'selected' : '' }}>Curlz MT</option>
+			                                            	<option value="Forte" {{ $brand_profile->font['button_font'] == 'Forte' ? 'selected' : '' }}>Forte</option>
+			                                            	<option value="Bradley Hand ITC" {{ $brand_profile->font['button_font'] == 'Bradley Hand ITC' ? 'selected' : '' }}>Bradley Hand ITC</option>
+			                                            	<option value="Bahnschrift SemiLight Condensed" {{ $brand_profile->font['button_font'] == 'Bahnschrift SemiLight Condensed' ? 'selected' : '' }}>Bahnschrift SemiLight Condensed</option>
+			                                            	<option value="Bodoni MT Black" {{ $brand_profile->font['button_font'] == 'Bodoni MT Black' ? 'selected' : '' }}>Bodoni MT Black</option>
+			                                            	<option value="Copperplate Gothic Light" {{ $brand_profile->font['button_font'] == 'Copperplate Gothic Light' ? 'selected' : '' }}>Copperplate Gothic Light</option>
 			                                        </select>
 															   <div style="color:red;">{{$errors->first('button_font')}}</div> <br>
 															   
@@ -200,25 +200,25 @@
 					                              <div class="col-md-6"> 
 																<label>Brand Title Font</label>
 															   <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="title_font" id="title_font">
-			                                            <option selected disabled>Select Font Size</option>
-			                                            	<option value="8px" {{ $brand_profile->font['title_font'] == '8px' ? 'selected' : '' }}>8px</option>
-			                                            	<option value="9px" {{ $brand_profile->font['title_font'] == '9px' ? 'selected' : '' }}>9px</option>
-			                                            	<option value="10px" {{ $brand_profile->font['title_font'] == '10px' ? 'selected' : '' }}>10px</option>
-			                                            	<option value="11px" {{ $brand_profile->font['title_font'] == '11px' ? 'selected' : '' }}>11px</option>
-			                                            	<option value="12px" {{ $brand_profile->font['title_font'] == '12px' ? 'selected' : '' }}>12px</option>
-			                                            	<option value="13px" {{ $brand_profile->font['title_font'] == '13px' ? 'selected' : '' }}>13px</option>
-			                                            	<option value="14px" {{ $brand_profile->font['title_font'] == '14px' ? 'selected' : '' }}>14px</option>
-			                                            	<option value="15px" {{ $brand_profile->font['title_font'] == '15px' ? 'selected' : '' }}>15px</option>
-			                                            	<option value="16px" {{ $brand_profile->font['title_font'] == '16px' ? 'selected' : '' }}>16px</option>
-			                                            	<option value="17px" {{ $brand_profile->font['title_font'] == '17px' ? 'selected' : '' }}>17px</option>
-			                                            	<option value="18px" {{ $brand_profile->font['title_font'] == '18px' ? 'selected' : '' }}>18px</option>
-			                                            	<option value="19px" {{ $brand_profile->font['title_font'] == '19px' ? 'selected' : '' }}>19px</option>
-			                                            	<option value="20px" {{ $brand_profile->font['title_font'] == '20px' ? 'selected' : '' }}>20px</option>
-			                                            	<option value="21px" {{ $brand_profile->font['title_font'] == '21px' ? 'selected' : '' }}>21px</option>
-			                                            	<option value="22px" {{ $brand_profile->font['title_font'] == '22px' ? 'selected' : '' }}>22px</option>
-			                                            	<option value="23px" {{ $brand_profile->font['title_font'] == '23px' ? 'selected' : '' }}>23px</option>
-			                                            	<option value="24px" {{ $brand_profile->font['title_font'] == '24px' ? 'selected' : '' }}>24px</option>
-			                                            	<option value="25px" {{ $brand_profile->font['title_font'] == '25px' ? 'selected' : '' }}>25px</option>
+			                                            <option selected disabled>Select Font Family</option>
+			                                            	<option value="Calibri Light (Headings)" {{ $brand_profile->font['title_font'] == 'Calibri Light (Headings)' ? 'selected' : '' }}>Calibri Light (Headings)</option>
+			                                            	<option value="Calibri (Body)" {{ $brand_profile->font['title_font'] == 'Calibri (Body)' ? 'selected' : '' }}>Calibri (Body)</option>
+			                                            	<option value="Algerian" {{ $brand_profile->font['title_font'] == 'Algerian' ? 'selected' : '' }}>Algerian</option>
+			                                            	<option value="Gill Sans Ultra Bold" {{ $brand_profile->font['title_font'] == 'Gill Sans Ultra Bold' ? 'selected' : '' }}>Gill Sans Ultra Bold</option>
+			                                            	<option value="Times New Roman" {{ $brand_profile->font['title_font'] == 'Times New Roman' ? 'selected' : '' }}>Times New Roman</option>
+			                                            	<option value="Gill Sans MT Condensed" {{ $brand_profile->font['title_font'] == 'Gill Sans MT Condensed' ? 'selected' : '' }}>Gill Sans MT Condensed</option>
+			                                            	<option value="Arial" {{ $brand_profile->font['title_font'] == 'Arial' ? 'selected' : '' }}>Arial</option>
+			                                            	<option value="Bahnschrift" {{ $brand_profile->font['title_font'] == 'Bahnschrift' ? 'selected' : '' }}>Bahnschrift</option>
+			                                            	<option value="Blackadder ITC" {{ $brand_profile->font['title_font'] == 'Blackadder ITC' ? 'selected' : '' }}>Blackadder ITC</option>
+			                                            	<option value="Bernard MT Condensed" {{ $brand_profile->font['title_font'] == 'Bernard MT Condensed' ? 'selected' : '' }}>Bernard MT Condensed</option>
+			                                            	<option value="Castellar" {{ $brand_profile->font['title_font'] == 'Castellar' ? 'selected' : '' }}>Castellar</option>
+			                                            	<option value="Bradley Hand ITC" {{ $brand_profile->font['title_font'] == 'Bradley Hand ITC' ? 'selected' : '' }}>Bradley Hand ITC</option>
+			                                            	<option value="Curlz MT" {{ $brand_profile->font['title_font'] == 'Curlz MT' ? 'selected' : '' }}>Curlz MT</option>
+			                                            	<option value="Forte" {{ $brand_profile->font['title_font'] == 'Forte' ? 'selected' : '' }}>Forte</option>
+			                                            	<option value="Bradley Hand ITC" {{ $brand_profile->font['title_font'] == 'Bradley Hand ITC' ? 'selected' : '' }}>Bradley Hand ITC</option>
+			                                            	<option value="Bahnschrift SemiLight Condensed" {{ $brand_profile->font['title_font'] == 'Bahnschrift SemiLight Condensed' ? 'selected' : '' }}>Bahnschrift SemiLight Condensed</option>
+			                                            	<option value="Bodoni MT Black" {{ $brand_profile->font['title_font'] == 'Bodoni MT Black' ? 'selected' : '' }}>Bodoni MT Black</option>
+			                                            	<option value="Copperplate Gothic Light" {{ $brand_profile->font['title_font'] == 'Copperplate Gothic Light' ? 'selected' : '' }}>Copperplate Gothic Light</option>
 			                                        </select>
 															   <div style="color:red;">{{$errors->first('title_font')}}</div> <br>
 															</div>
@@ -233,25 +233,25 @@
 					                              <div class="col-md-6"> 
 																<label>Brand Text Font</label>
 															   <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="text_font" id="text_font">
-			                                            <option selected disabled>Select Font Size</option>
-			                                            	<option value="8px" {{ $brand_profile->font['text_font'] == '8px' ? 'selected' : '' }}>8px</option>
-			                                            	<option value="9px" {{ $brand_profile->font['text_font'] == '9px' ? 'selected' : '' }}>9px</option>
-			                                            	<option value="10px" {{ $brand_profile->font['text_font'] == '10px' ? 'selected' : '' }}>10px</option>
-			                                            	<option value="11px" {{ $brand_profile->font['text_font'] == '11px' ? 'selected' : '' }}>11px</option>
-			                                            	<option value="12px" {{ $brand_profile->font['text_font'] == '12px' ? 'selected' : '' }}>12px</option>
-			                                            	<option value="13px" {{ $brand_profile->font['text_font'] == '13px' ? 'selected' : '' }}>13px</option>
-			                                            	<option value="14px" {{ $brand_profile->font['text_font'] == '14px' ? 'selected' : '' }}>14px</option>
-			                                            	<option value="15px" {{ $brand_profile->font['text_font'] == '15px' ? 'selected' : '' }}>15px</option>
-			                                            	<option value="16px" {{ $brand_profile->font['text_font'] == '16px' ? 'selected' : '' }}>16px</option>
-			                                            	<option value="17px" {{ $brand_profile->font['text_font'] == '17px' ? 'selected' : '' }}>17px</option>
-			                                            	<option value="18px" {{ $brand_profile->font['text_font'] == '18px' ? 'selected' : '' }}>18px</option>
-			                                            	<option value="19px" {{ $brand_profile->font['text_font'] == '19px' ? 'selected' : '' }}>19px</option>
-			                                            	<option value="20px" {{ $brand_profile->font['text_font'] == '20px' ? 'selected' : '' }}>20px</option>
-			                                            	<option value="21px" {{ $brand_profile->font['text_font'] == '21px' ? 'selected' : '' }}>21px</option>
-			                                            	<option value="22px" {{ $brand_profile->font['text_font'] == '22px' ? 'selected' : '' }}>22px</option>
-			                                            	<option value="23px" {{ $brand_profile->font['text_font'] == '23px' ? 'selected' : '' }}>23px</option>
-			                                            	<option value="24px" {{ $brand_profile->font['text_font'] == '24px' ? 'selected' : '' }}>24px</option>
-			                                            	<option value="25px" {{ $brand_profile->font['text_font'] == '25px' ? 'selected' : '' }}>25px</option>
+			                                            <option selected disabled>Select Font Family</option>
+			                                            	<option value="Calibri Light (Headings)" {{ $brand_profile->font['text_font'] == 'Calibri Light (Headings)' ? 'selected' : '' }}>Calibri Light (Headings)</option>
+			                                            	<option value="Calibri (Body)" {{ $brand_profile->font['text_font'] == 'Calibri (Body)' ? 'selected' : '' }}>Calibri (Body)</option>
+			                                            	<option value="Algerian" {{ $brand_profile->font['text_font'] == 'Algerian' ? 'selected' : '' }}>Algerian</option>
+			                                            	<option value="Gill Sans Ultra Bold" {{ $brand_profile->font['text_font'] == 'Gill Sans Ultra Bold' ? 'selected' : '' }}>Gill Sans Ultra Bold</option>
+			                                            	<option value="Times New Roman" {{ $brand_profile->font['text_font'] == 'Times New Roman' ? 'selected' : '' }}>Times New Roman</option>
+			                                            	<option value="Gill Sans MT Condensed" {{ $brand_profile->font['text_font'] == 'Gill Sans MT Condensed' ? 'selected' : '' }}>Gill Sans MT Condensed</option>
+			                                            	<option value="Arial" {{ $brand_profile->font['text_font'] == 'Arial' ? 'selected' : '' }}>Arial</option>
+			                                            	<option value="Bahnschrift" {{ $brand_profile->font['text_font'] == 'Bahnschrift' ? 'selected' : '' }}>Bahnschrift</option>
+			                                            	<option value="Blackadder ITC" {{ $brand_profile->font['text_font'] == 'Blackadder ITC' ? 'selected' : '' }}>Blackadder ITC</option>
+			                                            	<option value="Bernard MT Condensed" {{ $brand_profile->font['text_font'] == 'Bernard MT Condensed' ? 'selected' : '' }}>Bernard MT Condensed</option>
+			                                            	<option value="Castellar" {{ $brand_profile->font['text_font'] == 'Castellar' ? 'selected' : '' }}>Castellar</option>
+			                                            	<option value="Bradley Hand ITC" {{ $brand_profile->font['text_font'] == 'Bradley Hand ITC' ? 'selected' : '' }}>Bradley Hand ITC</option>
+			                                            	<option value="Curlz MT" {{ $brand_profile->font['text_font'] == 'Curlz MT' ? 'selected' : '' }}>Curlz MT</option>
+			                                            	<option value="Forte" {{ $brand_profile->font['text_font'] == 'Forte' ? 'selected' : '' }}>Forte</option>
+			                                            	<option value="Bradley Hand ITC" {{ $brand_profile->font['text_font'] == 'Bradley Hand ITC' ? 'selected' : '' }}>Bradley Hand ITC</option>
+			                                            	<option value="Bahnschrift SemiLight Condensed" {{ $brand_profile->font['text_font'] == 'Bahnschrift SemiLight Condensed' ? 'selected' : '' }}>Bahnschrift SemiLight Condensed</option>
+			                                            	<option value="Bodoni MT Black" {{ $brand_profile->font['text_font'] == 'Bodoni MT Black' ? 'selected' : '' }}>Bodoni MT Black</option>
+			                                            	<option value="Copperplate Gothic Light" {{ $brand_profile->font['text_font'] == 'Copperplate Gothic Light' ? 'selected' : '' }}>Copperplate Gothic Light</option>
 			                                        </select>
 															   <div style="color:red;">{{$errors->first('text_font')}}</div> <br>
 															   
