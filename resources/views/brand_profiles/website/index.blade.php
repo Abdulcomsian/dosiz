@@ -39,8 +39,12 @@
                             </div>
                             <div class="brandInfo">
                                 <h5>{{ $product->name}}</h5>
-                                <p>₪ {{$product->old_from_price}}-₪ {{$product->old_to_price}}</p>
-                                <p class="price">₪ {{$product->new_from_price}}-₪ {{$product->new_to_price}}</p>
+                                @if($product->discount_price != null)
+                                <p>₪ {{$product->price}}</p>
+                                <p class="price">₪ {{$product->discount_price}}</p>
+                                @else
+                                <p class="price">₪ {{$product->price}}</p>
+                                @endif
                             </div>
                         </div>
                         @endforeach
