@@ -24,10 +24,12 @@
 						<div class="col-sm-12">
 							<div class="card">
 								<div class="card-body">
-									<a href="{{route('subscribe.create')}}" class="btn btn-success">Add New <i class="fa fa-plus"></i></a>
-									<a href="#" data-toggle="modal" data-target="#import_modal" class="btn btn-info">Import Excel Sheet <i class="fa fa-download"></i></a>
-									<a href="{{url('dashboard/export')}}" class="btn btn-primary">Export Excel Sheet <i class="fa fa-upload"></i></a><br><br>
-								<!-- <a href="{{route('sub_category.create')}}"  class="btn btn-success">Send Email To all <i class="fa fa-send"></i></a><br><br> -->
+									@if(Auth::user()->hasRole('Brand Manager'))
+									<a href="{{route('subscribe.create')}}" style="padding: 5px !important;" class="btn btn-success">Add New <i class="fa fa-plus"></i></a>
+									<a href="#" data-toggle="modal" style="padding: 5px !important;" data-target="#import_modal" class="btn btn-info">Import <i class="fa fa-download"></i></a>
+									<a href="{{url('dashboard/export')}}" style="padding: 5px !important;" class="btn btn-primary">Export <i class="fa fa-upload"></i></a>
+									<br><br>
+									@endif
 									<div class="table-responsive">
 										<table class="datatable table table-hover table-center mb-0">
 											<thead>

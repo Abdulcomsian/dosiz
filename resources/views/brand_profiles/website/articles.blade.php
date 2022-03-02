@@ -33,7 +33,7 @@
                                     <img src="{{asset('assets_admin/img/calendar.png')}}" alt="" style="width:18px !important; height: 18px !important;">
                                 <span style="border: none;color: #747474;font-size: 12px;font-family: PloniRegular;">{{ date('Y/m/d', strtotime($article->created_at)) }}</span>
                                 </div>
-                                <h3>{!!$article->description!!}</p>
+                                <h3>{{$article->title ?? '2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס'}}</p>
                                 <div class="readMore">
                                     <p>
                                         <a href="{{url('article',$article->id)}}">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>

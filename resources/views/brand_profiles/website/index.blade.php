@@ -43,6 +43,7 @@
                                 <p>₪ {{$product->price}}</p>
                                 <p class="price">₪ {{$product->discount_price}}</p>
                                 @else
+                                <br>
                                 <p class="price">₪ {{$product->price}}</p>
                                 @endif
                             </div>
@@ -161,7 +162,7 @@
                                 <img src="{{asset('assets_admin/img/calendar.png')}}" alt="" style="width:18px !important; height: 18px !important;">
                                 <span style="border: none;color: #747474;font-size: 12px;font-family: PloniRegular;">{{ date('Y/m/d', strtotime($blog_1->created_at)) }}</span>
                             </div>
-                            <h3>2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס</h3>
+                            <h3>{{$blog_1->title ?? '2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס'}} </h3>
                             <p> {!!asset($blog_1->description ?? '')!!} </p>
                             <div class="readMore">
                                 <p>
@@ -208,7 +209,7 @@
                                         <img src="{{asset('assets_admin/img/calendar.png')}}" alt="" style="width:18px !important; height: 18px !important;">
                                         <span style="border: none;color: #747474;font-size: 12px;font-family: PloniRegular;">{{ date('Y/m/d', strtotime($blog_2->created_at)) }}</span>
                                     </div>
-                                    <h3>2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס</h3>
+                                    <h3>{{$blog_2->title ?? '2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס'}}</h3>
                                     <p> {!!asset($blog_2->description ?? '')!!} </p>
                                     <div class="readMore">
                                         <p>
@@ -259,7 +260,7 @@
                                     <div class="dateInput">
                                        <img src="{{asset('assets_admin/img/calendar.png')}}" alt="" style="width:18px !important; height: 18px !important;"> <span style="border: none;color: #747474;font-size: 12px;font-family: PloniRegular;">{{ date('Y/m/d', strtotime($blog_3->created_at)) }}</span>
                                     </div>
-                                    <h3>2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס</h3>
+                                    <h3>{{$blog_3->title ?? '2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס'}}</h3>
                                     <p>{!!asset($blog_3->description ?? '')!!} </p>
                                     <div class="readMore">
                                         <p>

@@ -17,8 +17,8 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <h3>{!! $articles->description!!} </h3>
-                            <p>{!! $articles->description!!}</p>
+                            <h3>{{$articles->title ?? '2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס'}} </h3>
+                            <p>{{$articles->sub_title ?? '2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס'}}</p>
                             <div class="detailImg">
                                 <img src="{{asset($articles->image)}}" style="width:769.07px; height:532.36px;" alt="">
                             </div>

@@ -42,6 +42,7 @@ Blogs
 													<th>Blog Name</th>
 													<th>Blog Feature Image</th>
 													<th>Blog Category</th>
+													<th>Blog Sub Category</th>
 													<th>Blog Status</th>
 													<th class="text-right">Action</th>
 												</tr>
@@ -57,7 +58,6 @@ Blogs
 													<td> <img src="{{asset($blog->image)}}" width="100px" height="100px"></td>
 													<td>{{$blog->category->name}}</td>
 													<td>{{$blog->sub_category->name}}</td>
-													<td>{{$blog->price}}</td>
 													<td>{{$blog->status}}</td>
 
 													<td class="text-right">
