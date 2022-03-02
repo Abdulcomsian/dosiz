@@ -98,25 +98,25 @@
 					                              <div class="col-md-6"> 
 																<label>Brand Header Font</label>
 															   <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="header_font" id="header_font">
-			                                            <option selected disabled>Select Font Size</option>
-			                                            	<option value="8px">8px</option>
-			                                            	<option value="9px">9px</option>
-			                                            	<option value="10px">10px</option>
-			                                            	<option value="11px">11px</option>
-			                                            	<option value="12px">12px</option>
-			                                            	<option value="13px">13px</option>
-			                                            	<option value="14px">14px</option>
-			                                            	<option value="15px">15px</option>
-			                                            	<option value="16px">16px</option>
-			                                            	<option value="17px">17px</option>
-			                                            	<option value="18px">18px</option>
-			                                            	<option value="19px">19px</option>
-			                                            	<option value="20px">20px</option>
-			                                            	<option value="21px">21px</option>
-			                                            	<option value="22px">22px</option>
-			                                            	<option value="23px">23px</option>
-			                                            	<option value="24px">24px</option>
-			                                            	<option value="25px">25px</option>
+			                                            <option selected disabled>Select Font Family</option>
+			                                            	<option value="Calibri Light (Headings)">Calibri Light (Headings)</option>
+			                                            	<option value="Calibri (Body)">Calibri (Body)</option>
+			                                            	<option value="Algerian">Algerian</option>
+			                                            	<option value="Gill Sans Ultra Bold">Gill Sans Ultra Bold</option>
+			                                            	<option value="Times New Roman">Times New Roman</option>
+			                                            	<option value="Gill Sans MT Condensed">Gill Sans MT Condensed</option>
+			                                            	<option value="Arial">Arial</option>
+			                                            	<option value="Bahnschrift">Bahnschrift</option>
+			                                            	<option value="Blackadder ITC">Blackadder ITC</option>
+			                                            	<option value="Bernard MT Condensed">Bernard MT Condensed</option>
+			                                            	<option value="Castellar">Castellar</option>
+			                                            	<option value="Bradley Hand ITC">Bradley Hand ITC</option>
+			                                            	<option value="Curlz MT">Curlz MT</option>
+			                                            	<option value="Forte">Forte</option>
+			                                            	<option value="Bradley Hand ITC">Bradley Hand ITC</option>
+			                                            	<option value="Bahnschrift SemiLight Condensed">Bahnschrift SemiLight Condensed</option>
+			                                            	<option value="Bodoni MT Black">Bodoni MT Black</option>
+			                                            	<option value="Copperplate Gothic Light">Copperplate Gothic Light</option>
 			                                        </select>
 															   <div style="color:red;">{{$errors->first('header_font')}}</div> <br>
 															</div>
@@ -131,25 +131,25 @@
 					                              <div class="col-md-6"> 
 																<label>Brand Footer Font</label>
 															   <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="footer_font" id="footer_font">
-			                                            <option selected disabled>Select Font Size</option>
-			                                            	<option value="8px">8px</option>
-			                                            	<option value="9px">9px</option>
-			                                            	<option value="10px">10px</option>
-			                                            	<option value="11px">11px</option>
-			                                            	<option value="12px">12px</option>
-			                                            	<option value="13px">13px</option>
-			                                            	<option value="14px">14px</option>
-			                                            	<option value="15px">15px</option>
-			                                            	<option value="16px">16px</option>
-			                                            	<option value="17px">17px</option>
-			                                            	<option value="18px">18px</option>
-			                                            	<option value="19px">19px</option>
-			                                            	<option value="20px">20px</option>
-			                                            	<option value="21px">21px</option>
-			                                            	<option value="22px">22px</option>
-			                                            	<option value="23px">23px</option>
-			                                            	<option value="24px">24px</option>
-			                                            	<option value="25px">25px</option>
+			                                            <option selected disabled>Select Font Family</option>
+			                                            	<option value="Calibri Light (Headings)">Calibri Light (Headings)</option>
+			                                            	<option value="Calibri (Body)">Calibri (Body)</option>
+			                                            	<option value="Algerian">Algerian</option>
+			                                            	<option value="Gill Sans Ultra Bold">Gill Sans Ultra Bold</option>
+			                                            	<option value="Times New Roman">Times New Roman</option>
+			                                            	<option value="Gill Sans MT Condensed">Gill Sans MT Condensed</option>
+			                                            	<option value="Arial">Arial</option>
+			                                            	<option value="Bahnschrift">Bahnschrift</option>
+			                                            	<option value="Blackadder ITC">Blackadder ITC</option>
+			                                            	<option value="Bernard MT Condensed">Bernard MT Condensed</option>
+			                                            	<option value="Castellar">Castellar</option>
+			                                            	<option value="Bradley Hand ITC">Bradley Hand ITC</option>
+			                                            	<option value="Curlz MT">Curlz MT</option>
+			                                            	<option value="Forte">Forte</option>
+			                                            	<option value="Bradley Hand ITC">Bradley Hand ITC</option>
+			                                            	<option value="Bahnschrift SemiLight Condensed">Bahnschrift SemiLight Condensed</option>
+			                                            	<option value="Bodoni MT Black">Bodoni MT Black</option>
+			                                            	<option value="Copperplate Gothic Light">Copperplate Gothic Light</option>
 			                                        </select>
 															   <div style="color:red;">{{$errors->first('footer_font')}}</div> <br>
 															   
@@ -165,25 +165,25 @@
 					                              <div class="col-md-6"> 
 																<label>Brand Buttons Font</label>
 															   <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="button_font" id="button_font">
-			                                            <option selected disabled>Select Font Size</option>
-			                                            	<option value="8px">8px</option>
-			                                            	<option value="9px">9px</option>
-			                                            	<option value="10px">10px</option>
-			                                            	<option value="11px">11px</option>
-			                                            	<option value="12px">12px</option>
-			                                            	<option value="13px">13px</option>
-			                                            	<option value="14px">14px</option>
-			                                            	<option value="15px">15px</option>
-			                                            	<option value="16px">16px</option>
-			                                            	<option value="17px">17px</option>
-			                                            	<option value="18px">18px</option>
-			                                            	<option value="19px">19px</option>
-			                                            	<option value="20px">20px</option>
-			                                            	<option value="21px">21px</option>
-			                                            	<option value="22px">22px</option>
-			                                            	<option value="23px">23px</option>
-			                                            	<option value="24px">24px</option>
-			                                            	<option value="25px">25px</option>
+			                                            <option selected disabled>Select Font Family</option>
+			                                            	<option value="Calibri Light (Headings)">Calibri Light (Headings)</option>
+			                                            	<option value="Calibri (Body)">Calibri (Body)</option>
+			                                            	<option value="Algerian">Algerian</option>
+			                                            	<option value="Gill Sans Ultra Bold">Gill Sans Ultra Bold</option>
+			                                            	<option value="Times New Roman">Times New Roman</option>
+			                                            	<option value="Gill Sans MT Condensed">Gill Sans MT Condensed</option>
+			                                            	<option value="Arial">Arial</option>
+			                                            	<option value="Bahnschrift">Bahnschrift</option>
+			                                            	<option value="Blackadder ITC">Blackadder ITC</option>
+			                                            	<option value="Bernard MT Condensed">Bernard MT Condensed</option>
+			                                            	<option value="Castellar">Castellar</option>
+			                                            	<option value="Bradley Hand ITC">Bradley Hand ITC</option>
+			                                            	<option value="Curlz MT">Curlz MT</option>
+			                                            	<option value="Forte">Forte</option>
+			                                            	<option value="Bradley Hand ITC">Bradley Hand ITC</option>
+			                                            	<option value="Bahnschrift SemiLight Condensed">Bahnschrift SemiLight Condensed</option>
+			                                            	<option value="Bodoni MT Black">Bodoni MT Black</option>
+			                                            	<option value="Copperplate Gothic Light">Copperplate Gothic Light</option>
 			                                        </select>
 															   <div style="color:red;">{{$errors->first('button_font')}}</div> <br>
 															   
@@ -199,25 +199,25 @@
 					                              <div class="col-md-6"> 
 																<label>Brand Title Font</label>
 															   <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="title_font" id="title_font">
-			                                            <option selected disabled>Select Font Size</option>
-			                                            	<option value="8px">8px</option>
-			                                            	<option value="9px">9px</option>
-			                                            	<option value="10px">10px</option>
-			                                            	<option value="11px">11px</option>
-			                                            	<option value="12px">12px</option>
-			                                            	<option value="13px">13px</option>
-			                                            	<option value="14px">14px</option>
-			                                            	<option value="15px">15px</option>
-			                                            	<option value="16px">16px</option>
-			                                            	<option value="17px">17px</option>
-			                                            	<option value="18px">18px</option>
-			                                            	<option value="19px">19px</option>
-			                                            	<option value="20px">20px</option>
-			                                            	<option value="21px">21px</option>
-			                                            	<option value="22px">22px</option>
-			                                            	<option value="23px">23px</option>
-			                                            	<option value="24px">24px</option>
-			                                            	<option value="25px">25px</option>
+			                                            <option selected disabled>Select Font Family</option>
+			                                            	<option value="Calibri Light (Headings)">Calibri Light (Headings)</option>
+			                                            	<option value="Calibri (Body)">Calibri (Body)</option>
+			                                            	<option value="Algerian">Algerian</option>
+			                                            	<option value="Gill Sans Ultra Bold">Gill Sans Ultra Bold</option>
+			                                            	<option value="Times New Roman">Times New Roman</option>
+			                                            	<option value="Gill Sans MT Condensed">Gill Sans MT Condensed</option>
+			                                            	<option value="Arial">Arial</option>
+			                                            	<option value="Bahnschrift">Bahnschrift</option>
+			                                            	<option value="Blackadder ITC">Blackadder ITC</option>
+			                                            	<option value="Bernard MT Condensed">Bernard MT Condensed</option>
+			                                            	<option value="Castellar">Castellar</option>
+			                                            	<option value="Bradley Hand ITC">Bradley Hand ITC</option>
+			                                            	<option value="Curlz MT">Curlz MT</option>
+			                                            	<option value="Forte">Forte</option>
+			                                            	<option value="Bradley Hand ITC">Bradley Hand ITC</option>
+			                                            	<option value="Bahnschrift SemiLight Condensed">Bahnschrift SemiLight Condensed</option>
+			                                            	<option value="Bodoni MT Black">Bodoni MT Black</option>
+			                                            	<option value="Copperplate Gothic Light">Copperplate Gothic Light</option>
 			                                        </select>
 															   <div style="color:red;">{{$errors->first('title_font')}}</div> <br>
 															</div>
@@ -232,25 +232,25 @@
 					                              <div class="col-md-6"> 
 																<label>Brand Text Font</label>
 															   <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="text_font" id="text_font">
-			                                            <option selected disabled>Select Font Size</option>
-			                                            	<option value="8px">8px</option>
-			                                            	<option value="9px">9px</option>
-			                                            	<option value="10px">10px</option>
-			                                            	<option value="11px">11px</option>
-			                                            	<option value="12px">12px</option>
-			                                            	<option value="13px">13px</option>
-			                                            	<option value="14px">14px</option>
-			                                            	<option value="15px">15px</option>
-			                                            	<option value="16px">16px</option>
-			                                            	<option value="17px">17px</option>
-			                                            	<option value="18px">18px</option>
-			                                            	<option value="19px">19px</option>
-			                                            	<option value="20px">20px</option>
-			                                            	<option value="21px">21px</option>
-			                                            	<option value="22px">22px</option>
-			                                            	<option value="23px">23px</option>
-			                                            	<option value="24px">24px</option>
-			                                            	<option value="25px">25px</option>
+			                                            <option selected disabled>Select Font Family</option>
+			                                            	<option value="Calibri Light (Headings)">Calibri Light (Headings)</option>
+			                                            	<option value="Calibri (Body)">Calibri (Body)</option>
+			                                            	<option value="Algerian">Algerian</option>
+			                                            	<option value="Gill Sans Ultra Bold">Gill Sans Ultra Bold</option>
+			                                            	<option value="Times New Roman">Times New Roman</option>
+			                                            	<option value="Gill Sans MT Condensed">Gill Sans MT Condensed</option>
+			                                            	<option value="Arial">Arial</option>
+			                                            	<option value="Bahnschrift">Bahnschrift</option>
+			                                            	<option value="Blackadder ITC">Blackadder ITC</option>
+			                                            	<option value="Bernard MT Condensed">Bernard MT Condensed</option>
+			                                            	<option value="Castellar">Castellar</option>
+			                                            	<option value="Bradley Hand ITC">Bradley Hand ITC</option>
+			                                            	<option value="Curlz MT">Curlz MT</option>
+			                                            	<option value="Forte">Forte</option>
+			                                            	<option value="Bradley Hand ITC">Bradley Hand ITC</option>
+			                                            	<option value="Bahnschrift SemiLight Condensed">Bahnschrift SemiLight Condensed</option>
+			                                            	<option value="Bodoni MT Black">Bodoni MT Black</option>
+			                                            	<option value="Copperplate Gothic Light">Copperplate Gothic Light</option>
 			                                        </select>
 															   <div style="color:red;">{{$errors->first('text_font')}}</div> <br>
 															   

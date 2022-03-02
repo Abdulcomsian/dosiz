@@ -1877,7 +1877,7 @@ html.menu-opened body {
     font-weight: 500;
     margin-bottom: 30px;
     text-transform: capitalize;
-	font-family: PloniMedium;
+	
 }
 .footer .footer-widget.footer-menu ul {
     list-style: none;
@@ -1986,14 +1986,13 @@ html.menu-opened body {
     color: #fff;
 }
 .footer .footer-widget p{
-	font-family: PloniRegular;
 	color: #B6B6B6;
 	font-size: 15px;
 }
 .footer .footer-menu ul li a {
     color: #B6B6B6;
     transition: all 0.4s ease 0s;
-	font-family: PloniRegular;
+	
 }
 /*-----------------
 	14. Login
@@ -6559,7 +6558,7 @@ html.menu-opened body {
 .header .navbar-nav>li a {
     color: #fff;
     padding: 0px 10px;
-	font-family: PloniMedium;
+	
 	font-size: 20px;
 }
 .btn {
@@ -7999,7 +7998,6 @@ div.dataTables_wrapper div.dataTables_filter input{
     color: #fff;
     margin-bottom: 18px;
 	font-size: 22px;
-	font-family: PloniMedium;
 }
 
 .footer .logoIconDiv {
@@ -8099,7 +8097,7 @@ div.dataTables_wrapper div.dataTables_filter input{
 
 #brandBanner .brandMainIntro h1 {
     font-size: 76px;
-	font-family: PloniMedium;
+	
 	font-weight: 500;
 }
 #brandBanner .brandMainIntro p{
@@ -8116,7 +8114,6 @@ div.dataTables_wrapper div.dataTables_filter input{
 #sliderSection h2 {
     font-size: 38px;
     margin-bottom: 30px;
-	font-family: PloniBold;
 	font-weight: 600;
 }
 
@@ -8181,7 +8178,7 @@ div.dataTables_wrapper div.dataTables_filter input{
 #contactSection h2 {
     font-size: 38px;
     margin-bottom: 30px;
-	font-family: PloniBold;
+	
 }
 
 #articleSection .articleCard,
@@ -8303,7 +8300,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 7px 46px;
     font-size: 20px;
     font-weight: 500;
-	font-family: PloniBold;
 }
 #contactSection{
 	background-color: #F8F8F8;
@@ -8343,7 +8339,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	font-weight: 600;
 }
 #contactSection .contactFormDiv h3{
-	font-family: PloniDBold;
+	
 	font-weight: 600;
 	font-size: 32px;
 }
@@ -8370,7 +8366,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 #contactSection .contactFormDiv button{
 	margin-top: 40px;
-	font-family: PloniMedium;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: #7B7B7B;
