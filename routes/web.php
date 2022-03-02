@@ -58,6 +58,10 @@ Route::prefix('dashboard')->middleware(['auth','dashboard'])->group(function(){
     //brand-category
     Route::resource('/p_category', 'ProductCategoryController');
 
+    //prfile setting
+    Route::get('profile', 'dashboardController@profile_setting');
+    Route::post('profile/store', 'dashboardController@profile_update')->name('profile.store');
+
 });
 /********************ADMIN ROUTES END******************************/
 
