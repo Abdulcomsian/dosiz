@@ -55,10 +55,10 @@ Add Blog
 					                                    <div class="form-group">
 					                                        <label>Blog Category</label>
 					                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="category_id" id="category_id">
-					                                            <option selected disabled>Select Category</option>
+					                                            <option disabled>Select Category</option>
 					                                            @if($categories)
-					                                            @foreach($categories as $category)
-					                                            	<option value="{{$category->id}}">{{$category->name}}</option>
+					                                            @foreach($categories as $all)
+					                                            	<option value="{{$all->id}}" {{ $category->id == $all->id ? 'selected' : 'disabled' }}>{{$all->name}}</option>
 					                                            @endforeach
 					                                            @endif
 					                                        </select>
@@ -68,7 +68,12 @@ Add Blog
 					                                    <div class="form-group">
 											                <label for="sub_category">Select Sub Category:</label>
 											                <select name="sub_category" class="form-control" >
-											                <option>--Sub Category--</option>
+											                <option disabled>Sub Category</option>
+															@if($sub_categories)
+															@foreach($sub_categories as $all)
+																<option value="{{$all->id}}">{{$all->name}}</option>
+															@endforeach
+															@endif
 											                </select>
 											            </div>
 
@@ -128,33 +133,7 @@ Add Blog
 <script>
 $(document).ready(function() {
 
-	jQuery(document).ready(function ()
-    {
-        jQuery('select[name="category_id"]').on('change',function(){
-           var categoryID = jQuery(this).val();
-           console.log(categoryID);
-           if(categoryID)
-           {
-              jQuery.ajax({
-                 url : '{{url("/dashboard/get_sub_category/")}}' +'/' +categoryID,
-                 type : "GET",
-                 dataType : "json",
-                 success:function(data)
-                 {
-                    console.log(data);
-                    jQuery('select[name="sub_category"]').empty();
-                    jQuery.each(data, function(key,value){
-                       $('select[name="sub_category"]').append('<option value="'+ key +'">'+ value +'</option>');
-                    });
-                 }
-              });
-           }
-           else
-           {
-              $('select[name="sub_category"]').empty();
-           }
-        });
-    });
+	
 
     $('.summernote').summernote({
      });

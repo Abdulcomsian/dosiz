@@ -11,13 +11,13 @@
 			</button>
 			@if(isset($brand_profile))
 				<a href="{{ url('brand_profile_id',$brand_profile->id)}}" class="logo logo-small">
-					@if(isset($brand_profile))
 					<img src="{{asset($brand_profile->brand_logo) ?? '../assets_admin/img/logo.png'}} " style="width:50px; height:50px;" alt="Logo">
-					@endif
+					
 				</a>
-				@else
-				<a href="{{ url('/register')}}" class="logo logo-small">
+			@else
+				<a href="{{ url('/')}}" class="logo logo-small">
 					<img src="../assets_admin/img/logo.png" alt="Logo">
+					
 				</a>
 			@endif
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">

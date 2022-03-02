@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\ProductCategory;
+use App\BrandProfile;
 use Auth;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Redirect;
@@ -13,8 +14,17 @@ class ProductCategoryController extends Controller
 {
     public function index()
     {
-        $product_categories = ProductCategory::get();
-        return view('product_category.index', compact('product_categories'));
+        $user_id = Auth::id();
+        $brand_profile = BrandProfile::where('user_id',$user_id)->first();
+        if($brand_profile)
+        {
+            $product_categories = ProductCategory::get();
+            return view('product_category.index', compact('product_categories'));
+        }
+        else{
+            toastError('Kindly Complete Your Profile First');
+            return Redirect::back();
+        }
     }      
 
     public function create()
@@ -30,15 +40,16 @@ class ProductCategoryController extends Controller
     public function store(Request $request)
     {
         $user_id = Auth::id();
+        $brand_profile = BrandProfile::where('user_id',$user_id)->first();
         $this->validate($request,[ 
             'category_name'=>'required', 
             'category_slug'=>'required|unique:product_categories,category_name,'.$request->id,
         ]);
         try {
         $product_category= new ProductCategory;
-        $product_category->category_id = $request->category_id;
+        $product_category->category_name = $request->category_name;
         $product_category->category_slug = $request->category_slug;
-        $product_category->user_id = $user_id;
+        $product_category->brand_profile_id = $brand_profile->id;
         $product_category->save();
             toastSuccess('Successfully Added');
             return redirect('dashboard/p_category');
@@ -58,7 +69,7 @@ class ProductCategoryController extends Controller
         ]);
         try {
         $product_category= ProductCategory::find($request->category_id);
-        $product_category->category_id = $request->category_id;
+        $product_category->category_name = $request->category_name;
         $product_category->category_slug = $request->category_slug;
         $product_category->save();
         toastSuccess('Successfully Update');

@@ -42,11 +42,15 @@ Sidebar -->
 							<!-- <li class="submenu"> 
 								<a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;"> -->
-							<!-- @if(Auth::user()->hasRole('Admin')) -->
+							@if(Auth::user()->hasRole('Admin'))
 							<li class="{{ Request::is('dashboard/category') ? 'active' : '' }}"> 
 								<a href="{{ url('/dashboard/category')}}"><span>Categories</span></a>
 							</li>
-							<!-- @endif -->
+							@elseif(Auth::user()->hasRole('Brand Manager'))
+							<li class="{{ Request::is('dashboard/p_category') ? 'active' : '' }}"> 
+								<a href="{{ url('/dashboard/p_category')}}"><span>Product Categories</span></a>
+							</li>
+							@endif
 							@if(Auth::user()->hasRole('Admin'))
 							<li class="{{ Request::is('dashboard/sub_category') ? 'active' : '' }}"> 
 								<a href="{{ url('/dashboard/sub_category')}}"><span>Sub Category</span></a>

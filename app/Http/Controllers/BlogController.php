@@ -17,20 +17,28 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::get();
-        return view('blog.index', compact('blogs'));
+        $user_id = Auth::id();
+        $brand_profile = BrandProfile::where('user_id',$user_id)->first();
+        if($brand_profile)
+        {
+            $blogs = Blog::get();
+            return view('blog.index', compact('blogs'));
+        }
+        else{
+            toastError('Kindly Complete your profile first');
+            return Redirect::back();
+        }
     }      
 
     public function create()
     {
-        try {
             $user_id = Auth::id();
+            $brand_profile = BrandProfile::where('user_id',$user_id)->first();
             $categories = Category::get();
-            return view('blog.add_blog', compact('categories'));
-        } catch (\Exception $exception) {
-            toastError($exception->getMessage());
-            return Redirect::back();
-        }
+            $category = Category::where('id',$brand_profile->category_id)->first();
+            $sub_categories = SubCategory::where('category_id',$category->id)->get();
+            return view('blog.add_blog', compact('categories','category','sub_categories'));
+        
     }
 
     public function show($id)
@@ -95,10 +103,12 @@ class BlogController extends Controller
     {
         try {
             $user_id = Auth::id();
+            $brand_profile = BrandProfile::where('user_id',$user_id)->first();
             $categories = Category::get();
             $blog = Blog::where('id',$id)->first();
             $sub_categories = SubCategory::where('category_id',$blog->category_id)->get();
-            return view('blog.edit_blog', compact('blog','categories','sub_categories'));
+            $category = Category::where('id',$brand_profile->category_id)->first();
+            return view('blog.edit_blog', compact('blog','categories','sub_categories','category'));
         } catch (\Exception $exception) {
             toastError($exception->getMessage());
             return Redirect::back();

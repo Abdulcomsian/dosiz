@@ -34,7 +34,6 @@ Show Product
 														<th>Product Name</th>
 														<th>Product Slug</th>
 														<th>Product Category</th>
-														<th>Product Sub Category</th>
 														<th>Product Orignal Price</th>
 														<th>Product Discount Price</th>
 														<th>Product Description</th>
@@ -45,8 +44,7 @@ Show Product
 													<tr>
 														<td>{{$product->name}}</td>
 														<td>{{$product->product_slug}}</td>
-														<td>{{$product->category->name}}</td>
-														<td>{{$product->sub_category->name}}</td>
+														<td>{{$product->product_category->category_name}}</td>
 														<td>{{$product->old_from_price}} - {{$product->old_to_price}}</td>
 														<td>{{$product->new_from_price}} - {{$product->new_to_price}}</td>
 														<td>{!! $product->description !!}</td>

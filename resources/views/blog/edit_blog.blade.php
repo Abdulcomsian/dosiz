@@ -53,8 +53,8 @@
 			                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="category_id" id="category_id">
 			                                            <option disabled>Select Category</option>
 			                                            @if($categories)
-			                                            @foreach($categories as $category)
-			                                            	<option value="{{$category->id}}" {{ $blog->category_id == $category->id ? 'selected' : '' }} >{{$category->name}}</option>
+			                                            @foreach($categories as $all)
+			                                            	<option value="{{$all->id}}" {{ $category->id == $all->id ? 'selected' : 'disabled' }} >{{$all->name}}</option>
 			                                            @endforeach
 			                                            @endif
 			                                        </select>

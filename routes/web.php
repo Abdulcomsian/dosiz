@@ -31,7 +31,7 @@ Route::get('/detailArticle', function () {
 });
 
 /*****************ADMIN ROUTES*******************/
-Route::prefix('dashboard')->middleware('dashboard')->group(function(){
+Route::prefix('dashboard')->middleware(['auth','dashboard'])->group(function(){
     Route::get('/dashboard', 'dashboardController@index')->name('dashboard');
     Route::get('/get_sub_category/{id}', 'productController@get_sub_category');
     //category
@@ -49,6 +49,9 @@ Route::prefix('dashboard')->middleware('dashboard')->group(function(){
 
     Route::get('/export/', 'EmailSubscribeController@export');
 
+    //brand-category
+    Route::resource('/p_category', 'ProductCategoryController');
+
 });
 /********************ADMIN ROUTES END******************************/
 
@@ -62,6 +65,7 @@ Route::prefix('admin')->middleware('can:admin')->group(function(){
 
 /*****************Brand Manager ROUTES*******************/
 Route::prefix('brand')->middleware('can:brand')->group(function(){
+    
     
 });
 /********************Brand Manager ROUTES END******************************/
