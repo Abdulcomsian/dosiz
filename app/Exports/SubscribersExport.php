@@ -20,7 +20,8 @@ class SubscribersExport implements FromCollection, WithHeadings, ShouldAutoSize,
             'id',
             'name',
             'email',
-            'phone'
+            'phone',
+            'type'
         )->get();
     }
 
@@ -31,6 +32,7 @@ class SubscribersExport implements FromCollection, WithHeadings, ShouldAutoSize,
             'Name',
             'Subscriber Email',
             'Phone Number',
+            'User Type',
         ];
     }
     public function styles(Worksheet $sheet)

@@ -418,6 +418,7 @@
                             <div class="form-group">
                                 <label>Name</label>
                                 <input class="form-control" type="text" value="" name="name" id="name" data-bv-field="name">
+                                <input class="form-control" type="hidden" value="1" name="type" id="type">
                                 <input class="form-control" type="hidden" value="{{$brand_profile->id}}" name="brand_profile_id" id="brand_profile_id">
                             </div>
                             <div class="form-group">
@@ -446,10 +447,26 @@
         jQuery(document).ready(function ()
         {
             const myTimeout = setTimeout(myGreeting, 10000);
+            console.log(localStorage.getItem("id"));
+            // const data = 24*60*60;
 
+            // localStorage.setItem('storedData', JSON.stringify(data))
+
+            // console.log(localStorage.getItem("storedData"));
+           
             function myGreeting() {
-              $("#email_subscriber").modal();
+                if(localStorage.getItem("id") == "1")
+                {
+                      return false;
+                }
+                $("#email_subscriber").modal();
+                localStorage.setItem("id","1");
             }
+           
+                
+
         });
+
+
     </script>
 @endsection

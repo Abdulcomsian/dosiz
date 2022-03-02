@@ -47,7 +47,13 @@ Route::prefix('dashboard')->middleware(['auth','dashboard'])->group(function(){
     //blog
     Route::resource('/subscribe', 'EmailSubscribeController');
 
+    // export Excel File
     Route::get('/export/', 'EmailSubscribeController@export');
+
+    //Import Excel File
+
+    Route::get('importExportView', 'EmailSubscribeController@importExportView');
+    Route::post('import', 'EmailSubscribeController@import')->name('import');
 
     //brand-category
     Route::resource('/p_category', 'ProductCategoryController');
@@ -81,3 +87,4 @@ Route::get('/blogs/{id}', 'BrandProfileController@blogs')->name('blogs');  //by 
 Route::get('/blog/{id}', 'BrandProfileController@blog')->name('blog'); 
 Route::get('/article/{id}', 'BrandProfileController@article')->name('article'); 
 Route::get('/articles/{id}', 'BrandProfileController@articles')->name('articles'); 
+

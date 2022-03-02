@@ -11,6 +11,7 @@ use DB;
 use Illuminate\Support\Facades\Redirect;
 use App\Exports\SubscribersExport;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\SubscribersImport;
 
 
 class EmailSubscribeController extends Controller
@@ -41,6 +42,16 @@ class EmailSubscribeController extends Controller
     {
         try {
         $user_id = Auth::id();
+        $brand_profile = BrandProfile::where('user_id',$user_id)->first();
+        if($brand_profile)
+        {
+            return view('subscriber.add');
+        }
+        else{
+            toastError('Kindly Complete your profile first');
+            return Redirect::back();
+        }
+        
         
         } catch (\Exception $exception) {
             toastError($exception->getMessage());
@@ -62,6 +73,11 @@ class EmailSubscribeController extends Controller
     {
         // dd($request->all());
         // try{
+        $this->validate($request,[ 
+            'name'=>'required', 
+            'email'=>'required|unique:subscribers,email,'.$request->id,
+            'phone'=>'required',
+        ]);
             $subscriber= new Subscriber;
             $subscriber->name = $request->name;
             $chk_email = Subscriber::where('email',$request->email)->first();
@@ -74,10 +90,20 @@ class EmailSubscribeController extends Controller
             {
                 $subscriber->email = $request->email;
                 $subscriber->phone = $request->phone;
-                $subscriber->brand_profile_id = $request->brand_profile_id;
+                $subscriber->type = $request->type;
+                if($request->type == 2)
+                {
+                    $user_id = Auth::id();
+                    $brand_profile = BrandProfile::where('user_id',$user_id)->first();
+                    $subscriber->brand_profile_id = $brand_profile->id;
+                }
+                else
+                {
+
+                }
                 $subscriber->save();
                 toastSuccess('Successfully Subscribe');
-                return Redirect::back();
+                return redirect('dashboard/subscribe');
             }
 
         // } catch (\Exception $exception) {
@@ -123,5 +149,17 @@ class EmailSubscribeController extends Controller
     public function export() 
     {
         return Excel::download(new SubscribersExport, 'subscribers.xlsx');
+    }
+
+    public function importExportView()
+    {
+       return view('subscriber.import');
+    }
+
+    public function import() 
+    {
+        Excel::import(new SubscribersImport,request()->file('file'));
+           
+        return back();
     }
 }
