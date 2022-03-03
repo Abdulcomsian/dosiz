@@ -161,5 +161,20 @@ class EmailSubscribeController extends Controller
         Excel::import(new SubscribersImport,request()->file('file'));
            
         return back();
+    }   
+
+    public function send_email(Request $request) 
+    {
+
+         Subscriber::where('type',$request->type)->chunk(2 , function($email){
+            $user_id = Auth::id();
+            $brand_profile = BrandProfile::where('user_id',$user_id)->first();
+            foreach($email as $subscriber)
+            {
+                \Mail::to($subscriber->email)->send(new \App\Mail\MyEmail($brand_profile));
+            }
+         });
+        
+        return redirect('dashboard/subscribe');
     }
 }
