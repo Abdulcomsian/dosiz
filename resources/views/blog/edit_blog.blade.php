@@ -86,20 +86,20 @@
 					                                <textarea cols="30" rows="6" class="form-control summernote" name="description"  value="" id="description" >{!! $blog->description !!}</textarea>
 					                                <div style="color:red;">{{$errors->first('description')}}</div> <br>
 					                            </div>
-					                            <div class="form-group">
+					                            <!-- <div class="form-group">
 					                                <label class="display-block w-100">Blog Status</label>
-													<div>
-														<div class="custom-control custom-radio custom-control-inline">
-															<input class="custom-control-input" name="status" id="status" value="1" type="radio" {{ $blog->status == '1' ? 'checked' : ''}}>
-															<label class="custom-control-label" for="active">Active</label>
-														</div>
-														<div class="custom-control custom-radio custom-control-inline">
-															<input class="custom-control-input" name="status" id="status" value="0" type="radio" {{ $blog->status == '0' ? 'checked' : ''}}>
-															<label class="custom-control-label" for="inactive">Inactive</label>
-														</div>
-														<div style="color:red;">{{$errors->first('status')}}</div> <br>
-													</div>
-					                            </div>
+																<div>
+																	<div class="custom-control custom-radio custom-control-inline">
+																		<input class="custom-control-input" name="status" id="status" value="1" type="radio" {{ $blog->status == '1' ? 'checked' : ''}}>
+																		<label class="custom-control-label" for="active">Active</label>
+																	</div>
+																	<div class="custom-control custom-radio custom-control-inline">
+																		<input class="custom-control-input" name="status" id="status" value="0" type="radio" {{ $blog->status == '0' ? 'checked' : ''}}>
+																		<label class="custom-control-label" for="inactive">Inactive</label>
+																	</div>
+																	<div style="color:red;">{{$errors->first('status')}}</div> <br>
+																</div>
+					                            </div> -->
 					                            <div class="m-t-20 text-center">
 					                                <button class="btn btn-primary btn-lg">Update Blog</button>
 					                            </div>

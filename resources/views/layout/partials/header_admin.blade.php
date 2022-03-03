@@ -111,13 +111,22 @@
 				<!-- User Menu -->
 				<li class="nav-item dropdown has-arrow">
 					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+						@if(isset(Auth::user()->name))
 						<span class="user-img" style="color:#fff;">{{ Auth::user()->name }}</span>
+						@else
+						<span class="user-img" style="color:#fff;">Administrator</span>
+						@endif
 					</a>
 					<div class="dropdown-menu">
 						<div class="user-header">
 							<div class="user-text">
-								<h6>{{ Auth::user()->name }}</h6>
-								<p class="text-muted mb-0">{{ Auth::user()->email }}</p>
+								@if(isset(Auth::user()->name))
+								<h6>{{ Auth::user()->name ?? 'User Name' }}</h6>
+								<p class="text-muted mb-0">{{ Auth::user()->email ?? 'USer Email' }}</p>
+								@else
+								<h6>Administrator</h6>
+								<p class="text-muted mb-0">Administrator Email</p>
+								@endif
 							</div>
 						</div>
 						<a class="dropdown-item" href="profile">My Profile</a>

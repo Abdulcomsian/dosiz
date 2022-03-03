@@ -7,8 +7,8 @@
             
             <div class="col-md-6">
                 <div class="brandMainIntro">
-                    <h4 class="commonTitleText">{{$brand_profile->category->name ?? 'יתיללכ הריקס  '}} </h4>
-                    <h1>סונייקוא חור ונחנא</h1>
+                    <!-- <h4 class="commonTitleText">{{$brand_profile->category->name ?? 'יתיללכ הריקס  '}} </h4> -->
+                    <h1>{{$brand_profile->brand_name ?? ''}}</h1>
                     <p>{{$brand_profile->description ?? ''}}</p>
                 </div>
             </div>
