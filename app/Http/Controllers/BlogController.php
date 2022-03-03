@@ -69,7 +69,6 @@ class BlogController extends Controller
             'sub_title'=>'required', 
             'category_id'=>'required', 
             'description'=>'required', 
-            'status'=>'required', 
 
         ]);
         try {
@@ -135,7 +134,6 @@ class BlogController extends Controller
             'sub_title'=>'required', 
             'category_id'=>'required', 
             'description'=>'required', 
-            'status'=>'required', 
 
         ]);
         try {

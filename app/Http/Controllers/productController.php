@@ -56,7 +56,6 @@ class productController extends Controller
             'image'=>'required', 
             'product_category_id'=>'required', 
             'description'=>'required', 
-            'status'=>'required', 
 
         ]);
         try {
@@ -118,7 +117,6 @@ class productController extends Controller
             'product_slug'=>'required|unique:products,name,'.$request->id,
             'product_category_id'=>'required', 
             'description'=>'required', 
-            'status'=>'required', 
 
         ]);
         try {

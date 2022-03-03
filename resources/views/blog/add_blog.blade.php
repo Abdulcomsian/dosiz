@@ -108,7 +108,7 @@ Add Blog
 					                                <textarea cols="30" rows="6" class="form-control summernote" name="description" id="description" ></textarea>
 					                                <div style="color:red;">{{$errors->first('description')}}</div> <br>
 					                            </div>
-					                            <div class="form-group">
+					                           <!--  <div class="form-group">
 					                                <label class="display-block w-100">Blog Status</label>
 													<div>
 														<div class="custom-control custom-radio custom-control-inline">
@@ -121,7 +121,7 @@ Add Blog
 														</div>
 														<div style="color:red;">{{$errors->first('status')}}</div> <br>
 													</div>
-					                            </div>
+					                            </div> -->
 					                            <div class="m-t-20 text-center">
 					                                <button class="btn btn-primary btn-lg">Publish Blog</button>
 					                            </div>
