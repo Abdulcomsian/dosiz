@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +29,11 @@ Route::get('/allArticle', function () {
 });
 Route::get('/detailArticle', function () {
     return view('user.article.articleDetail');
+});
+
+Route::get('test', function () {
+
+    
 });
 
 /*****************ADMIN ROUTES*******************/
@@ -60,7 +66,8 @@ Route::prefix('dashboard')->middleware(['auth','dashboard'])->group(function(){
 
     //prfile setting
     Route::get('profile', 'dashboardController@profile_setting');
-    Route::post('profile/store', 'dashboardController@profile_update')->name('profile.store');
+    Route::post('profile/store', 'dashboardController@profile_update')->name('profile.store');  
+    Route::post('send_email', 'EmailSubscribeController@send_email')->name('send-email');
 
 });
 /********************ADMIN ROUTES END******************************/

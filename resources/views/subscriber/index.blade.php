@@ -28,6 +28,7 @@
 									<a href="{{route('subscribe.create')}}" style="padding: 5px !important;" class="btn btn-success">Add New <i class="fa fa-plus"></i></a>
 									<a href="#" data-toggle="modal" style="padding: 5px !important;" data-target="#import_modal" class="btn btn-info">Import <i class="fa fa-download"></i></a>
 									<a href="{{url('dashboard/export')}}" style="padding: 5px !important;" class="btn btn-primary">Export <i class="fa fa-upload"></i></a>
+									<a href="" data-toggle="modal" data-target="#sendEmailModal" style="padding: 5px !important;" class="btn btn-warning">Send Email <i class="fa fa-send"></i></a>
 									<br><br>
 									@endif
 									<div class="table-responsive">
@@ -89,6 +90,46 @@
 				</div>			
 			</div>
 			<!-- /Page Wrapper -->
+
+			<!-- Select Type user Modal -->
+			<div class="modal fade" id="sendEmailModal" aria-hidden="true" role="dialog">
+				<div class="modal-dialog modal-dialog-centered" role="document" >
+					<div class="modal-content">
+						<div class="modal-body">
+							<div class="form-content p-2">
+								<div class="modal-header border-0">
+									<h4 class="modal-title">Send Email</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">×</span>
+									</button>
+								</div>
+								<div class="card">
+									<div class="card-body">
+						                <form id="update_category" method="post" autocomplete="off" action="{{ route('send-email') }}" enctype="multipart/form-data" novalidate="novalidate" class="bv-form"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+						                @method('POST')
+						                @csrf
+						                    <div class="form-group">
+						                        <label>Select Type</label>
+						                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true" name="type" id="type">
+		                                            <option disabled>Select Type</option>
+		                                            	<option value="1">Front End Subscriber</option>
+		                                            	<option value="2">Manual Entry Subscriber</option>
+		                                            	<option value="3">Import From Excel Subscriber</option>
+		                                        </select>
+						                    </div>
+						                    <div class="mt-4">
+						                        <button class="btn btn-primary" name="form_submit" value="submit" type="submit">Send Email</button>
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+						                    </div>
+						                </form>
+						            </div>
+						        </div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Select Type user Modal -->
 
 			<!-- Edit Modal -->
 			<div class="modal fade" id="import_modal" aria-hidden="true" role="dialog">
