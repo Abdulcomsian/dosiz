@@ -97,9 +97,9 @@ class EmailSubscribeController extends Controller
                     $brand_profile = BrandProfile::where('user_id',$user_id)->first();
                     $subscriber->brand_profile_id = $brand_profile->id;
                 }
-                else
+                elseif($request->type == 1)
                 {
-
+                    $subscriber->brand_profile_id = $request->brand_profile_id;
                 }
                 $subscriber->save();
                 toastSuccess('Successfully Subscribe');
