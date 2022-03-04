@@ -15,10 +15,11 @@ class TwilioSMSController extends Controller
         $message = "This is testing from Acuralhub.com from rawalpindi";
   
         try {
-  
-            $account_sid = env("TWILIO_SID");
-            $auth_token = env("TWILIO_TOKEN");
-            $twilio_number = env("TWILIO_FROM");
+
+            $account_sid = env("AC7fe22859b60777bf2348bd95c4f6958f");
+            $auth_token = env("7e93da03164080ec5634b01d48aae213");
+            $twilio_number = env("+972533856105");
+            
   
             $client = new Client($account_sid, $auth_token);
             $client->messages->create($receiverNumber, [
