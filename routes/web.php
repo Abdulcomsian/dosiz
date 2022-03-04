@@ -35,6 +35,7 @@ Route::get('test', function () {
 
     
 });
+Route::get('sendSMS', 'TwilioSMSController@index');
 
 /*****************ADMIN ROUTES*******************/
 Route::prefix('dashboard')->middleware(['auth','dashboard'])->group(function(){
