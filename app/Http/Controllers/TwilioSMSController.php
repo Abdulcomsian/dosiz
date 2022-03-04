@@ -11,8 +11,8 @@ class TwilioSMSController extends Controller
 {
     public function index()
     {
-        $receiverNumber = "RECEIVER_NUMBER";
-        $message = "This is testing from ItSolutionStuff.com";
+        $receiverNumber = "+923075207206";
+        $message = "This is testing from Acuralhub.com from rawalpindi";
   
         try {
   
