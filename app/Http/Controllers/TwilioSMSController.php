@@ -9,6 +9,7 @@ use App\Subscriber;
 use App\BrandProfile;
 use App\SubscriberList;
 use Twilio\Rest\Client;
+use Illuminate\Support\Facades\Redirect;
 
 class TwilioSMSController extends Controller
 {
@@ -25,7 +26,7 @@ class TwilioSMSController extends Controller
             try {
 
                 $account_sid = 'AC7fe22859b60777bf2348bd95c4f6958f';
-                $auth_token = '914c00291349b6ee07c75b6da728f00f';
+                $auth_token = '93e510902955e8b9b119382996cb485e';
                 $twilio_number = '+13213365311';
 
       
@@ -34,7 +35,7 @@ class TwilioSMSController extends Controller
                     'from' => $twilio_number, 
                     'body' => $message]);
       
-                dd('SMS Sent Successfully.');
+                return Redirect::back();
       
             } catch (Exception $e) {
                 dd("Error: ". $e->getMessage());
