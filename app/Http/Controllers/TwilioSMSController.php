@@ -15,27 +15,30 @@ class TwilioSMSController extends Controller
     public function index(Request $request)
     {
         // dd($request->all());
-        $subscriber_detail = Subscriber::where('subscriber_list_id',$request->subscriber_list_id)->first();
+        $subscriber_details = Subscriber::where('subscriber_list_id',$request->subscriber_list_id)->get();
         // dd($subscriber_detail);
-        $receiverNumber = $subscriber_detail->phone;
-        $message = $request->description;
-  
-        try {
+        foreach($subscriber_details as $subscriber_detail){
 
-            $account_sid = 'AC7fe22859b60777bf2348bd95c4f6958f';
-            $auth_token = '914c00291349b6ee07c75b6da728f00f';
-            $twilio_number = '+13213365311';
+            $receiverNumber = $subscriber_detail->phone;
+            $message = $request->description;
+      
+            try {
 
-  
-            $client = new Client($account_sid, $auth_token);
-            $client->messages->create($receiverNumber, [
-                'from' => $twilio_number, 
-                'body' => $message]);
-  
-            dd('SMS Sent Successfully.');
-  
-        } catch (Exception $e) {
-            dd("Error: ". $e->getMessage());
+                $account_sid = 'AC7fe22859b60777bf2348bd95c4f6958f';
+                $auth_token = '914c00291349b6ee07c75b6da728f00f';
+                $twilio_number = '+13213365311';
+
+      
+                $client = new Client($account_sid, $auth_token);
+                $client->messages->create($receiverNumber, [
+                    'from' => $twilio_number, 
+                    'body' => $message]);
+      
+                dd('SMS Sent Successfully.');
+      
+            } catch (Exception $e) {
+                dd("Error: ". $e->getMessage());
+            }
         }
     }
 }
