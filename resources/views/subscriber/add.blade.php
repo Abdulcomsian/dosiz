@@ -41,7 +41,7 @@
 					                            </div>
 					                            <div class="form-group">
 					                                <label>Phone</label>
-					                                <input class="form-control" id="phone" name="phone" placeholder="Enter Subscriber Phone" type="number">
+					                                <input class="form-control" name="phone" placeholder="Enter Subscriber Phone" type="text">
 					                                <div style="color:red;">{{$errors->first('phone')}}</div> <br>
 					                            </div>
 					                            <div class="m-t-20 text-center">
