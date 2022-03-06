@@ -76,6 +76,9 @@ Sidebar -->
 							<li class="{{ Request::is('dashboard/brand_profile') ? 'active' : '' }}">
 								<a href="{{ url('dashboard/brand_profile') }}"><span> Profile </span></a>
 							</li>
+							<li class="{{ Request::is('dashboard/subscribe_list') ? 'active' : '' }}">
+								<a href="{{ url('dashboard/subscribe_list') }}"><span> Subscriber Category </span></a>
+							</li>
 							<li class="{{ Request::is('dashboard/subscribe') ? 'active' : '' }}">
 								<a href="{{ url('dashboard/subscribe') }}"><span> Subscribers </span></a>
 							</li>

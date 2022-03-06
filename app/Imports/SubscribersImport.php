@@ -7,6 +7,13 @@ use Maatwebsite\Excel\Concerns\ToModel;
 
 class SubscribersImport implements ToModel
 {
+
+    public $subscriber_list_id;
+    public function __construct($subscriber_list_id)
+    {
+        $this->subscriber_list_id = $subscriber_list_id;
+ 
+    }
     /**
     * @param array $row
     *
@@ -18,8 +25,8 @@ class SubscribersImport implements ToModel
             'name'     => $row[0],
             'email'    => $row[1], 
             'phone' => $row[2],
-            'type' => $row[3],
-            'brand_profile_id' => $row[4],
+            'subscriber_list_id' => $this->subscriber_list_id,  
+            'brand_profile_id' => $row[3],
         ]);
     }
 }

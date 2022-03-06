@@ -21,6 +21,7 @@ class MyEmail extends Mailable
     public function __construct($email)
     {
         $this->email = $email;
+
     }
 
     /**

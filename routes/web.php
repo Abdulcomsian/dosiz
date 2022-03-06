@@ -35,7 +35,7 @@ Route::get('test', function () {
 
     
 });
-Route::get('sendSMS', 'TwilioSMSController@index');
+
 
 /*****************ADMIN ROUTES*******************/
 Route::prefix('dashboard')->middleware(['auth','dashboard'])->group(function(){
@@ -51,8 +51,10 @@ Route::prefix('dashboard')->middleware(['auth','dashboard'])->group(function(){
     Route::resource('/blog', 'BlogController');  
     //blog
     Route::resource('/brand_profile', 'BrandProfileController');
-    //blog
-    Route::resource('/subscribe', 'EmailSubscribeController');
+    //subscriber
+    Route::resource('/subscribe', 'EmailSubscribeController');  
+    //subscriber list
+    Route::resource('/subscribe_list', 'SubscriberListController'); 
 
     // export Excel File
     Route::get('/export/', 'EmailSubscribeController@export');
@@ -69,6 +71,7 @@ Route::prefix('dashboard')->middleware(['auth','dashboard'])->group(function(){
     Route::get('profile', 'dashboardController@profile_setting');
     Route::post('profile/store', 'dashboardController@profile_update')->name('profile.store');  
     Route::post('send_email', 'EmailSubscribeController@send_email')->name('send-email');
+    Route::post('sendSMS', 'TwilioSMSController@index')->name('sendSMS');
 
 });
 /********************ADMIN ROUTES END******************************/

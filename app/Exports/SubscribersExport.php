@@ -8,9 +8,8 @@ use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithStyles;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
-use Maatwebsite\Excel\Concerns\WithMapping;
 
-class SubscribersExport implements FromCollection, WithHeadings, ShouldAutoSize, WithStyles , WithMapping
+class SubscribersExport implements FromCollection, WithHeadings, ShouldAutoSize, WithStyles 
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -21,8 +20,8 @@ class SubscribersExport implements FromCollection, WithHeadings, ShouldAutoSize,
             'name',
             'email',
             'phone',
-            'type'
-        )->orderBy('type','asc')->get();
+            'subscriber_list_id'
+        )->orderBy('subscriber_list_id','asc')->get();
     }
 
     public function headings(): array
@@ -42,27 +41,4 @@ class SubscribersExport implements FromCollection, WithHeadings, ShouldAutoSize,
         ];
     }
 
-    public function map($invoice): array
-    {
-        if($invoice->type==1)
-        {
-            $manual = 'FrontEnd User';
-        }
-        else if($invoice->type == 2)
-        {
-            $manual = 'Manual User';
-        }
-        else
-        {
-            $manual = 'Import subscriber';
-        }
-        return [
-            $invoice->name,
-            $invoice->email,
-            $invoice->phone,
-            $manual,
-
-        ];
-       
-    }
 }

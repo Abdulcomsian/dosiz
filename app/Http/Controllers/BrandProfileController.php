@@ -11,7 +11,8 @@ use DB;
 use App\Category;
 use App\City;
 use App\Blog;
-use App\BrandProfile;
+use App\BrandProfile; 
+use App\SubscriberList; 
 use App\Utils\HelperFunctions;
 use Illuminate\Support\Facades\Redirect;
 
@@ -118,6 +119,16 @@ class BrandProfileController extends Controller
         $brand_profile->font = $fonts;
  
         $brand_profile->save();
+        $subscriber_list= new SubscriberList;
+        $subscriber_list->name= 'FrontEnd User';
+        $subscriber_list->brand_profile_id= $brand_profile->id;
+        $subscriber_list->save();
+
+        $subscriber_list_1= new SubscriberList;
+        $subscriber_list_1->name= 'Manual User';
+        $subscriber_list_1->brand_profile_id= $brand_profile->id;
+        $subscriber_list_1->save();
+
         toastSuccess('Successfully Added');
         return redirect('dashboard/brand_profile');
         } catch (\Exception $exception) {

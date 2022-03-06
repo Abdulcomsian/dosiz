@@ -31,7 +31,7 @@
 					                            <div class="form-group">
 			                                        <label>Name</label>
 			                                        <input class="form-control" id="name" name="name" placeholder="Enter Subscriber Name" type="text">
-			                                        <input class="form-control" id="type" name="type" value="2" type="hidden">
+			                                        <input class="form-control" id="subscriber_list_id" name="subscriber_list_id" value="2" type="hidden">
 			                                        <div style="color:red;">{{$errors->first('name')}}</div> <br>
 			                                    </div>
 					                            <div class="form-group">
