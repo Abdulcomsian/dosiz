@@ -36,6 +36,8 @@ class TwilioSMSController extends Controller
                     'body' => $message]);
       
                 return Redirect::back();
+                toastSuccess('Successfully Update');
+                return redirect('dashboard/subscribe');
       
             } catch (Exception $e) {
                 dd("Error: ". $e->getMessage());
