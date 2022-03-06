@@ -423,7 +423,7 @@
                             <div class="form-group">
                                 <label>Name</label>
                                 <input class="form-control" type="text" value="" name="name" id="name" data-bv-field="name">
-                                <input class="form-control" type="hidden" value="1" name="type" id="type">
+                                <input class="form-control" type="hidden" value="1" name="subscriber_list_id" id="subscriber_list_id">
                                 <input class="form-control" type="hidden" value="{{$brand_profile->id}}" name="brand_profile_id" id="brand_profile_id">
                             </div>
                             <div class="form-group">

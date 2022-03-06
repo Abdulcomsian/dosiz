@@ -5,14 +5,20 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Exception;
+use App\Subscriber;
+use App\BrandProfile;
+use App\SubscriberList;
 use Twilio\Rest\Client;
 
 class TwilioSMSController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $receiverNumber = "+972533856105";
-        $message = "This is testing from Acuralhub.com from rawalpindi";
+        // dd($request->all());
+        $subscriber_detail = Subscriber::where('subscriber_list_id',$request->subscriber_list_id)->first();
+        // dd($subscriber_detail);
+        $receiverNumber = $subscriber_detail->phone;
+        $message = $request->description;
   
         try {
 
