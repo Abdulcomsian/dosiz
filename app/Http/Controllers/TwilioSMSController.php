@@ -28,7 +28,7 @@ class TwilioSMSController extends Controller
                 $account_sid = 'AC7fe22859b60777bf2348bd95c4f6958f';
                 $auth_token = '93e510902955e8b9b119382996cb485e';
                 $twilio_number = '+13213365311';
-                require_once "Twilio/autoload.php";
+                
 
       
                 $client = new Client($account_sid, $auth_token);
