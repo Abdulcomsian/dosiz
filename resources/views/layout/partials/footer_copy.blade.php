@@ -12,7 +12,9 @@
 							<!-- Footer Widget -->
 							<div class="footer-widget footer-about">
 							<div class="footer-logo">
-									<img src="assets_admin/img/logo.png" alt="logo">
+								@if(isset($brand_profile))
+									<img src="{{$brand_profile->brand_logo ?? 'assets_admin/img/logo.png'}} " alt="logo">
+								@endif
 								</div>
 								<div class="formDiv">
 									<form action="">
@@ -62,7 +64,7 @@
 							
 						</div>
 							
-							<div class="col-lg-3 col-md-3">
+							<!-- <div class="col-lg-3 col-md-3">
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-menu footer-menu-list">
@@ -90,7 +92,7 @@
 								</div>
 								<!-- /Footer Widget -->
 								
-							</div>
+							</div> -->
 							
 							<!-- <div class="col-lg-3 col-md-6">
 							
@@ -118,7 +120,7 @@
                             <div class="col-lg-4 col-md-4 mobileHide">
 							
 								<!-- Footer Widget -->
-								<div class="footer-widget footer-about">
+								<!-- <div class="footer-widget footer-about">
                                     <div class="formDiv">
                                         <form action="">
                                             <div class="inputDiv">
@@ -132,7 +134,9 @@
                                     </div>
                                     <div class="logoIconDiv">
                                     <div class="footer-logo">
-										<img src="assets_admin/img/logo.png" alt="logo">
+                                    	@if(isset($brand_profile))
+										<img src="{{asset($brand_profile->brand_logo) ?? 'assets_admin/img/logo.png'}}" alt="logo">
+										@endif
 									</div>
 									<div class="footer-about-content">
 										<div class="social-icon">
@@ -164,7 +168,7 @@
 									</div>
                                     </div>
 									
-								</div>
+								</div> -->
 								<!-- /Footer Widget -->
 								
 							</div>
@@ -190,6 +194,7 @@
 								<div class="col-6 text-right">
 									<div class="copyright-text">
 										<p class="mb-0">&copy; כל הזכויות שמורות לדוסיז צרכנות ויזמות בע''מ</p>
+
 									</div>
 								</div>
                                 <div class="col-6 text-left">
