@@ -85,13 +85,13 @@ Register
                                             </span>
                                         @enderror
                                     </div> -->
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label for="">המסיס שדחמ סינכת<span>*</span></label>
                                         <div class="inputIcon">
                                         <img src="{{asset('assets_admin/img/password.svg')}}" alt="">
                                             <input class="form-control" type="password" id="password-confirm" name="password_confirmation" placeholder="אשר סיסמה"> <br>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="form-group">
                                         <label for="">מספר טלפון <span>*</span></label>
                                         <div class="inputIcon">

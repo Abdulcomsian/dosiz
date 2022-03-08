@@ -181,7 +181,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\wamp64\\www\\dosiz\\storage\\framework/cache/data',
+        'path' => 'C:\\wamp64\\www\\dosiz_new\\dosiz\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -443,7 +443,7 @@
     ),
     'temporary_files' => 
     array (
-      'local_path' => 'C:\\wamp64\\www\\dosiz\\storage\\framework/cache/laravel-excel',
+      'local_path' => 'C:\\wamp64\\www\\dosiz_new\\dosiz\\storage\\framework/cache/laravel-excel',
       'remote_disk' => NULL,
       'remote_prefix' => NULL,
       'force_resync_remote' => NULL,
@@ -458,12 +458,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\wamp64\\www\\dosiz\\storage\\app',
+        'root' => 'C:\\wamp64\\www\\dosiz_new\\dosiz\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\wamp64\\www\\dosiz\\storage\\app/public',
+        'root' => 'C:\\wamp64\\www\\dosiz_new\\dosiz\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -480,7 +480,7 @@
     ),
     'links' => 
     array (
-      'C:\\wamp64\\www\\dosiz\\public\\storage' => 'C:\\wamp64\\www\\dosiz\\storage\\app/public',
+      'C:\\wamp64\\www\\dosiz_new\\dosiz\\public\\storage' => 'C:\\wamp64\\www\\dosiz_new\\dosiz\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -514,13 +514,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\wamp64\\www\\dosiz\\storage\\logs/laravel.log',
+        'path' => 'C:\\wamp64\\www\\dosiz_new\\dosiz\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\wamp64\\www\\dosiz\\storage\\logs/laravel.log',
+        'path' => 'C:\\wamp64\\www\\dosiz_new\\dosiz\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -570,7 +570,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\wamp64\\www\\dosiz\\storage\\logs/laravel.log',
+        'path' => 'C:\\wamp64\\www\\dosiz_new\\dosiz\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -582,11 +582,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'smtp.mailtrap.io',
-        'port' => '2525',
-        'encryption' => NULL,
-        'username' => NULL,
-        'password' => NULL,
+        'host' => 'smtp.googlemail.com',
+        'port' => '465',
+        'encryption' => 'ssl',
+        'username' => 'dosizph@gmail.com',
+        'password' => 'pd975318643',
         'timeout' => NULL,
       ),
       'ses' => 
@@ -618,7 +618,7 @@
     ),
     'from' => 
     array (
-      'address' => NULL,
+      'address' => 'dosizph@gmail.com',
       'name' => 'dosiz',
     ),
     'markdown' => 
@@ -626,7 +626,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\wamp64\\www\\dosiz\\resources\\views/vendor/mail',
+        0 => 'C:\\wamp64\\www\\dosiz_new\\dosiz\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -764,6 +764,11 @@
       'secret' => '',
       'region' => 'us-east-1',
     ),
+    'twilio' => 
+    array (
+      'sid' => 'AC7fe22859b60777bf2348bd95c4f6958f',
+      'token' => NULL,
+    ),
   ),
   'session' => 
   array (
@@ -771,7 +776,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\wamp64\\www\\dosiz\\storage\\framework/sessions',
+    'files' => 'C:\\wamp64\\www\\dosiz_new\\dosiz\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -791,9 +796,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\wamp64\\www\\dosiz\\resources\\views',
+      0 => 'C:\\wamp64\\www\\dosiz_new\\dosiz\\resources\\views',
     ),
-    'compiled' => 'C:\\wamp64\\www\\dosiz\\storage\\framework\\views',
+    'compiled' => 'C:\\wamp64\\www\\dosiz_new\\dosiz\\storage\\framework\\views',
   ),
   'flare' => 
   array (
