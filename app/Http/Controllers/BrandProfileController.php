@@ -265,23 +265,9 @@ class BrandProfileController extends Controller
         $blog_2 = Blog::where('user_id',$user->id)->skip(1)->first();
         $blog_3 = Blog::where('user_id',$user->id)->skip(2)->first();
         // dd($blog_1,$blog_2,$blog_3);
-        if(isset($blog_1))
-        {
-        $blog_1_des = Str::limit($blog_1->description, 200);
+        
 
-        }
-        if(isset($blog_2))
-        {
-            $blog_2_des = Str::limit($blog_2->description, 200);
-
-        }
-        if(isset($blog_3))
-        {
-            $blog_3_des = Str::limit($blog_3->description, 200);
-
-            
-        }
-        return view('brand_profiles.website.index',compact('brand_profile','blog_1_des','blog_2_des','blog_3_des','blog_1','blog_2','blog_3','user','products'));
+        return view('brand_profiles.website.index',compact('brand_profile','blog_1','blog_2','blog_3','user','products'));
     }
 
     public function products($brand_id)
