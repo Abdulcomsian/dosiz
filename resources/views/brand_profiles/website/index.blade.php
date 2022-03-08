@@ -334,7 +334,7 @@
                 <div class="col-md-4">
                     <div class="commonContactDiv">
                         <div class="iconDiv">
-                            <img src="{{asset('assets/img/user/call.svg')}}" alt="" class="img-fluid">
+                            <img src="{{asset('assets/img/user/call.svg')}}" alt="" id="for_phone" class="img-fluid">
                         </div>
                         <div class="infoDiv">
                             <h5>תתקשרו אלינו: </h5>
@@ -346,7 +346,7 @@
                 <div class="col-md-4">
                     <div class="commonContactDiv">
                         <div class="iconDiv">
-                            <img src="{{asset('assets/img/user/message.svg')}}" alt="" class="img-fluid">
+                            <img src="{{asset('assets/img/user/message.svg')}}" alt="" id="for_email" class="img-fluid">
                         </div>
                         <div class="infoDiv">
                             <h5>שלח לנו הודעה:</h5>
@@ -470,6 +470,16 @@
            
                 
 
+        });
+
+        $("#for_phone").click(function() {
+
+            alert("for_phone");
+        });
+
+       $("#for_email").click(function() {
+
+            alert("for_email");
         });
 
 
