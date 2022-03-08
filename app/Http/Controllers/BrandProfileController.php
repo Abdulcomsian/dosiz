@@ -275,7 +275,7 @@ class BrandProfileController extends Controller
     {
         $brand_profile = BrandProfile::where('id',$brand_id)->first();
         $products = Product::where('user_id',$brand_profile->user_id)->get();
-        return view('brand_profiles.website.products',compact('products'));
+        return view('brand_profiles.website.products',compact('products','brand_id'));
     }
 
     public function blogs($brand_id)
