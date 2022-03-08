@@ -14,25 +14,25 @@ Register
                         </div> -->
                         <div class="login-right">
                             <div class="login-right-wrap">
-                                <h1>םשריהל</h1>
+                                <h1>הרשמה</h1>
                                 <!-- <p class="account-subtitle">Access to our dashboard</p> -->
                                 
                                 <!-- Form -->
                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
                                     <div class="form-group">
-                                        <label for="">םש<span>*</span></label>
+                                        <label for=""> שם מלא <span>*</span></label>
                                         <div class="inputIcon">
                                             <img src="{{asset('assets_admin/img/user.svg')}}" alt="">
-                                            <input class="form-control" type="text" placeholder="ךמש תא ןזה" id="name" name="name" value="{{ old('name') }}">
+                                            <input class="form-control" type="text" placeholder="נא הכנס את שמך כאן" id="name" name="name" value="{{ old('name') }}">
                                         </div>
                                         <div style="color:red;">{{$errors->first('name')}}</div> <br>
                                     </div>
                                     <div class="form-group">
-                                        <label for="">אימייל<span>*</span></label>
+                                        <label for="">מייל <span>*</span></label>
                                         <div class="inputIcon">
                                             <img src="{{asset('assets_admin/img/email.svg')}}" alt="">
-                                            <input class="form-control @error('email') is-invalid @enderror" type="email" id="email" value="{{ old('email') }}" name="email" placeholder="ךלש לאודה תבותכ">
+                                            <input class="form-control @error('email') is-invalid @enderror" type="email" id="email" value="{{ old('email') }}" name="email" placeholder="נא הכנס את כתובת המייל שלך">
                                         </div>
                                         <div style="color:red;">{{$errors->first('email')}}</div> <br>
                                     </div>
@@ -72,7 +72,7 @@ Register
                                         <label for="">סיסמה<span>* </span></label>
                                         <div class="inputIcon">
                                         <img src="{{asset('assets_admin/img/password.svg')}}" alt="">
-                                            <input class="form-control @error('password') is-invalid @enderror" type="password" id="password" name="password" placeholder="סיסמה">
+                                            <input class="form-control @error('password') is-invalid @enderror" type="password" id="password" name="password" placeholder="נא הכנס סיסמה בטוחה">
                                         </div>
                                         <div style="color:red;">{{$errors->first('password')}}</div> <br>
                                     </div>
@@ -93,10 +93,10 @@ Register
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="">ןופלט רפסמ<span>*</span></label>
+                                        <label for="">מספר טלפון <span>*</span></label>
                                         <div class="inputIcon">
                                         <img src="{{asset('assets_admin/img/mobile.svg')}}" alt="">
-                                            <input class="form-control" type="number" id="phone" name="phone" placeholder="םכלש ןופלטה רפסמ תא ודילקה">
+                                            <input class="form-control" type="number" id="phone" name="phone" placeholder="נא הכנס מספר טלפון">
                                         </div>
                                         <div style="color:red;">{{$errors->first('phone')}}</div> <br>
                                     </div>
@@ -118,7 +118,7 @@ Register
                                 </div> -->
                                 <!-- /Social Login -->
                                 
-                                <div class="text-center dont-have"> ?ןובשח ךל שי רבכ <a href="login">סנכיהל ידכ ןאכ ץחל</a></div>
+                                <div class="text-center dont-have"> יש לך כבר חשבון? <a href="login"> לחץ כאן להתחבר! </a></div>
                             </div>
                         </div>
                     </div>

@@ -24,7 +24,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h2>םישדח םירצומ םי תינור</h2>
+                <h2>המוצרים שלנו </h2>
                 <div class="brandSlider">
                     @if($products)
                         @foreach($products as $product)
@@ -150,7 +150,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h2><a href="{{url('articles',$brand_profile->id)}}" >םלוכ תא ןכדעי ונלש םינורחאה םיגולבה</a></h2>
+                <h2><a href="{{url('articles',$brand_profile->id)}}" >הכתבות האחרונות שלנו: </a></h2>
             </div>
             @if($blog_1 != null)
             <div class="col-md-4">
@@ -166,7 +166,7 @@
                             <p> {!!asset($blog_1->description ?? '')!!} </p>
                             <div class="readMore">
                                 <p>
-                                    <a href="{{url('article',$blog_1->id)}}">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                    <a href="{{url('article',$blog_1->id)}}">קרא עוד <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                                 </p>
                             </div>
                         </div>
@@ -213,7 +213,7 @@
                                     <p> {!!asset($blog_2->description ?? '')!!} </p>
                                     <div class="readMore">
                                         <p>
-                                            <a href="{{url('article',$blog_2->id)}}">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                            <a href="{{url('article',$blog_2->id)}}">קרא עוד <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                                         </p>
                                     </div>
                                 </div>
@@ -264,7 +264,7 @@
                                     <p>{!!asset($blog_3->description ?? '')!!} </p>
                                     <div class="readMore">
                                         <p>
-                                            <a href="{{url('article',$blog_3->id)}}">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                            <a href="{{url('article',$blog_3->id)}}">קרא עוד <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                                         </p>
                                     </div>
                                 </div>
@@ -304,7 +304,7 @@
             </div>
             <div class="col-12 text-center mt-60">
                 <button class="loadMore">
-                <a href="{{url('articles',$brand_profile->id)}}">ףסונ רמאמ</a>
+                <a href="{{url('articles',$brand_profile->id)}}">כל הכתבות</a>
                 </button>
             </div>
         </div>
@@ -314,7 +314,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h2>רשק ונתיא רוציל ישפוח שיגרת</h2>
+                <h2>מחכים לשמוע ממך </h2>
             </div>
         </div>
         <div class="contactInfoDiv">
@@ -325,9 +325,9 @@
                             <img src="{{asset('assets/img/user/map.svg')}}" alt="" class="img-fluid">
                         </div>
                         <div class="infoDiv">
-                            <h5>םוקמ</h5>
-                            <p>בקר אותנו</p>
-                            <span>{{$brand_profile->city->name ?? ''}}</span>
+                            <h5>כתובתינו: </h5>
+                            <p>{{$brand_profile->city->name ?? ''}}</p>
+                            <span>בקר אותנו</span>
                         </div>
                     </div>
                 </div>
@@ -337,9 +337,9 @@
                             <img src="{{asset('assets/img/user/call.svg')}}" alt="" class="img-fluid">
                         </div>
                         <div class="infoDiv">
-                            <h5>7/24 תוריש</h5>
-                            <p>ונילא רשקתה</p>
-                            <span>{{$brand_profile->user->phone ?? ''}}</span>
+                            <h5>תתקשרו אלינו: </h5>
+                            <p>{{$brand_profile->user->phone ?? ''}}</p>
+                            <span>זמינים לכל שאלה </span>
                         </div>
                     </div>
                 </div>
@@ -349,9 +349,9 @@
                             <img src="{{asset('assets/img/user/message.svg')}}" alt="" class="img-fluid">
                         </div>
                         <div class="infoDiv">
-                            <h5>הרוש קורז</h5>
-                            <p>ראוד ונל חלש</p>
-                            <span>{{$brand_profile->user->email ?? ''}}</span>
+                            <h5>שלח לנו הודעה:</h5>
+                            <p>{{$brand_profile->user->phone ?? ''}}</p>
+                            <span>מחכים לשמוע ממך </span>
                         </div>
                     </div>
                 </div>
@@ -361,7 +361,7 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="formDiv">
-                        <h3>ונילא ךתעדוה תא חלש</h3>
+                        <h3>צור איתנו קשר </h3>
                         <form action="" method="post" >
                             @csrf
                             <div class="d-flex">
@@ -370,13 +370,13 @@
                                     <div style="color:red;">{{$errors->first('first_name')}}</div> <br>
                                 </div>
                                 <div class="inputdiv">
-                                    <input type="text" name="last_name" id="last_name" value="" placeholder="םש">
+                                    <input type="text" name="last_name" id="last_name" value="" placeholder="שם">
                                     <div style="color:red;">{{$errors->first('last_name')}}</div> <br>
                                 </div>
                             </div>
                             <div class="d-flex">
                                 <div class="inputdiv">
-                                    <input type="email" name="email" id="email" value="" placeholder="אשונ">
+                                    <input type="email" name="email" id="email" value="" placeholder="נושא">
                                     <div style="color:red;">{{$errors->first('email')}}</div> <br>
                                 </div>
                                 <div class="inputdiv">
@@ -385,9 +385,9 @@
                                 </div>
                             </div>
                             <div class="inputdiv" style="width: 100%; margin: 18px 0px 0px;">
-                                    <textarea name="subject" id="subject" cols="30" rows="10" placeholder="שלח עיסוי"></textarea>
+                                    <textarea name="subject" id="subject" cols="30" rows="10" placeholder="תוכן ההודעה "></textarea>
                                 </div>
-                                <button style="submit" class="commonBtn">שלח עיסוי</button>
+                                <button style="submit" class="commonBtn">שלח </button>
                         </form>
                     </div>
                 </div>

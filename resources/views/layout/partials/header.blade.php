@@ -30,7 +30,7 @@
 						<a href="">םירצומה גולטק</a>
 					</li>
 					@else
-					<li class="nav-item active">
+					<!-- <li class="nav-item active">
 						<img  src="../assets_admin/img/home.svg" alt=""><a href=""> תיבה ףד </a>
 					</li>
 					<li class="nav-item">
@@ -41,7 +41,7 @@
 					</li>
 					<li class="nav-item">
 						<img  src="../assets_admin/img/mail.svg" alt=""><a href="{{route('register')}}">העידי תחילש</a>
-					</li>
+					</li> -->
 					@endif
 				</ul>
 			</div>
