@@ -163,7 +163,7 @@
                                 <span style="border: none;color: #747474;font-size: 12px;font-family: PloniRegular;">{{ date('Y/m/d', strtotime($blog_1->created_at)) }}</span>
                             </div>
                             <h3>{{$blog_1->title ?? '2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס'}} </h3>
-                            <p> {!!asset($blog_1->description ?? '')!!} </p>
+                            <p> {!!$blog_1_des ?? ''!!} </p>
                             <div class="readMore">
                                 <p>
                                     <a href="{{url('article',$blog_1->id)}}">קרא עוד <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
@@ -210,7 +210,7 @@
                                         <span style="border: none;color: #747474;font-size: 12px;font-family: PloniRegular;">{{ date('Y/m/d', strtotime($blog_2->created_at)) }}</span>
                                     </div>
                                     <h3>{{$blog_2->title ?? '2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס'}}</h3>
-                                    <p> {!!asset($blog_2->description ?? '')!!} </p>
+                                    <p> {!!$blog_2_des!!} </p>
                                     <div class="readMore">
                                         <p>
                                             <a href="{{url('article',$blog_2->id)}}">קרא עוד <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
@@ -261,7 +261,7 @@
                                        <img src="{{asset('assets_admin/img/calendar.png')}}" alt="" style="width:18px !important; height: 18px !important;"> <span style="border: none;color: #747474;font-size: 12px;font-family: PloniRegular;">{{ date('Y/m/d', strtotime($blog_3->created_at)) }}</span>
                                     </div>
                                     <h3>{{$blog_3->title ?? '2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס'}}</h3>
-                                    <p>{!!asset($blog_3->description ?? '')!!} </p>
+                                    <p>{!!$blog_3_des!!} </p>
                                     <div class="readMore">
                                         <p>
                                             <a href="{{url('article',$blog_3->id)}}">קרא עוד <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
@@ -350,7 +350,7 @@
                         </div>
                         <div class="infoDiv">
                             <h5>שלח לנו הודעה:</h5>
-                            <p>{{$brand_profile->user->phone ?? ''}}</p>
+                            <p>{{$brand_profile->user->email ?? ''}}</p>
                             <span>מחכים לשמוע ממך </span>
                         </div>
                     </div>
