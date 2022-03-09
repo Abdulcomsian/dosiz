@@ -54,7 +54,7 @@ Edit Product
 					                            <div class="form-group">
 					                                <label>Product Orignal Price</label>
 					                                <div>
-					                                    <input class="form-control" type="number" name="price" value="{{$Product->price}}" id="price" placeholder="Enter Orignal Price">
+					                                    <input class="form-control" type="number" name="price" value="{{$product->price}}" id="price" placeholder="Enter Orignal Price">
 					                                    <div style="color:red;">{{$errors->first('price')}}</div> <br>
 					                                    
 					                                </div>
@@ -63,7 +63,7 @@ Edit Product
 						                        <div class="form-group">
 					                                <label>Product Discount Price</label>
 					                                <div>
-					                                    <input class="form-control" type="number" name="discount_price" value="{{$Product->discount_price}}" id="discount_price" placeholder="Enter Discount Price">
+					                                    <input class="form-control" type="number" name="discount_price" value="{{$product->discount_price}}" id="discount_price" placeholder="Enter Discount Price">
 					                                    <div style="color:red;">{{$errors->first('discount_price')}}</div> <br>
 					                                    
 					                                </div>
