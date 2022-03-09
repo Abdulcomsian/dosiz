@@ -31,4 +31,9 @@ class BrandProfile extends Model
     {
         return $this->belongsTo(City::class);
     }
+
+    public function contact_us()
+    {
+        return $this->belongsTo(ContactUs::class);
+    }
 }

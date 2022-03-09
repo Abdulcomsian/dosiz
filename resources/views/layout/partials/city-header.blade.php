@@ -2,7 +2,7 @@
 	<div class="main-wrapper">
 		
 		<!-- Header -->
-		<div class="header">
+		<div class="header cityHeader">
 
 
 		<nav class="navbar navbar-expand-lg navbar-light">
@@ -19,35 +19,41 @@
 					<img src="../assets_admin/img/logo.png" alt="Logo">
 					
 				</a>
+				<p class="cityName">Rawalpindi</p>
 			@endif
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-					@if(isset($brand_profile))
-					<li class="nav-item active">
-						<a href="{{ url('articles',$brand_profile->id)}}"> מאמרים </a>
-					</li>
-					<li class="nav-item">
-						<a href="{{ url('products',$brand_profile->id)}}"> קטלוג המוצרים </a>
-					</li>
-
-					<li class="nav-item">
-						<a href="{{ url('cities',$brand_profile->id)}}"> City</a>
-					</li>
-
-					@else
-					<!-- <li class="nav-item active">
-						<img  src="../assets_admin/img/home.svg" alt=""><a href=""> תיבה ףד </a>
-					</li>
-					<li class="nav-item">
-						<img  src="../assets_admin/img/lock.svg" alt=""><a href="">תונכרצ ןויכרא</a>
-					</li>
-					<li class="nav-item">
-						<img  src="../assets_admin/img/glases.svg" alt=""><a href="">םירמאמ</a>
-					</li>
-					<li class="nav-item">
-						<img  src="../assets_admin/img/mail.svg" alt=""><a href="{{route('register')}}">העידי תחילש</a>
-					</li> -->
-					@endif
+					<form action="{{ route('cities',$brand_id) }}" method="get">
+						
+						<li>
+							<button class="btn btn-success">עובשמ רתויב</button>
+						</li>
+						<li>
+							<div class="searchBar">
+								<select name="city" id="city">
+									<option disabled>Select City</option>
+									@foreach($cities as $city)
+									<option value="{{$city->id}}">{{$city->name}}</option>
+									@endforeach
+								</select>
+							</div>
+						</li>
+						<li>
+							<select name="category" id="category">
+								<option disabled>Select Category</option>
+								@foreach($categories as $category)
+								<option value="{{$category->id}}">{{$category->name}}</option>
+								@endforeach
+							</select>
+						</li>
+						<li>
+							<p>
+								<a href="">Login /</a>
+								<a href="">Sign Up</a>
+							</p>
+						</li>
+					</form>
+					
 				</ul>
 			</div>
 			</nav>

@@ -18,9 +18,18 @@ class productController extends Controller
 {
     public function index()
     {
+        $user_id = Auth::id();
+        $brand_profile = BrandProfile::where('user_id',$user_id)->first();
+        if($brand_profile)
+        {
+            $products = Product::where('user_id',$brand_profile->id)->get();
+                return view('product.index', compact('products'));
+        }
+        else{
+            toastError('Kindly Complete Your Profile First');
+            return Redirect::back();
+        }
         
-        $products = Product::get();
-        return view('product.index', compact('products'));
     }      
 
     public function create()

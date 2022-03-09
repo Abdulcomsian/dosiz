@@ -18,7 +18,7 @@ class ProductCategoryController extends Controller
         $brand_profile = BrandProfile::where('user_id',$user_id)->first();
         if($brand_profile)
         {
-            $product_categories = ProductCategory::get();
+            $product_categories = ProductCategory::where('brand_profile_id',$brand_profile->id)->get();
             return view('product_category.index', compact('product_categories'));
         }
         else{

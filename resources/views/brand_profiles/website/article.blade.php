@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-12">
                             <h3>{{$product->name ?? ''}}  </h3>
-                            <p>{{$product->description ?? ''}} </p>
+                            <p>{!!$product->description!!} </p>
                             <div class="detailImg">
                                 <img src="{{asset($product->image)}}" style="width:769.07px; height:532.36px;" alt="">
                             </div>
@@ -52,7 +52,7 @@
                                 </ul>
                             </div>
                             <div class="articleDescription">
-                                <p>{{$product->description ?? ''}}</p>
+                                <p>{!!$product->description!!}</p>
                             </div>
                             
                             
@@ -84,7 +84,7 @@
                                             <div class="dateDiv">
                                                 <p><a href="{{url('product/'.$brand_profile->id.'/' .$all->id)}}">  {{ $all->name }}/</a> {{ date('Y/m/d', strtotime($all->created_at)) }} </p>
                                             </div>
-                                            <p>{{ $all->description }} </p>
+                                            <p>{!!$all->description!!} </p>
                                         </div>
                                     </div>
                                 </li>
