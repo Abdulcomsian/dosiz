@@ -29,13 +29,21 @@ Add City
 									<!-- Add details -->
 									<div class="row">
 										<div class="col-12 blog-details">
-											<form action="{{ route('city.store') }}" method="post">
+											<form action="{{ route('city.store') }}" enctype="multipart/form-data" method="post">
                 								@csrf
 					                            
 					                            <div class="form-group">
 					                                <label>City Name</label>
 					                                <input class="form-control" id="name" name="name" placeholder="Enter City Name" type="text">
 			                                        <div style="color:red;">{{$errors->first('name')}}</div> <br>
+					                            </div>
+					                            <div class="form-group">
+					                                <label>City Image</label>
+					                                <div>
+					                                    <input class="form-control" type="file" name="image" id="image">
+					                                    <div style="color:red;">{{$errors->first('image')}}</div> <br>
+					                                    
+					                                </div>
 					                            </div>
 					                            <div class="m-t-20 text-center">
 					                                <button class="btn btn-primary btn-lg">Add City</button>

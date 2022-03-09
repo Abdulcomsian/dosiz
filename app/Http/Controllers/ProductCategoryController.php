@@ -89,8 +89,15 @@ class ProductCategoryController extends Controller
             toastr()->success('Successfully Deleted');
             return back();
         } catch (\Exception $exception) {
-            // dd($exception->getMessage());
-            toastError($exception->getMessage());
+            if($exception->getCode() == 23000)
+            {
+                toastError("First delete Product under this Category");
+            }
+            else
+            {
+                toastError("Something went wrong");
+            }
+            // toastError($exception->getMessage());
             return Redirect::back();
         }
     }

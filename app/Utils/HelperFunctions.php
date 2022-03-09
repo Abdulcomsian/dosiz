@@ -43,5 +43,11 @@ class HelperFunctions
         
         $path  = 'uploads/brand_profile/';
         return $path;
+    }  
+    public static function cityImagePath($user = null)
+    {
+        
+        $path  = 'uploads/city/';
+        return $path;
     }
 }
