@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 text-center">
-                <h2>היישעתב םיגולב</h2>
+                <h2> הכתבות והמאמרים שלנו </h2>
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@
                                 <h3>{{$article->title ?? '2022 ויתס םלוהקוטשב הנפואה עובשמ רתויב בוטה בוחרה ןונגס'}}</p>
                                 <div class="readMore">
                                     <p>
-                                        <a href="{{url('article',$article->id)}}">דוע ארק <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                        <a href="{{url('article',$article->id)}}"> טטען עוד<i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                                     </p>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@
     </div>
     <div class="row mt-80">
         <div class="col-12 text-center">
-            <button class="commonBtn">דוע ןעט</button>
+            <button class="commonBtn"> קרא עוד </button>
         </div>
     </div>
 </section>
