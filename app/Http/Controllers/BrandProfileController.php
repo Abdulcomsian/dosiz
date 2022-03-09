@@ -8,7 +8,7 @@ use App\Product;
 use Auth;
 use App\User;
 use DB;
-use App\Category;
+use App\Category;  
 use App\City;
 use App\Blog;
 use App\BrandProfile; 
@@ -309,6 +309,21 @@ class BrandProfileController extends Controller
         $products = Product::where('user_id',$user_id)->get();
 
         return view('brand_profiles.website.article',compact('products','product','brand_profile'));
-    }
+    }  
+
+    public function cities(Request $request,$brand_id)
+    {
+        $brand_profile = BrandProfile::where('id',$brand_id)->first();
+        $blogs = Blog::get();
+        $cities = City::get();
+        $categories = Category::get();
+        $blog_1 = Blog::where('user_id',$brand_profile->user_id)->first();
+        $blog_2 = Blog::where('user_id',$brand_profile->user_id)->skip(1)->first();
+        $blog_3 = Blog::where('user_id',$brand_profile->user_id)->skip(2)->first();
+        $blog_4 = Blog::where('user_id',$brand_profile->user_id)->skip(3)->first();
+        $blog_5 = Blog::where('user_id',$brand_profile->user_id)->skip(4)->first();
+        return view('brand_profiles.website.cities',compact('categories','cities','blog_1','blog_2','blog_3','blog_4','blog_5','blogs','brand_id'));
+    } 
+
 
 }

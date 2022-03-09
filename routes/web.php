@@ -31,6 +31,10 @@ Route::get('/detailArticle', function () {
     return view('user.article.articleDetail');
 });
 
+Route::get('/city_test', function () {
+    return view('user.city');
+});
+
 Route::get('test', function () {
 
     
@@ -97,7 +101,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/brand_profile_id/{id}', 'BrandProfileController@brand_profile')->name('brand_profile_id');
 Route::post('/subscriber', 'EmailSubscribeController@store')->name('subscriber.store');
-Route::get('/products/{id}', 'BrandProfileController@products')->name('brand_profile_id');
+Route::get('/products/{id}', 'BrandProfileController@products')->name('brand_profile_id'); 
+Route::get('/cities/{id}', 'BrandProfileController@cities')->name('cities'); 
 Route::get('/blogs/{id}', 'BrandProfileController@blogs')->name('blogs');  //by city next task
 Route::get('/blog/{id}', 'BrandProfileController@blog')->name('blog'); 
 Route::get('/article/{id}', 'BrandProfileController@article')->name('article'); 
