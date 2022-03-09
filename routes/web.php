@@ -95,7 +95,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/brand_profile_id/{id}', 'BrandProfileController@brand_profile')->name('brand_profile_id')->domain('blog.' . env('APP_URL'));
+Route::get('/brand_profile_id/{id}', 'BrandProfileController@brand_profile')->name('brand_profile_id');
 Route::post('/subscriber', 'EmailSubscribeController@store')->name('subscriber.store');
 Route::get('/products/{id}', 'BrandProfileController@products')->name('brand_profile_id');
 Route::get('/blogs/{id}', 'BrandProfileController@blogs')->name('blogs');  //by city next task
