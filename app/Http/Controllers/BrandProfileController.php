@@ -301,4 +301,14 @@ class BrandProfileController extends Controller
         return view('brand_profiles.website.articles',compact('articles','brand_profile'));
     }
 
+    public function single_product($brand_id,$product_id)
+    {
+        $user_id = Auth::id();
+        $brand_profile = BrandProfile::where('id',$brand_id)->first();
+        $product = Product::where('id',$product_id)->first();
+        $products = Product::where('user_id',$user_id)->get();
+
+        return view('brand_profiles.website.article',compact('products','product','brand_profile'));
+    }
+
 }

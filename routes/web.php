@@ -102,4 +102,5 @@ Route::get('/blogs/{id}', 'BrandProfileController@blogs')->name('blogs');  //by 
 Route::get('/blog/{id}', 'BrandProfileController@blog')->name('blog'); 
 Route::get('/article/{id}', 'BrandProfileController@article')->name('article'); 
 Route::get('/articles/{id}', 'BrandProfileController@articles')->name('articles'); 
+Route::get('/product/{brand_id}/{product_id}', 'BrandProfileController@single_product'); 
 

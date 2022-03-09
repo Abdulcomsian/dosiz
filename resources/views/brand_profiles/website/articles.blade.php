@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 text-center">
-                <h2> הכתבות והמאמרים שלנו </h2>
+                <h2>הכתבות והמאמרים שלנו</h2>
             </div>
         </div>
     </div>
