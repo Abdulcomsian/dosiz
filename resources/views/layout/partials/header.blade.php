@@ -24,10 +24,10 @@
 				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 					@if(isset($brand_profile))
 					<li class="nav-item active">
-						<a href="{{ url('articles',$brand_profile->id)}}"> תםירצומ</a>
+						<a href="{{ url('articles',$brand_profile->id)}}"> מאמרים </a>
 					</li>
 					<li class="nav-item">
-						<a href="{{ url('products',$brand_profile->id)}}">םירצומה גולטק</a>
+						<a href="{{ url('products',$brand_profile->id)}}"> קטלוג המוצרים </a>
 					</li>
 					@else
 					<!-- <li class="nav-item active">
