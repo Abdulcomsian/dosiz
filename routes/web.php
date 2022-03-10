@@ -77,6 +77,11 @@ Route::prefix('dashboard')->middleware(['auth','dashboard'])->group(function(){
     Route::post('send_email', 'EmailSubscribeController@send_email')->name('send-email');
     Route::post('sendSMS', 'TwilioSMSController@index')->name('sendSMS');
 
+    //contact us
+    Route::get('/contact_us', 'ContactUsController@index');
+    Route::delete('/contact_us_delete/{id}', 'ContactUsController@destroy');
+
+
 });
 /********************ADMIN ROUTES END******************************/
 
@@ -101,6 +106,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/brand_profile_id/{id}', 'BrandProfileController@brand_profile')->name('brand_profile_id');
 Route::post('/subscriber', 'EmailSubscribeController@store')->name('subscriber.store');
+Route::post('/contact_us', 'ContactUsController@store')->name('contact_us.store');
 Route::get('/products/{id}', 'BrandProfileController@products')->name('brand_profile_id'); 
 Route::get('/cities/{id}', 'BrandProfileController@cities')->name('cities'); 
 Route::get('/blogs/{id}', 'BrandProfileController@blogs')->name('blogs');  //by city next task
