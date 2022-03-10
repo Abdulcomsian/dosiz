@@ -362,16 +362,17 @@
                 <div class="col-md-7">
                     <div class="formDiv">
                         <h3>צור איתנו קשר </h3>
-                        <form action="" method="post" >
+                        <form action="{{ route('contact_us.store') }}" method="post" >
                             @csrf
                             <div class="d-flex">
                                 <div class="inputdiv">
-                                    <input type="text" name="first_name" id="first_name" value="" placeholder="אימייל">
-                                    <div style="color:red;">{{$errors->first('first_name')}}</div> <br>
+                                    <input type="text" name="f_name" id="f_name" value="" placeholder="אימייל">
+                                    <input type="hidden" name="id" id="id" value="{{$brand_profile->id}}" placeholder="אימייל">
+                                    <div style="color:red;">{{$errors->first('f_name')}}</div> <br>
                                 </div>
                                 <div class="inputdiv">
-                                    <input type="text" name="last_name" id="last_name" value="" placeholder="שם">
-                                    <div style="color:red;">{{$errors->first('last_name')}}</div> <br>
+                                    <input type="text" name="l_name" id="l_name" value="" placeholder="שם">
+                                    <div style="color:red;">{{$errors->first('l_name')}}</div> <br>
                                 </div>
                             </div>
                             <div class="d-flex">

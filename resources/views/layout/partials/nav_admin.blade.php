@@ -82,6 +82,11 @@ Sidebar -->
 							<li class="{{ Request::is('dashboard/subscribe') ? 'active' : '' }}">
 								<a href="{{ url('dashboard/subscribe') }}"><span> Subscribers </span></a>
 							</li>
+							@if(Auth::user()->hasRole('Brand Manager'))
+							<li class="{{ Request::is('dashboard/contact_us') ? 'active' : '' }}"> 
+								<a href="{{ url('/dashboard/contact_us')}}"><span>Contact US</span></a>
+							</li>
+							@endif
 									<!-- <li><a class="{{ Request::is('admin/blog-details') ? 'active' : '' }}" href="{{ url('admin/blog-details') }}"> Blog Details </a></li> -->
 									<!-- <li><a class="{{ Request::is('admin/add-blog') ? 'active' : '' }}" href="{{ url('admin/add-blog') }}"> Add Blog </a></li> -->
 									<!-- <li><a class="{{ Request::is('admin/edit-blog') ? 'active' : '' }}" href="{{ url('admin/edit-blog') }}"> Edit Blog </a></li> -->
